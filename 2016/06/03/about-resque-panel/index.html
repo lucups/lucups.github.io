@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Tony&#39;s Blog">
+  <meta name="keyword" content="php, java, bigdata">
+  
+    <link rel="shortcut icon" href="/css/images/logo.jpg">
+  
+  <title>
+    
+      为什么我要写 ResquePanel | Tony&#39;s Blog
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.jpg" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Tony's Blog</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>为什么我要写 ResquePanel</h2>
+  <p class="post-date">2016-06-03</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p><a href="https://github.com/Lucups/resque-panel" target="_blank" rel="noopener">ResquePanel</a> 是用于监控 <a href="https://github.com/chrisboulton/php-resque" target="_blank" rel="noopener">php-resque</a> 的一款 Web 界面工具。完全使用  PHP 开发。当然，由于 resque 的 “正版” 是 Ruby 写的，所以你也可以用来监控 Ruby 版的 resque。 </p>
+<p>也许有人会说我造轮子，因为很容易可以在 GitHub 上搜到一个叫 <a href="https://github.com/wa0x6e/ResqueBoard" target="_blank" rel="noopener">ResqueBoard</a> 的项目，还有个非常漂亮的<a href="http://resqueboard.kamisama.me/" target="_blank" rel="noopener">介绍网页</a>，如图：</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fr25wh37rij30yg0ptq53.jpg" alt="ResqueBoard 官方介绍页"></p>
+<p>可以看出来，作者花费了不少心思，前端做得也漂亮(我觉得这个前端堪称完美！)。所以刚开始我也用了这个，于是，发现了问题。</p>
+<h3 id="ResqueBoard-的缺陷"><a href="#ResqueBoard-的缺陷" class="headerlink" title="ResqueBoard 的缺陷"></a>ResqueBoard 的缺陷</h3><p>首先是该项目依赖太多，除了 <code>Node.js</code> 的 <code>Cube</code>，另外还要装一个 MongoDB，最关键的还在于如果你需要使用作者改写过的 php-resque，这让人很是担心。虽然我毫不怀疑作者的人品，但要我把正在跑的一个项目依赖的库替换掉（因为与原项目冲突），还是有不少担心的。然后就是 Cube 依赖的一个叫 <code>websocket-server</code> 的项目已经不见了，导致 npm install 安装依赖失败，Google 了半天，最后在该项目的 GitHub Issue List 里找到解决方案，过程参见 <a href="https://segmentfault.com/q/1010000003990965" target="_blank" rel="noopener">npm install cube Error: No dist in websocket-server package</a>。折腾了半天，Cube 的两个进程跑起来了。最后就是替换项目里原来用的 php-resque，小心翼翼。配置了 Nginx 后终于跑起来了。 </p>
+<p>跑起来后发现，首页是能看了，其他页面都有问题，一检查，发现 web 目录下有个 <code>.htaccess</code> 文件，一看尿了，rewrite 规则这么多！只能用 apache 了，于是又给服务器装了 apache，Nginx 做反代，搞了半天终于基本正常了，右上角显示的三个服务正常连接。再对照官方文档，完全正确了。</p>
+<p>但是，跑了几天后，发现数据有问题。首先是很多数据完全获取不到，基本上除了看到队列、处理了多少个 Job，其他一切显示没有数据。这一点让我很是伤心。各种找原因，反复查看官方文档、Issue 列表，还是没找到问题。</p>
+<p>我最终决定自己写一个，简单一点的。</p>
+<h3 id="我菜我认怂"><a href="#我菜我认怂" class="headerlink" title="我菜我认怂"></a>我菜我认怂</h3><p>有人会说，明明是你自己菜，还怪人家太复杂！<br>我菜我认怂行不？<br>我并不否认 ResqueBoard 的价值，也并不怀疑作者的人品(不会故意给一个不好用的东西出来)。但是，作为一个<strong>产品经理</strong>(我觉得我更是一个产品经理)，我觉得无论是什么工具，做出来都是给人用的，既然给人用，就要考虑用户的感受。当然，对于开源软件，这一条并不适用，因为很多工具都是作者给自己用的，顺便开源出来，让用得上的人顺便用用。</p>
+<p>其实，我不需要查看那么多指标，我只是想简简单单看看队列的情况而已，当然，如果可能，可以加一个 <code>Retry</code> 的功能。所以你也可以说，并不是 ResqueBoard 不好，而是不适合我。</p>
+<h3 id="为什么造轮子"><a href="#为什么造轮子" class="headerlink" title="为什么造轮子"></a>为什么造轮子</h3><p>有人会问，那你为什么不向作者咨询一下，而是自己造个轮子？</p>
+<p>首先我本人是一个不喜欢麻烦别人的人，如果有问题，我会尽一切可能自己解决，这事跟借钱一样，我宁愿向银行向支付宝借钱也不愿意向朋友借钱，像银行借钱只不过交点利息，向朋友借钱要交的就太多了。当然，这是我自己的观点，我只是自己不想做这个事，不代表我反对这个事。就好比我不会穿丝袜，但不反对别人穿，如果是美女穿，我还喜欢呢，哈哈！</p>
+<p>跑题了。话说回来，我觉得 ResqueBoard 是一个好看但并不好用(或者说实用)的工具，首先是安装过程太折腾，限制条件太多，虽然功能强大，但对于使用 php-resque 作为队列的用户来说，并不是一个好的选择。(既然选择了 php-resque 作为队列服务，首先可以认为用户对队列的要求并不高，否则肯定选择更加强大更加完善的方案。)</p>
+<p>所以，我在 ResquePanel 里使用的都是 PHPer 比较熟悉的技术，最“精深”的也只不过是 <a href="http://www.swoole.com/" target="_blank" rel="noopener">swoole</a> 实现的 WebSocket (外加一个 swoole 实现的 child process，其实没必要使用这个特性的，我只是为了尝试一下，也许会在正式版本中移除)，安装简单快捷，甚至都不用安装 HTTP Server。当然，代价就是功能没那么多，目前最核心的功能除了查看队列情况(包括 Queues/Workers/Jobs 的各种信息)外，还有一个 <code>Retry</code> 的功能，都是按照我们实际需要来开发的，所以比较简单实用。</p>
+<h3 id="ResquePanel-的未来计划"><a href="#ResquePanel-的未来计划" class="headerlink" title="ResquePanel 的未来计划"></a>ResquePanel 的未来计划</h3><p>目前 ResquePanel 只是一个简单的查看 php-resque 队列运行情况的 web 界面工具，我计划将其发展成一个完整的队列工具，甚至包含一个微型的 MVC 框架，这样在某些场景下，可以完全依靠 ResquePanel 来解决问题，为开发者提供方便。</p>
+<p>当然，以上只是美好的构想，也许由于我太懒会停更这个项目。</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#PHP" >
+    <span class="tag-code">PHP</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2015/11/30/about-steel-film/">
+        <span class="nav-arrow">← </span>
+        
+          为什么我不用钢化膜
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2016/09/13/gantt-by-mermaid/">
+        
+          用 mermaid 画甘特图
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ResqueBoard-的缺陷"><span class="toc-nav-text">ResqueBoard 的缺陷</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#我菜我认怂"><span class="toc-nav-text">我菜我认怂</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#为什么造轮子"><span class="toc-nav-text">为什么造轮子</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ResquePanel-的未来计划"><span class="toc-nav-text">ResquePanel 的未来计划</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://tony.engineer/2016/06/03/about-resque-panel/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    // var gitmentConfig = "";
+    // if (gitmentConfig !== 'undefined') {
+    //   var gitment = new Gitment({
+    //     id: "为什么我要写 ResquePanel",
+    //     owner: "",
+    //     repo: "",
+    //     oauth: {
+    //       client_id: "",
+    //       client_secret: ""
+    //     },
+    //     theme: {
+    //       render(state, instance) {
+    //         const container = document.createElement('div')
+    //         container.lang = "en-US"
+    //         container.className = 'gitment-container gitment-root-container'
+    //         container.appendChild(instance.renderHeader(state, instance))
+    //         container.appendChild(instance.renderEditor(state, instance))
+    //         container.appendChild(instance.renderComments(state, instance))
+    //         container.appendChild(instance.renderFooter(state, instance))
+    //         return container;
+    //       }
+    //     }
+    //   })
+    //   gitment.render(document.getElementById('comments'))
+    // }
+    
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2018 <a href="https://tony.engineer">TONY.ENGINEER</a>
+    | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> and <a href="https://pages.github.com/" target="_blank">Github Pages</a>, Theme by <a href="https://github.com/yanm1ng/hexo-theme-vexo" target="_blank">Vexo</a>.
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>
