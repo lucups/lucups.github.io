@@ -1,2 +1,2 @@
 # Lucups.github.io
-My blog.
+My HomePage.
