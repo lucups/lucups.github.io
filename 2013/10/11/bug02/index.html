@@ -117,45 +117,98 @@
 </nav>
 
 <div class="container">
-    <div class="pt-3">
-    <div class="jumbotron">
-        <h1 class="display-4">就这么吹来吹去~</h1>
+    <style>
+    article img {
+        max-width: 100% !important;
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+
+<h1 class="pt-3">一次愉快的 bug 修复经历</h1>
+
+<p>
+    <span class="label mr-1">发布:</span>
+    2013-10-11
+
+    <span class="ml-2 mr-2">|</span>
+
+    <span class="label mr-1">分类:</span>
+    
+    
         
-        
-        
-        
-    </div>
-</div>
+    
+    <a href="/categories/技术">技术</a>
+
+    <span class="ml-2 mr-2">|</span>
+
+    <span class="label mr-1">标签:</span>
+    
+        <a href="/tags/bug" class="badge badge-secondary">bug</a>
+    
+</p>
 
 <div class="row">
-    <div class="col-md-6 col-12">
-        <h2>最新文章</h2>
-        <ul>
-            
-                <li>2019-10-23 <a href="/2019/10/23/apple-service/">一次良心售后</a></li>
-            
-                <li>2019-09-18 <a href="/2019/09/18/how-to-design-phone/">实用手机设计指南</a></li>
-            
-                <li>2019-03-11 <a href="/2019/03/11/threshold/">到底是阈值还是阀值？</a></li>
-            
-                <li>2019-02-21 <a href="/2019/02/21/macos-mojave/">macOS 升级到 Mojave 的经历</a></li>
-            
-                <li>2018-07-03 <a href="/2018/07/03/tuniu-backpack/">途牛原创双肩包初级体验</a></li>
-            
-                <li>2018-05-06 <a href="/2018/05/06/hello-world/">Hello World</a></li>
-            
-                <li>2017-08-13 <a href="/2017/08/13/fontawesome/">查找 FontAwesome 图标的正确姿势</a></li>
-            
-                <li>2017-07-12 <a href="/2017/07/12/a-business-trip/">记一次神奇的出差经历</a></li>
-            
-                <li>2017-07-12 <a href="/2017/07/12/bullshitting01/">改变世界的不是技术，而是运用技术的能力</a></li>
-            
-                <li>2016-12-30 <a href="/2016/12/30/about-engineer/">论软件工程师的职业素养</a></li>
-            
-            <li><a href="/archives">查看更多</a></li>
-        </ul>
+    <div class="col-9">
+        <article>
+            <p>使用 jQuery 插件 Jcrop 裁剪图片时，发现一个问题，如图：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fr26ehqgj2j30ek0eg0tw.jpg" alt="Bug of Jcrop"></p>
+<p>不知道这里的 radio 哪里来的，很郁闷，因为以前用过一次，没遇到这个问题。<br>到 stackoverflow 上查了也没有类似的问题。<br>没办法，只好上官网留言问作者。<br>英语不太好，只能勉强描述问题：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input <span class="attribute">type</span>=<span class="string">"radio"</span> <span class="attribute">class</span>=<span class="string">"jcrop-keymgr"</span> <span class="attribute">style</span>=<span class="string">"position: fixed; left: -120px; width: 12px; display: inline-block;"</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>There is a strange radio input in my page, I don’t know where it comes from, I think you can help me.<br>If you can give me your email address, I will send the pictue to you.</p>
+</blockquote>
+<p>几个小时候，收到了作者的回复:</p>
+<blockquote>
+<p>Hi… I think the option to turn that off is keySupport: false…<br>I have a new version that is completely rewritten, and much better…<br>Check “WIP-2.x” branch on github.<br>Should allow keyboard support without the (supposed to be hidden) radio input…<br>Documentation in progress…but should be similar in most cases.</p>
+</blockquote>
+<p>作者很热心，不仅提供了解决方案，还告诉我新版本完全重写，非常好~<br>我尝试了一下，在代码中加了 <code>keySupport: false</code>，OK，问题解决。<br>这个作者太厚道了，我对他的景仰如同滔滔黄河之水天上来。。。（后面省略1000字）<br>立马回复作者：</p>
+<blockquote>
+<p>Hi ! Thank you for your reply.<br>With your help, I have successfully solved the problem.<br>With thanks again and best wishes to you !</p>
+</blockquote>
+<p>最后不得不感叹一句，这个作者真棒！</p>
+
+        </article>
     </div>
-    <div class="col-md-6 col-12">
+    <div class="col-3">
+        
+            <ul>
+                <li>因吹斯汀</li>
+            </ul>
+        
+            <ul>
+                <li>PHP</li>
+            </ul>
+        
+            <ul>
+                <li>Apple</li>
+            </ul>
+        
+            <ul>
+                <li>吐槽</li>
+            </ul>
+        
+            <ul>
+                <li>bug</li>
+            </ul>
+        
+            <ul>
+                <li>macOS</li>
+            </ul>
+        
+            <ul>
+                <li>工具</li>
+            </ul>
+        
+            <ul>
+                <li>phone</li>
+            </ul>
+        
+            <ul>
+                <li>Linux</li>
+            </ul>
+        
     </div>
 </div>
 
