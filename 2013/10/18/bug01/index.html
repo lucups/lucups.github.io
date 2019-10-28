@@ -9,6 +9,7 @@
     
     <title>托尼吹雪</title>
     <link rel="stylesheet" href="/css/bootstrap-cosmo.css">
+    <link rel="stylesheet" href="/css/code.css">
     <style>
         * {
             font-size: 14px;
@@ -76,8 +77,12 @@
             text-decoration: none;
         }
 
+        .display-5 {
+            font-size: 3em;
+            font-weight: 300;
+            line-height: 1;
+        }
     </style>
-    
 </head>
 <body>
 
@@ -125,31 +130,29 @@
     }
 </style>
 
-<h1 class="pt-3">关于使用 Symfony2 开发时遇到的一个诡异的 bug</h1>
+<div class="row pt-3">
+    <div class="col-md-9 col-sm-12">
+        <h1>关于使用 Symfony2 开发时遇到的一个诡异的 bug</h1>
+        <p id="post-info">
+            <span class="label mr-1">发布:</span>
+            2013-10-18
 
-<p>
-    <span class="label mr-1">发布:</span>
-    2013-10-18
+            <span class="ml-2 mr-2">|</span>
 
-    <span class="ml-2 mr-2">|</span>
+            <span class="label mr-1">分类:</span>
+            
+            
+                
+            
+            <a href="/categories/技术">技术</a>
 
-    <span class="label mr-1">分类:</span>
-    
-    
-        
-    
-    <a href="/categories/技术">技术</a>
+            <span class="ml-2 mr-2">|</span>
 
-    <span class="ml-2 mr-2">|</span>
-
-    <span class="label mr-1">标签:</span>
-    
-        <a href="/tags/bug" class="badge badge-secondary">bug</a>
-    
-</p>
-
-<div class="row">
-    <div class="col-9">
+            <span class="label mr-1">标签:</span>
+            
+                <a href="/tags/bug" class="badge badge-secondary">bug</a>
+            
+        </p>
         <article>
             <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>最近在使用symfony 2开发，处于刚入门阶段。昨天完成了注册登录模块，开发阶段一直没有问题，快完成时诡异的错误出现了：注册成功后，查询数据表，记录存在，但登录始终报错。由于登录是使用symfony2自带的安全框架，又不知道 symfony2有什么debug的好方法，所以只能检查代码，继续读symfony2文档，因为之前做过登录注册模块，所以对配置什么的还是蛮有信心，确信不会错，搞了半天不知道问题在哪。注册成功，登录始终不成功。</p>
 <h3 id="衣带渐宽终不悔，为-bug-消的人憔悴"><a href="#衣带渐宽终不悔，为-bug-消的人憔悴" class="headerlink" title="衣带渐宽终不悔，为 bug 消的人憔悴"></a>衣带渐宽终不悔，为 bug 消的人憔悴</h3><p>最后还是同事过来，问我用什么加密，然后试图寻找登录加密与注册加密的结果是否一致。不成功，因为login的过程完全由symfony来完成的，查文档一时又找不到login具体的代码，最后，我们找了一个在线加密网站，比对加密结果和注册加密结果是否一致，最后结果是一致。。。蛋疼！尼妈这错太诡异了！难道真要我这个刚入门的去看框架源码？？？</p>
@@ -157,44 +160,65 @@
 
         </article>
     </div>
-    <div class="col-3">
-        
-            <ul>
-                <li>因吹斯汀</li>
-            </ul>
-        
-            <ul>
-                <li>PHP</li>
-            </ul>
-        
-            <ul>
-                <li>Apple</li>
-            </ul>
-        
-            <ul>
-                <li>吐槽</li>
-            </ul>
-        
-            <ul>
-                <li>bug</li>
-            </ul>
-        
-            <ul>
-                <li>macOS</li>
-            </ul>
-        
-            <ul>
-                <li>工具</li>
-            </ul>
-        
-            <ul>
-                <li>phone</li>
-            </ul>
-        
-            <ul>
-                <li>Linux</li>
-            </ul>
-        
+    <div class="col-md-3 col-sm-12">
+        <h4>分类</h4>
+<ul>
+    
+        <li>
+            <a href="/categories/杂的文">杂的文</a>
+        </li>
+    
+        <li>
+            <a href="/categories/技术">技术</a>
+        </li>
+    
+        <li>
+            <a href="/categories/工具">工具</a>
+        </li>
+    
+</ul>
+
+<h4>标签</h4>
+<ul>
+    
+        <li>
+            <a href="/tags/因吹斯汀">#因吹斯汀</a>
+        </li>
+    
+        <li>
+            <a href="/tags/PHP">#PHP</a>
+        </li>
+    
+        <li>
+            <a href="/tags/Apple">#Apple</a>
+        </li>
+    
+        <li>
+            <a href="/tags/吐槽">#吐槽</a>
+        </li>
+    
+        <li>
+            <a href="/tags/bug">#bug</a>
+        </li>
+    
+        <li>
+            <a href="/tags/macOS">#macOS</a>
+        </li>
+    
+        <li>
+            <a href="/tags/工具">#工具</a>
+        </li>
+    
+        <li>
+            <a href="/tags/phone">#phone</a>
+        </li>
+    
+        <li>
+            <a href="/tags/Linux">#Linux</a>
+        </li>
+    
+</ul>
+
     </div>
 </div>
 
@@ -207,12 +231,12 @@
         <p class="footer-info mb-3 pt-2">
             Copyright &copy; 2019 <a href="https://tony.engineer">托尼吹雪</a>.
             <span style="display:inline-block;float:right;">
-                Powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/lucups/hexo-theme-muji">hexo-theme-muji</a>.
-            </span>
+                        Powered by <a href="https://hexo.io">Hexo</a>
+                        and <a href="https://github.com/lucups/hexo-theme-muji">hexo-theme-muji</a>.
+                    </span>
         </p>
     </footer>
 </div>
-
 
 <script src="/js/jquery-3.3.1.min.js"></script>
 <script src="/js/bootstrap.bundle.min.js"></script>

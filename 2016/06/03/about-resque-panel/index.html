@@ -9,6 +9,7 @@
     
     <title>托尼吹雪</title>
     <link rel="stylesheet" href="/css/bootstrap-cosmo.css">
+    <link rel="stylesheet" href="/css/code.css">
     <style>
         * {
             font-size: 14px;
@@ -76,8 +77,12 @@
             text-decoration: none;
         }
 
+        .display-5 {
+            font-size: 3em;
+            font-weight: 300;
+            line-height: 1;
+        }
     </style>
-    
 </head>
 <body>
 
@@ -125,31 +130,29 @@
     }
 </style>
 
-<h1 class="pt-3">为什么我要写 ResquePanel</h1>
+<div class="row pt-3">
+    <div class="col-md-9 col-sm-12">
+        <h1>为什么我要写 ResquePanel</h1>
+        <p id="post-info">
+            <span class="label mr-1">发布:</span>
+            2016-06-03
 
-<p>
-    <span class="label mr-1">发布:</span>
-    2016-06-03
+            <span class="ml-2 mr-2">|</span>
 
-    <span class="ml-2 mr-2">|</span>
+            <span class="label mr-1">分类:</span>
+            
+            
+                
+            
+            <a href="/categories/技术">技术</a>
 
-    <span class="label mr-1">分类:</span>
-    
-    
-        
-    
-    <a href="/categories/技术">技术</a>
+            <span class="ml-2 mr-2">|</span>
 
-    <span class="ml-2 mr-2">|</span>
-
-    <span class="label mr-1">标签:</span>
-    
-        <a href="/tags/PHP" class="badge badge-secondary">PHP</a>
-    
-</p>
-
-<div class="row">
-    <div class="col-9">
+            <span class="label mr-1">标签:</span>
+            
+                <a href="/tags/PHP" class="badge badge-secondary">PHP</a>
+            
+        </p>
         <article>
             <p><a href="https://github.com/Lucups/resque-panel" target="_blank" rel="noopener">ResquePanel</a> 是用于监控 <a href="https://github.com/chrisboulton/php-resque" target="_blank" rel="noopener">php-resque</a> 的一款 Web 界面工具。完全使用  PHP 开发。当然，由于 resque 的 “正版” 是 Ruby 写的，所以你也可以用来监控 Ruby 版的 resque。 </p>
 <p>也许有人会说我造轮子，因为很容易可以在 GitHub 上搜到一个叫 <a href="https://github.com/wa0x6e/ResqueBoard" target="_blank" rel="noopener">ResqueBoard</a> 的项目，还有个非常漂亮的<a href="http://resqueboard.kamisama.me/" target="_blank" rel="noopener">介绍网页</a>，如图：</p>
@@ -171,44 +174,65 @@
 
         </article>
     </div>
-    <div class="col-3">
-        
-            <ul>
-                <li>因吹斯汀</li>
-            </ul>
-        
-            <ul>
-                <li>PHP</li>
-            </ul>
-        
-            <ul>
-                <li>Apple</li>
-            </ul>
-        
-            <ul>
-                <li>吐槽</li>
-            </ul>
-        
-            <ul>
-                <li>bug</li>
-            </ul>
-        
-            <ul>
-                <li>macOS</li>
-            </ul>
-        
-            <ul>
-                <li>工具</li>
-            </ul>
-        
-            <ul>
-                <li>phone</li>
-            </ul>
-        
-            <ul>
-                <li>Linux</li>
-            </ul>
-        
+    <div class="col-md-3 col-sm-12">
+        <h4>分类</h4>
+<ul>
+    
+        <li>
+            <a href="/categories/杂的文">杂的文</a>
+        </li>
+    
+        <li>
+            <a href="/categories/技术">技术</a>
+        </li>
+    
+        <li>
+            <a href="/categories/工具">工具</a>
+        </li>
+    
+</ul>
+
+<h4>标签</h4>
+<ul>
+    
+        <li>
+            <a href="/tags/因吹斯汀">#因吹斯汀</a>
+        </li>
+    
+        <li>
+            <a href="/tags/PHP">#PHP</a>
+        </li>
+    
+        <li>
+            <a href="/tags/Apple">#Apple</a>
+        </li>
+    
+        <li>
+            <a href="/tags/吐槽">#吐槽</a>
+        </li>
+    
+        <li>
+            <a href="/tags/bug">#bug</a>
+        </li>
+    
+        <li>
+            <a href="/tags/macOS">#macOS</a>
+        </li>
+    
+        <li>
+            <a href="/tags/工具">#工具</a>
+        </li>
+    
+        <li>
+            <a href="/tags/phone">#phone</a>
+        </li>
+    
+        <li>
+            <a href="/tags/Linux">#Linux</a>
+        </li>
+    
+</ul>
+
     </div>
 </div>
 
@@ -221,12 +245,12 @@
         <p class="footer-info mb-3 pt-2">
             Copyright &copy; 2019 <a href="https://tony.engineer">托尼吹雪</a>.
             <span style="display:inline-block;float:right;">
-                Powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/lucups/hexo-theme-muji">hexo-theme-muji</a>.
-            </span>
+                        Powered by <a href="https://hexo.io">Hexo</a>
+                        and <a href="https://github.com/lucups/hexo-theme-muji">hexo-theme-muji</a>.
+                    </span>
         </p>
     </footer>
 </div>
-
 
 <script src="/js/jquery-3.3.1.min.js"></script>
 <script src="/js/bootstrap.bundle.min.js"></script>
