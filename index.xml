@@ -698,11 +698,11 @@ valve（阀）是控制系统中的组件，而 threshold（阈值）这个则�
 &lt;p&gt;我说好是因为对程序员好，支持命令行操作并且是开源的，貌似还可以整合进 Markdown，不过我没找到相关的案例。&lt;/p&gt;
 &lt;h3 id=&#34;使用在线工具绘制-使用在线工具绘制使用在线工具绘制&#34;&gt;&lt;a href=&#34;#%E4%BD%BF%E7%94%A8%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E7%BB%98%E5%88%B6&#34; title=&#34;使用在线工具绘制&#34;&gt;&lt;/a&gt;使用在线工具绘制&lt;/h3&gt;
 &lt;p&gt;mermaid 提供了一个&lt;a href=&#34;https://knsv.github.io/mermaid/live_editor/&#34;&gt;在线编辑器&lt;/a&gt;，可以迅速在线作图，下面是官方的 demo&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
 &lt;p&gt;生成的效果是这样的:&lt;/p&gt;
 &lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/mermaid/01.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;再来一个甘特图的:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
 &lt;p&gt;生成的效果:&lt;/p&gt;
 &lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/mermaid/02.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;画甘特图可以参考官方的 &lt;a href=&#34;https://knsv.github.io/mermaid/gantt.html&#34;&gt;Gantt语法文档&lt;/a&gt;。&lt;/p&gt;
@@ -713,7 +713,8 @@ valve（阀）是控制系统中的组件，而 threshold（阈值）这个则�
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;完成之后，就可以使用命令行了。&lt;br&gt;
 先新建一个文本文件，我们这里就来展示一个甘特图，所以命名 &lt;code&gt;demo.gantt&lt;/code&gt;，当然，文件名随意起就好。&lt;code&gt;demo.gantt&lt;/code&gt; 文件内容就用上面的甘特图的例子，然后使用命令：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mermaid demo .gantt -w 1920 -s -p -o images
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;就可以在 &lt;code&gt;images&lt;/code&gt; 目录下生成两个文件，一个是 &lt;code&gt;PNG&lt;/code&gt; 图片，另一个是 &lt;code&gt;SVG&lt;/code&gt; 矢量图。&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;就可以在 &lt;code&gt;images&lt;/code&gt; 目录下生成两个文件，一个是 &lt;code&gt;PNG&lt;/code&gt; 图片，另一个是 &lt;code&gt;SVG&lt;/code&gt; 矢量图。&lt;/p&gt;
+&lt;p&gt;可以用 &lt;code&gt;mermaid -h&lt;/code&gt; 命令查看帮助，这里我贴上刚刚那条命令里用到的参数:&lt;/p&gt;</description>
     </item>
     <item>
       <title>为什么我要写 ResquePanel</title>
