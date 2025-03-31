@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Linux | 托尼吹雪</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://tony.engineer/tags/linux/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://tony.engineer/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tony.engineer/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tony.engineer/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tony.engineer/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tony.engineer/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://tony.engineer/tags/linux/index.xml">
+<link rel="alternate" hreflang="en" href="https://tony.engineer/tags/linux/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://tony.engineer/tags/linux/">
+  <meta property="og:site_name" content="托尼吹雪">
+  <meta property="og:title" content="Linux">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux">
+<meta name="twitter:description" content="">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://tony.engineer/" accesskey="h" title="托尼吹雪 (Alt + H)">托尼吹雪</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://tony.engineer/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Linux
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">我的Linux发行版/桌面环境选择之路
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>PS：这是一个年轻程序员折腾 Linux 桌面的流水账。。。
+2013年3月份 Unity 这个时间用的是Ubuntu 12.10，默认的Unity界面，稳定性一般，最不习惯的是，窗口操作按钮（最小化最大化关闭）在左上角，用惯了Windows的我很不习惯。然后就是，Unity的菜单很炫，但不幸的是，09年的ThinkPad R400表示反应有点迟钝，所以我决定换个不那么炫的桌面环境。
+2013年4~7月份 KDE 4 这几个月先是在原来Ubuntu 12.10装了KDE 4、BlackBox、Xfce、GNome 3，都折腾了一遍之后，决定使用 KDE 4。KDE 4的优点就是插件多，使用习惯类似Windows，然后就是默认的资源管理器功能强大，远超Unity。
+不选GNome3的原因是，感觉跟Unity有点像（个人觉得本质上区别不大，按下WinKey，机械硬盘就会表示压力很大），至于其他的几个，都感觉上个世纪来的。这时候Ubuntu13.04来了，于是直接下了个Kubuntu装了。
+2013年8月份 回归Unity 时间一长，就发现Kubuntu的不好了。主要还是Ubuntu的原罪——每次开机都会提示一个错误，永远修复不了。然后就是KDE本身的一些问题，比如对多屏支持不好（我费了好大力气解决的），然后就是发现KDE并不是那么漂亮、精致。
+8月份离开前公司，换系统，又换回了Ubuntu，换回了Unity。
+2013年9~11月份 Linux Mint（Cinnamon） 月份来到现在的公司，无意中发现Unity的一个重大Bug，就是鼠标按着拖来拖去时可能导致图形界面崩溃——即时升级到13.10，等Bug修复不知何年何月，再加上对Unity的种种不满，于是，决心放弃Ubuntu。
+又开始折腾，这时已经相对来讲比较熟悉Linux了，于是尝试使用Debian——终于还是被驱动击败了。。。Debian都搞不定，更别提Gentoo了，于是，还是回到Ubuntu系上。
+找来找去，无意中尝试了一下Linux Mint（其实我还在下载的时候，并没有报任何希望，因为感觉Linux Mint的官网略显。。。寒酸），使用的Cinnamon桌面环境，一切都是那么美好…..
+适合我多年的Windows下的习惯，又满足了我对Terminal的需求，至于稳定性，还需要时间去验证，至少目前来看，不输于Unity。最终选定Linux Mint（Cinnamon桌面环境）。
+2013年12月1日更新 前几日给笔记本换了块硬盘，装了Fedora19。感觉GNOME3还是不错的。不过我主要的目的是尝试一下yum。我觉得貌似 Fedora 比 Ubuntu 要快那么一点点。。。难道是我的错觉？
+2014年3月12日更新 折腾了一年的 Linux桌面，最终还是找不到一个稳定又好用且漂亮的，最终还是在新年到来之前回归了 Win7，还特别安装了 Cygwin 以及 Gow，让好用的 grep 等命令保留下来。Win7终归是“温妻”啊！
+2014年5月29日更新 3月底入手 ThinkPad X240 后，开始转到 Win8.1，这个过程还好，尤其是 X240 的触控板，在 Windows 下很好用，在 Linux 下很不好用，没办法，没有驱动的支持，再牛叉的硬件也是扯淡啊。
+2025年4月1日更新 自2015年5月开始正式切换到 macOS（彼时还叫 Mac OS X），至今已有整整 10 年。
+macOS 虽然在很多方面都比不过 Windows，但在 Web 开发方便，便利性远超 Windows。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-11-30 00:00:00 +0800 CST'>November 30, 2013</span></footer>
+  <a class="entry-link" aria-label="post link to 我的Linux发行版/桌面环境选择之路" href="https://tony.engineer/posts/2013/the-road-of-my-linux-dist/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://tony.engineer/">托尼吹雪</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

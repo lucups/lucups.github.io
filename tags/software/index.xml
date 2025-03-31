@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Software on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/software/</link>
+    <description>Recent content in Software on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>慎用国产软件</title>
+      <link>https://tony.engineer/posts/2022/do-not-use-chinese-softwares/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2022/do-not-use-chinese-softwares/</guid>
+      <description>&lt;p&gt;几年前，我使用锤子便签分享王某四的文章，结果生成的分享图片是空白的。我抓包后发现，在点击分享按钮时，会调用一个 HTTP 接口，将便签内容全部上传到服务器验证是否包含敏感词。了解了这些，事情就很简单了，我禁用了锤子便签的网络权限，果然分享图片功能正常了。&lt;/p&gt;
+&lt;p&gt;结合这次 WPS 事件，基本可以做出所有的国产软件都有此类功能的结论。&lt;/p&gt;
+&lt;p&gt;我的建议是，如非必要，不要使用任何国产软件。其次是做好信息备份。&lt;/p&gt;
+&lt;p&gt;有些人非常搞笑，说我不怕我没有隐私。嗯，没有隐私是不错，但你辛辛苦苦写了半天的文档因为非常搞笑的原因命中敏感词突然被和谐了，你找谁说理去？你拍的正常照片莫名其妙被云盘识别为色情图片和谐了，你找谁说理去？&lt;/p&gt;
+&lt;p&gt;答案是没地说理，因为人家认为自己做得是对的：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/do-not-use-chinese-softwares/01.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后引用一些网友的评论补充一下细节，真假自辩。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/do-not-use-chinese-softwares/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后的最后，说明一下，本号从来不传谣不信谣不造谣，所有消息来自官方媒体。如有质疑，可以看文末的参考资料。&lt;/p&gt;
+&lt;h5 id=&#34;参考资料&#34;&gt;参考资料&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://guancha.gmw.cn/2022-07/13/content_35881012.htm&#34;&gt;https://guancha.gmw.cn/2022-07/13/content_35881012.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://new.qq.com/omn/20220716/20220716A0391700.html&#34;&gt;https://new.qq.com/omn/20220716/20220716A0391700.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>MUJI 风格的 Hexo 主题 | 托尼吹雪</title>
+<meta name="keywords" content="muji, hexo">
+<meta name="description" content="
+由于个人主页荒废太久，心生愧疚，感觉对不起这么好的域名，于是上周末花了一些时间给主页（兼博客）重新做了一个主题。
+原本是计划从头开始，做一个代码极致简约的 hexo 主题，无奈前端技术太渣，时间又紧，不得不妥协，找了一个 Bootstrap 的 CSS，然后研究了一下 MUJI 官网的颜色，最终做出了一个半成品。
+GitHub 仓库地址: https://github.com/lucups/hexo-theme-muji
+因为时间紧还没有完善，目前的效果一般般，可以看看我的个人主页。
+
+大家可以试用一把，提提意见。
+分割线，下面开始扯淡
+
+顺便贴一下我的个人主页变迁史，讲一讲这个主题的由来。
+2016年以前，我的个人主页是这样的：
+
+当时（大概是2014年）抄袭了一位学长的个人主页搞的，甚至还复制了很多代码。
+PS：刚偷偷看了看，学长的个人主页还是那个样子没有变化，嗯，应该有10年了。
+2016年那一年正是移动互联网最巅峰的一年，那一年我也换了个风格，用当时的流行语说就是：高端大气上档次，低调奢华有内涵。
+
+其实这个主页是改自于 Boostrap 官方的一个模板
+直到2019年年初，受各种因素的影响，决定选择极简风格，于是复制了 MUJI 官网的两个颜色，搞了一个新主页，如图：
+
+但总感觉差了点意思。
+于是最终决定自己写一款主题。
+虽然名字上完全照抄了 MUJI，但实际上跟 MUJI 的网站风格还是不太一样的，毕竟 MUJI 那么多子站，风格也不完全一样，这个以后再详细说。
+最后想说的是，放心吧，我肯定会持续更新的。">
+<meta name="author" content="">
+<link rel="canonical" href="https://tony.engineer/posts/2019/hexo-theme-muji/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://tony.engineer/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tony.engineer/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tony.engineer/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tony.engineer/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tony.engineer/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://tony.engineer/posts/2019/hexo-theme-muji/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://tony.engineer/posts/2019/hexo-theme-muji/">
+  <meta property="og:site_name" content="托尼吹雪">
+  <meta property="og:title" content="MUJI 风格的 Hexo 主题">
+  <meta property="og:description" content="
+由于个人主页荒废太久，心生愧疚，感觉对不起这么好的域名，于是上周末花了一些时间给主页（兼博客）重新做了一个主题。
+原本是计划从头开始，做一个代码极致简约的 hexo 主题，无奈前端技术太渣，时间又紧，不得不妥协，找了一个 Bootstrap 的 CSS，然后研究了一下 MUJI 官网的颜色，最终做出了一个半成品。
+GitHub 仓库地址: https://github.com/lucups/hexo-theme-muji
+因为时间紧还没有完善，目前的效果一般般，可以看看我的个人主页。
+大家可以试用一把，提提意见。
+分割线，下面开始扯淡
+顺便贴一下我的个人主页变迁史，讲一讲这个主题的由来。
+2016年以前，我的个人主页是这样的：
+当时（大概是2014年）抄袭了一位学长的个人主页搞的，甚至还复制了很多代码。
+PS：刚偷偷看了看，学长的个人主页还是那个样子没有变化，嗯，应该有10年了。
+2016年那一年正是移动互联网最巅峰的一年，那一年我也换了个风格，用当时的流行语说就是：高端大气上档次，低调奢华有内涵。
+其实这个主页是改自于 Boostrap 官方的一个模板
+直到2019年年初，受各种因素的影响，决定选择极简风格，于是复制了 MUJI 官网的两个颜色，搞了一个新主页，如图：
+但总感觉差了点意思。
+于是最终决定自己写一款主题。
+虽然名字上完全照抄了 MUJI，但实际上跟 MUJI 的网站风格还是不太一样的，毕竟 MUJI 那么多子站，风格也不完全一样，这个以后再详细说。
+最后想说的是，放心吧，我肯定会持续更新的。">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-10-28T00:00:00+08:00">
+    <meta property="article:modified_time" content="2019-10-28T00:00:00+08:00">
+    <meta property="article:tag" content="Muji">
+    <meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MUJI 风格的 Hexo 主题">
+<meta name="twitter:description" content="
+由于个人主页荒废太久，心生愧疚，感觉对不起这么好的域名，于是上周末花了一些时间给主页（兼博客）重新做了一个主题。
+原本是计划从头开始，做一个代码极致简约的 hexo 主题，无奈前端技术太渣，时间又紧，不得不妥协，找了一个 Bootstrap 的 CSS，然后研究了一下 MUJI 官网的颜色，最终做出了一个半成品。
+GitHub 仓库地址: https://github.com/lucups/hexo-theme-muji
+因为时间紧还没有完善，目前的效果一般般，可以看看我的个人主页。
+
+大家可以试用一把，提提意见。
+分割线，下面开始扯淡
+
+顺便贴一下我的个人主页变迁史，讲一讲这个主题的由来。
+2016年以前，我的个人主页是这样的：
+
+当时（大概是2014年）抄袭了一位学长的个人主页搞的，甚至还复制了很多代码。
+PS：刚偷偷看了看，学长的个人主页还是那个样子没有变化，嗯，应该有10年了。
+2016年那一年正是移动互联网最巅峰的一年，那一年我也换了个风格，用当时的流行语说就是：高端大气上档次，低调奢华有内涵。
+
+其实这个主页是改自于 Boostrap 官方的一个模板
+直到2019年年初，受各种因素的影响，决定选择极简风格，于是复制了 MUJI 官网的两个颜色，搞了一个新主页，如图：
+
+但总感觉差了点意思。
+于是最终决定自己写一款主题。
+虽然名字上完全照抄了 MUJI，但实际上跟 MUJI 的网站风格还是不太一样的，毕竟 MUJI 那么多子站，风格也不完全一样，这个以后再详细说。
+最后想说的是，放心吧，我肯定会持续更新的。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://tony.engineer/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "MUJI 风格的 Hexo 主题",
+      "item": "https://tony.engineer/posts/2019/hexo-theme-muji/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "MUJI 风格的 Hexo 主题",
+  "name": "MUJI 风格的 Hexo 主题",
+  "description": "\n由于个人主页荒废太久，心生愧疚，感觉对不起这么好的域名，于是上周末花了一些时间给主页（兼博客）重新做了一个主题。\n原本是计划从头开始，做一个代码极致简约的 hexo 主题，无奈前端技术太渣，时间又紧，不得不妥协，找了一个 Bootstrap 的 CSS，然后研究了一下 MUJI 官网的颜色，最终做出了一个半成品。\nGitHub 仓库地址: https://github.com/lucups/hexo-theme-muji\n因为时间紧还没有完善，目前的效果一般般，可以看看我的个人主页。\n大家可以试用一把，提提意见。\n分割线，下面开始扯淡\n顺便贴一下我的个人主页变迁史，讲一讲这个主题的由来。\n2016年以前，我的个人主页是这样的：\n当时（大概是2014年）抄袭了一位学长的个人主页搞的，甚至还复制了很多代码。\nPS：刚偷偷看了看，学长的个人主页还是那个样子没有变化，嗯，应该有10年了。\n2016年那一年正是移动互联网最巅峰的一年，那一年我也换了个风格，用当时的流行语说就是：高端大气上档次，低调奢华有内涵。\n其实这个主页是改自于 Boostrap 官方的一个模板\n直到2019年年初，受各种因素的影响，决定选择极简风格，于是复制了 MUJI 官网的两个颜色，搞了一个新主页，如图：\n但总感觉差了点意思。\n于是最终决定自己写一款主题。\n虽然名字上完全照抄了 MUJI，但实际上跟 MUJI 的网站风格还是不太一样的，毕竟 MUJI 那么多子站，风格也不完全一样，这个以后再详细说。\n最后想说的是，放心吧，我肯定会持续更新的。\n",
+  "keywords": [
+    "muji", "hexo"
+  ],
+  "articleBody": "\n由于个人主页荒废太久，心生愧疚，感觉对不起这么好的域名，于是上周末花了一些时间给主页（兼博客）重新做了一个主题。\n原本是计划从头开始，做一个代码极致简约的 hexo 主题，无奈前端技术太渣，时间又紧，不得不妥协，找了一个 Bootstrap 的 CSS，然后研究了一下 MUJI 官网的颜色，最终做出了一个半成品。\nGitHub 仓库地址: https://github.com/lucups/hexo-theme-muji\n因为时间紧还没有完善，目前的效果一般般，可以看看我的个人主页。\n大家可以试用一把，提提意见。\n分割线，下面开始扯淡\n顺便贴一下我的个人主页变迁史，讲一讲这个主题的由来。\n2016年以前，我的个人主页是这样的：\n当时（大概是2014年）抄袭了一位学长的个人主页搞的，甚至还复制了很多代码。\nPS：刚偷偷看了看，学长的个人主页还是那个样子没有变化，嗯，应该有10年了。\n2016年那一年正是移动互联网最巅峰的一年，那一年我也换了个风格，用当时的流行语说就是：高端大气上档次，低调奢华有内涵。\n其实这个主页是改自于 Boostrap 官方的一个模板\n直到2019年年初，受各种因素的影响，决定选择极简风格，于是复制了 MUJI 官网的两个颜色，搞了一个新主页，如图：\n但总感觉差了点意思。\n于是最终决定自己写一款主题。\n虽然名字上完全照抄了 MUJI，但实际上跟 MUJI 的网站风格还是不太一样的，毕竟 MUJI 那么多子站，风格也不完全一样，这个以后再详细说。\n最后想说的是，放心吧，我肯定会持续更新的。\n",
+  "wordCount" : "35",
+  "inLanguage": "en",
+  "datePublished": "2019-10-28T00:00:00+08:00",
+  "dateModified": "2019-10-28T00:00:00+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tony.engineer/posts/2019/hexo-theme-muji/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "托尼吹雪",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tony.engineer/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://tony.engineer/" accesskey="h" title="托尼吹雪 (Alt + H)">托尼吹雪</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://tony.engineer/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      MUJI 风格的 Hexo 主题
+    </h1>
+    <div class="post-meta"><span title='2019-10-28 00:00:00 +0800 CST'>October 28, 2019</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><img loading="lazy" src="/images/hexo-theme-muji/01.jpeg"></p>
+<p>由于个人主页荒废太久，心生愧疚，感觉对不起这么好的域名，于是上周末花了一些时间给主页（兼博客）重新做了一个主题。</p>
+<p>原本是计划从头开始，做一个代码极致简约的 hexo 主题，无奈前端技术太渣，时间又紧，不得不妥协，找了一个 Bootstrap 的 CSS，然后研究了一下 MUJI 官网的颜色，最终做出了一个半成品。</p>
+<p>GitHub 仓库地址: <a href="https://github.com/lucups/hexo-theme-muji">https://github.com/lucups/hexo-theme-muji</a></p>
+<p>因为时间紧还没有完善，目前的效果一般般，可以看看我的个人主页。</p>
+<p><img loading="lazy" src="/images/hexo-theme-muji/02.jpeg"></p>
+<p>大家可以试用一把，提提意见。</p>
+<p>分割线，下面开始扯淡</p>
+<hr>
+<p>顺便贴一下我的个人主页变迁史，讲一讲这个主题的由来。</p>
+<p>2016年以前，我的个人主页是这样的：</p>
+<p><img loading="lazy" src="/images/hexo-theme-muji/03.jpeg"></p>
+<p>当时（大概是2014年）抄袭了一位学长的个人主页搞的，甚至还复制了很多代码。</p>
+<p>PS：刚偷偷看了看，学长的个人主页还是那个样子没有变化，嗯，应该有10年了。</p>
+<p>2016年那一年正是移动互联网最巅峰的一年，那一年我也换了个风格，用当时的流行语说就是：高端大气上档次，低调奢华有内涵。</p>
+<p><img loading="lazy" src="/images/hexo-theme-muji/04.jpeg"></p>
+<p>其实这个主页是改自于 Boostrap 官方的一个模板</p>
+<p>直到2019年年初，受各种因素的影响，决定选择极简风格，于是复制了 MUJI 官网的两个颜色，搞了一个新主页，如图：</p>
+<p><img loading="lazy" src="/images/hexo-theme-muji/05.jpeg"></p>
+<p>但总感觉差了点意思。</p>
+<p>于是最终决定自己写一款主题。</p>
+<p>虽然名字上完全照抄了 MUJI，但实际上跟 MUJI 的网站风格还是不太一样的，毕竟 MUJI 那么多子站，风格也不完全一样，这个以后再详细说。</p>
+<p>最后想说的是，放心吧，我肯定会持续更新的。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://tony.engineer/tags/muji/">Muji</a></li>
+      <li><a href="https://tony.engineer/tags/hexo/">Hexo</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://tony.engineer/">托尼吹雪</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

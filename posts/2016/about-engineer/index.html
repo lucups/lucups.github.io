@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>论软件工程师的职业素养 | 托尼吹雪</title>
+<meta name="keywords" content="engineer, php">
+<meta name="description" content="在过去，工程师是一个极难获得的称谓，通常需要获取相应的学位，有多年的工作经验，甚至还要通过官方的考评，方能取得。
+那时的工程师，往往要承担着社会责任。比如，作为桥梁工程师，你设计了一座大桥，就得为大桥的质量负责，
+如果桥垮了，你是要跳河的。
+
+然而，自互联网兴盛以来，出现了一大波“软件工程师”，也就是程序员，他们轻易获取了“工程师”的头衔，
+其中有些人毫无职业素养，毫无责任担当。当然，我并非想要贬低程序员，因为本人也是一个程序员，
+只是最近掉进坑了，满腹牢骚，愤懑不平，怨气冲天，才不得不作此文，吐槽以泄愤。
+
+在我看来，作为一名软件工程师，最基本职业素养就是专业技能，也就是编码和程序设计，其他的比如团队精神等等等这里就不多谈了，
+因为今天只想吐槽这么多。
+首先来说说编码。作为一名合格的软件工程师，必须要明白代码的可维护性是多么重要，用来衡量可维护性的，首先是代码的可读性。
+有些人把代码写得别人看不懂，就飘飘然以为自己多牛逼多厉害。比如判断一个变量是否为 0，0 偏偏要写成 intval(chr(48))，等等等诸如此类不胜枚举，罄竹难书。
+殊不知这种行为愚蠢至极，过两年把他拉回来看自己的这些代码，他一定会抽自己嘴巴子，因为他自己也看不懂自己写了什么。
+所以请记住：你的代码别人看不懂，只有外行人才会觉得你牛逼，同行都会说你傻逼。在编码的时候，一定要想一想，这么写别人能理解我的意图吗？代码要写得傻一点，这一点脚本语言工程师尤其要注意，不要滥用魔法特性。
+再来扯扯程序设计。其实这一点跟代码的可读性有共通之处，程序设计的目的首先是满足业务需求，其次就是在满足业务需求的前提下保证代码的可维护性，也就是保证代码描述的业务逻辑容易被人理解。
+偏偏有些人，自以为自己的设计高端大气上档次，一个缓存 key，存了 9999 条数据，我只想问，有一条数据更新了怎么办？
+恭喜你，答错了。人家的做法不是把这 9999 条数据查出来重新 set（虽然这已经足够奇葩），而是把全表的数据查出来每 9999 条分批 set 一遍（奇葩中的奇葩）。除了数据更新，有新数据插入缓存也要全部更新一遍。
+哪天内存不够加载全表的数据了怎么办？没事啊，人家已经跑路了！人家跑路了项目怎么办？没事啊，有接盘侠啊！
+没错，我就是这个接盘侠。昨天我花了一个晚上，把这波缓存改成了正常人的设计。
+2016年的最后两天，我接了一个盘，不过，我会接好这个盘。
+我不入地狱，谁入地狱？">
+<meta name="author" content="">
+<link rel="canonical" href="https://tony.engineer/posts/2016/about-engineer/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://tony.engineer/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tony.engineer/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tony.engineer/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tony.engineer/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tony.engineer/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://tony.engineer/posts/2016/about-engineer/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://tony.engineer/posts/2016/about-engineer/">
+  <meta property="og:site_name" content="托尼吹雪">
+  <meta property="og:title" content="论软件工程师的职业素养">
+  <meta property="og:description" content="在过去，工程师是一个极难获得的称谓，通常需要获取相应的学位，有多年的工作经验，甚至还要通过官方的考评，方能取得。
+那时的工程师，往往要承担着社会责任。比如，作为桥梁工程师，你设计了一座大桥，就得为大桥的质量负责，
+如果桥垮了，你是要跳河的。
+然而，自互联网兴盛以来，出现了一大波“软件工程师”，也就是程序员，他们轻易获取了“工程师”的头衔，
+其中有些人毫无职业素养，毫无责任担当。当然，我并非想要贬低程序员，因为本人也是一个程序员，
+只是最近掉进坑了，满腹牢骚，愤懑不平，怨气冲天，才不得不作此文，吐槽以泄愤。
+在我看来，作为一名软件工程师，最基本职业素养就是专业技能，也就是编码和程序设计，其他的比如团队精神等等等这里就不多谈了，
+因为今天只想吐槽这么多。
+首先来说说编码。作为一名合格的软件工程师，必须要明白代码的可维护性是多么重要，用来衡量可维护性的，首先是代码的可读性。
+有些人把代码写得别人看不懂，就飘飘然以为自己多牛逼多厉害。比如判断一个变量是否为 0，0 偏偏要写成 intval(chr(48))，等等等诸如此类不胜枚举，罄竹难书。
+殊不知这种行为愚蠢至极，过两年把他拉回来看自己的这些代码，他一定会抽自己嘴巴子，因为他自己也看不懂自己写了什么。
+所以请记住：你的代码别人看不懂，只有外行人才会觉得你牛逼，同行都会说你傻逼。在编码的时候，一定要想一想，这么写别人能理解我的意图吗？代码要写得傻一点，这一点脚本语言工程师尤其要注意，不要滥用魔法特性。
+再来扯扯程序设计。其实这一点跟代码的可读性有共通之处，程序设计的目的首先是满足业务需求，其次就是在满足业务需求的前提下保证代码的可维护性，也就是保证代码描述的业务逻辑容易被人理解。
+偏偏有些人，自以为自己的设计高端大气上档次，一个缓存 key，存了 9999 条数据，我只想问，有一条数据更新了怎么办？
+恭喜你，答错了。人家的做法不是把这 9999 条数据查出来重新 set（虽然这已经足够奇葩），而是把全表的数据查出来每 9999 条分批 set 一遍（奇葩中的奇葩）。除了数据更新，有新数据插入缓存也要全部更新一遍。
+哪天内存不够加载全表的数据了怎么办？没事啊，人家已经跑路了！人家跑路了项目怎么办？没事啊，有接盘侠啊！
+没错，我就是这个接盘侠。昨天我花了一个晚上，把这波缓存改成了正常人的设计。
+2016年的最后两天，我接了一个盘，不过，我会接好这个盘。
+我不入地狱，谁入地狱？">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-12-30T00:00:00+08:00">
+    <meta property="article:modified_time" content="2016-12-30T00:00:00+08:00">
+    <meta property="article:tag" content="Engineer">
+    <meta property="article:tag" content="Php">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="论软件工程师的职业素养">
+<meta name="twitter:description" content="在过去，工程师是一个极难获得的称谓，通常需要获取相应的学位，有多年的工作经验，甚至还要通过官方的考评，方能取得。
+那时的工程师，往往要承担着社会责任。比如，作为桥梁工程师，你设计了一座大桥，就得为大桥的质量负责，
+如果桥垮了，你是要跳河的。
+
+然而，自互联网兴盛以来，出现了一大波“软件工程师”，也就是程序员，他们轻易获取了“工程师”的头衔，
+其中有些人毫无职业素养，毫无责任担当。当然，我并非想要贬低程序员，因为本人也是一个程序员，
+只是最近掉进坑了，满腹牢骚，愤懑不平，怨气冲天，才不得不作此文，吐槽以泄愤。
+
+在我看来，作为一名软件工程师，最基本职业素养就是专业技能，也就是编码和程序设计，其他的比如团队精神等等等这里就不多谈了，
+因为今天只想吐槽这么多。
+首先来说说编码。作为一名合格的软件工程师，必须要明白代码的可维护性是多么重要，用来衡量可维护性的，首先是代码的可读性。
+有些人把代码写得别人看不懂，就飘飘然以为自己多牛逼多厉害。比如判断一个变量是否为 0，0 偏偏要写成 intval(chr(48))，等等等诸如此类不胜枚举，罄竹难书。
+殊不知这种行为愚蠢至极，过两年把他拉回来看自己的这些代码，他一定会抽自己嘴巴子，因为他自己也看不懂自己写了什么。
+所以请记住：你的代码别人看不懂，只有外行人才会觉得你牛逼，同行都会说你傻逼。在编码的时候，一定要想一想，这么写别人能理解我的意图吗？代码要写得傻一点，这一点脚本语言工程师尤其要注意，不要滥用魔法特性。
+再来扯扯程序设计。其实这一点跟代码的可读性有共通之处，程序设计的目的首先是满足业务需求，其次就是在满足业务需求的前提下保证代码的可维护性，也就是保证代码描述的业务逻辑容易被人理解。
+偏偏有些人，自以为自己的设计高端大气上档次，一个缓存 key，存了 9999 条数据，我只想问，有一条数据更新了怎么办？
+恭喜你，答错了。人家的做法不是把这 9999 条数据查出来重新 set（虽然这已经足够奇葩），而是把全表的数据查出来每 9999 条分批 set 一遍（奇葩中的奇葩）。除了数据更新，有新数据插入缓存也要全部更新一遍。
+哪天内存不够加载全表的数据了怎么办？没事啊，人家已经跑路了！人家跑路了项目怎么办？没事啊，有接盘侠啊！
+没错，我就是这个接盘侠。昨天我花了一个晚上，把这波缓存改成了正常人的设计。
+2016年的最后两天，我接了一个盘，不过，我会接好这个盘。
+我不入地狱，谁入地狱？">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://tony.engineer/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "论软件工程师的职业素养",
+      "item": "https://tony.engineer/posts/2016/about-engineer/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "论软件工程师的职业素养",
+  "name": "论软件工程师的职业素养",
+  "description": "在过去，工程师是一个极难获得的称谓，通常需要获取相应的学位，有多年的工作经验，甚至还要通过官方的考评，方能取得。\n那时的工程师，往往要承担着社会责任。比如，作为桥梁工程师，你设计了一座大桥，就得为大桥的质量负责，\n如果桥垮了，你是要跳河的。\n然而，自互联网兴盛以来，出现了一大波“软件工程师”，也就是程序员，他们轻易获取了“工程师”的头衔，\n其中有些人毫无职业素养，毫无责任担当。当然，我并非想要贬低程序员，因为本人也是一个程序员，\n只是最近掉进坑了，满腹牢骚，愤懑不平，怨气冲天，才不得不作此文，吐槽以泄愤。\n在我看来，作为一名软件工程师，最基本职业素养就是专业技能，也就是编码和程序设计，其他的比如团队精神等等等这里就不多谈了，\n因为今天只想吐槽这么多。\n首先来说说编码。作为一名合格的软件工程师，必须要明白代码的可维护性是多么重要，用来衡量可维护性的，首先是代码的可读性。\n有些人把代码写得别人看不懂，就飘飘然以为自己多牛逼多厉害。比如判断一个变量是否为 0，0 偏偏要写成 intval(chr(48))，等等等诸如此类不胜枚举，罄竹难书。\n殊不知这种行为愚蠢至极，过两年把他拉回来看自己的这些代码，他一定会抽自己嘴巴子，因为他自己也看不懂自己写了什么。\n所以请记住：你的代码别人看不懂，只有外行人才会觉得你牛逼，同行都会说你傻逼。在编码的时候，一定要想一想，这么写别人能理解我的意图吗？代码要写得傻一点，这一点脚本语言工程师尤其要注意，不要滥用魔法特性。\n再来扯扯程序设计。其实这一点跟代码的可读性有共通之处，程序设计的目的首先是满足业务需求，其次就是在满足业务需求的前提下保证代码的可维护性，也就是保证代码描述的业务逻辑容易被人理解。\n偏偏有些人，自以为自己的设计高端大气上档次，一个缓存 key，存了 9999 条数据，我只想问，有一条数据更新了怎么办？\n恭喜你，答错了。人家的做法不是把这 9999 条数据查出来重新 set（虽然这已经足够奇葩），而是把全表的数据查出来每 9999 条分批 set 一遍（奇葩中的奇葩）。除了数据更新，有新数据插入缓存也要全部更新一遍。\n哪天内存不够加载全表的数据了怎么办？没事啊，人家已经跑路了！人家跑路了项目怎么办？没事啊，有接盘侠啊！\n没错，我就是这个接盘侠。昨天我花了一个晚上，把这波缓存改成了正常人的设计。\n2016年的最后两天，我接了一个盘，不过，我会接好这个盘。\n我不入地狱，谁入地狱？\n",
+  "keywords": [
+    "engineer", "php"
+  ],
+  "articleBody": "在过去，工程师是一个极难获得的称谓，通常需要获取相应的学位，有多年的工作经验，甚至还要通过官方的考评，方能取得。\n那时的工程师，往往要承担着社会责任。比如，作为桥梁工程师，你设计了一座大桥，就得为大桥的质量负责，\n如果桥垮了，你是要跳河的。\n然而，自互联网兴盛以来，出现了一大波“软件工程师”，也就是程序员，他们轻易获取了“工程师”的头衔，\n其中有些人毫无职业素养，毫无责任担当。当然，我并非想要贬低程序员，因为本人也是一个程序员，\n只是最近掉进坑了，满腹牢骚，愤懑不平，怨气冲天，才不得不作此文，吐槽以泄愤。\n在我看来，作为一名软件工程师，最基本职业素养就是专业技能，也就是编码和程序设计，其他的比如团队精神等等等这里就不多谈了，\n因为今天只想吐槽这么多。\n首先来说说编码。作为一名合格的软件工程师，必须要明白代码的可维护性是多么重要，用来衡量可维护性的，首先是代码的可读性。\n有些人把代码写得别人看不懂，就飘飘然以为自己多牛逼多厉害。比如判断一个变量是否为 0，0 偏偏要写成 intval(chr(48))，等等等诸如此类不胜枚举，罄竹难书。\n殊不知这种行为愚蠢至极，过两年把他拉回来看自己的这些代码，他一定会抽自己嘴巴子，因为他自己也看不懂自己写了什么。\n所以请记住：你的代码别人看不懂，只有外行人才会觉得你牛逼，同行都会说你傻逼。在编码的时候，一定要想一想，这么写别人能理解我的意图吗？代码要写得傻一点，这一点脚本语言工程师尤其要注意，不要滥用魔法特性。\n再来扯扯程序设计。其实这一点跟代码的可读性有共通之处，程序设计的目的首先是满足业务需求，其次就是在满足业务需求的前提下保证代码的可维护性，也就是保证代码描述的业务逻辑容易被人理解。\n偏偏有些人，自以为自己的设计高端大气上档次，一个缓存 key，存了 9999 条数据，我只想问，有一条数据更新了怎么办？\n恭喜你，答错了。人家的做法不是把这 9999 条数据查出来重新 set（虽然这已经足够奇葩），而是把全表的数据查出来每 9999 条分批 set 一遍（奇葩中的奇葩）。除了数据更新，有新数据插入缓存也要全部更新一遍。\n哪天内存不够加载全表的数据了怎么办？没事啊，人家已经跑路了！人家跑路了项目怎么办？没事啊，有接盘侠啊！\n没错，我就是这个接盘侠。昨天我花了一个晚上，把这波缓存改成了正常人的设计。\n2016年的最后两天，我接了一个盘，不过，我会接好这个盘。\n我不入地狱，谁入地狱？\n",
+  "wordCount" : "32",
+  "inLanguage": "en",
+  "datePublished": "2016-12-30T00:00:00+08:00",
+  "dateModified": "2016-12-30T00:00:00+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tony.engineer/posts/2016/about-engineer/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "托尼吹雪",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tony.engineer/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://tony.engineer/" accesskey="h" title="托尼吹雪 (Alt + H)">托尼吹雪</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://tony.engineer/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      论软件工程师的职业素养
+    </h1>
+    <div class="post-meta"><span title='2016-12-30 00:00:00 +0800 CST'>December 30, 2016</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>在过去，工程师是一个极难获得的称谓，通常需要获取相应的学位，有多年的工作经验，甚至还要通过官方的考评，方能取得。</p>
+<p>那时的工程师，往往要承担着社会责任。比如，作为桥梁工程师，你设计了一座大桥，就得为大桥的质量负责，</p>
+<p>如果桥垮了，你是要跳河的。</p>
+<p><img loading="lazy" src="/images/about-engineer/01.jpg"></p>
+<p>然而，自互联网兴盛以来，出现了一大波“软件工程师”，也就是程序员，他们轻易获取了“工程师”的头衔，</p>
+<p>其中有些人毫无职业素养，毫无责任担当。当然，我并非想要贬低程序员，因为本人也是一个程序员，</p>
+<p>只是最近掉进坑了，满腹牢骚，愤懑不平，怨气冲天，才不得不作此文，吐槽以泄愤。</p>
+<p><img loading="lazy" src="/images/about-engineer/02.jpg"></p>
+<p>在我看来，作为一名软件工程师，最基本职业素养就是专业技能，也就是编码和程序设计，其他的比如团队精神等等等这里就不多谈了，</p>
+<p>因为今天只想吐槽这么多。</p>
+<p>首先来说说编码。作为一名合格的软件工程师，必须要明白代码的可维护性是多么重要，用来衡量可维护性的，首先是代码的可读性。</p>
+<p>有些人把代码写得别人看不懂，就飘飘然以为自己多牛逼多厉害。比如判断一个变量是否为 0，0 偏偏要写成 <code>intval(chr(48))</code>，等等等诸如此类不胜枚举，罄竹难书。</p>
+<p>殊不知这种行为愚蠢至极，过两年把他拉回来看自己的这些代码，他一定会抽自己嘴巴子，因为他自己也看不懂自己写了什么。</p>
+<p>所以请记住：你的代码别人看不懂，只有外行人才会觉得你牛逼，同行都会说你傻逼。在编码的时候，一定要想一想，这么写别人能理解我的意图吗？代码要写得傻一点，这一点脚本语言工程师尤其要注意，不要滥用魔法特性。</p>
+<p>再来扯扯程序设计。其实这一点跟代码的可读性有共通之处，程序设计的目的首先是满足业务需求，其次就是在满足业务需求的前提下保证代码的可维护性，也就是保证代码描述的业务逻辑容易被人理解。</p>
+<p>偏偏有些人，自以为自己的设计高端大气上档次，一个缓存 key，存了 9999 条数据，我只想问，有一条数据更新了怎么办？</p>
+<p>恭喜你，答错了。人家的做法不是把这 9999 条数据查出来重新 set（虽然这已经足够奇葩），而是把全表的数据查出来每 9999 条分批 set 一遍（奇葩中的奇葩）。除了数据更新，有新数据插入缓存也要全部更新一遍。</p>
+<p>哪天内存不够加载全表的数据了怎么办？没事啊，人家已经跑路了！人家跑路了项目怎么办？没事啊，有接盘侠啊！</p>
+<p>没错，我就是这个接盘侠。昨天我花了一个晚上，把这波缓存改成了正常人的设计。</p>
+<p>2016年的最后两天，我接了一个盘，不过，我会接好这个盘。</p>
+<p>我不入地狱，谁入地狱？</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://tony.engineer/tags/engineer/">Engineer</a></li>
+      <li><a href="https://tony.engineer/tags/php/">Php</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://tony.engineer/">托尼吹雪</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

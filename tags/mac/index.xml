@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mac on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/mac/</link>
+    <description>Recent content in Mac on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 04 Jun 2020 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>对 MacBook Pro TouchBar 的评价</title>
+      <link>https://tony.engineer/posts/2020/macos-touchbar/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2020/macos-touchbar/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/macos-touchbar.jpg&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;非常容易误触（且无反馈），尤其是躺在床上的时候；&lt;/li&gt;
+&lt;li&gt;耗电，且占用了机器内部的空间，让电池变小（可以参考之前无Bar的版本）；&lt;/li&gt;
+&lt;li&gt;非常容易发烫，加重了散热问题（我怀疑误触跟发烫有一些关系）；&lt;/li&gt;
+&lt;li&gt;增加消费者的成本（对 Apple 来说可能是个优点，可以卖更多的钱）；&lt;/li&gt;
+&lt;li&gt;最关键的是，我用了小半年，还是觉得这东西没什么用，反而让我在常用的调节音量、屏幕亮度功能上多浪费一些时间。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>macOS 升级到 Mojave 的经历</title>
+      <link>https://tony.engineer/posts/2019/macos-mojave/</link>
+      <pubDate>Thu, 21 Feb 2019 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2019/macos-mojave/</guid>
+      <description>&lt;p&gt;去年国庆长假后，有个同事问我有没有升级 Mojave，我说没有，立马打开 App Store 一看，瞬间就不淡定了…&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/macos-mojave/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对于我来说，比较有吸引力的几个功能如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dark Mode/黑暗主题&lt;/li&gt;
+&lt;li&gt;Finder 增强&lt;/li&gt;
+&lt;li&gt;截图功能加强&lt;/li&gt;
+&lt;li&gt;动态桌面&lt;/li&gt;
+&lt;li&gt;桌面堆栈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;尤其是黑暗主题，终于可以和我灰色的 MBP 契合了。&lt;/p&gt;
+&lt;p&gt;下班后，手痒难耐，明知 macOS 升级的故障率很高（不过之前我自己没遇到过大问题），终究耐不住寂寞，还是升级了。&lt;/p&gt;
+&lt;p&gt;一切顺利，大概将近一个小时，终于更新完毕，完美，选择了深色主题，UI 颜值提升了许多。&lt;/p&gt;
+&lt;p&gt;用了一会，终于还是发现一个很严重的问题：“隐私”-“辅助功能”-“允许下面的应用控制您的电脑” 里的所有应用都不见了，手动添加也添加不进去！这么严重的 Bug 竟然都没发现…&lt;/p&gt;
+&lt;p&gt;于是我的窗口控制应用 Moom 妥妥地罢工了……&lt;/p&gt;
+&lt;p&gt;所有需要这个权限的应用都跪了……&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/macos-mojave/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;网上搜了一圈，很多人都出现了这个问题，在知乎上 “如何评价 macOS Mojave 10.14？” 一堆人遇到的 bug 跟我一样。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/macos-mojave/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;虽然系统本身功能不受影响，也不影响大多数第三方软件的操作，但严重影响了我的工作心情。&lt;/p&gt;
+&lt;p&gt;折腾了半个月后，实在是受不了了，最终备份数据格盘重新安装了 Mojave。&lt;/p&gt;
+&lt;p&gt;重新安装后，功能上一切良好，主要遇到的问题是黑暗主题下的不兼容。&lt;/p&gt;
+&lt;p&gt;比如 MySQLWorkbench（8.0.13 及之前的版本，从 8.0.14 版本开始已修复）等软件在黑暗主题下有 bug。&lt;/p&gt;
+&lt;p&gt;截止目前（2019年2月20日），我所使用的软件基本上都已经支持了新的暗黑主题。&lt;/p&gt;
+&lt;h3 id=&#34;总结-总结总结&#34;&gt;&lt;a href=&#34;#%E6%80%BB%E7%BB%93%EF%BC%9A&#34; title=&#34;总结：&#34;&gt;&lt;/a&gt;总结：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;macOS 升级需谨慎，做好数据备份工作；&lt;/li&gt;
+&lt;li&gt;目前已经很稳了，可以升级了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;参考资料-参考资料参考资料&#34;&gt;&lt;a href=&#34;#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99%EF%BC%9A&#34; title=&#34;参考资料：&#34;&gt;&lt;/a&gt;参考资料：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/279832723/answer/499132061&#34;&gt;如何评价 macOS Mojave 10.14？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.mysql.com/doc/relnotes/workbench/en/news-8-0-14.html&#34;&gt;Changes in MySQL Workbench 8.0.14 (2019-01-21, General Availability)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://macflow.net/p/635.html&#34;&gt;MacOS Mojave 新功能解析：从未如此强大的Finder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

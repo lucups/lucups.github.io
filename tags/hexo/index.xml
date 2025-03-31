@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hexo on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/hexo/</link>
+    <description>Recent content in Hexo on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 28 Oct 2019 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MUJI 风格的 Hexo 主题</title>
+      <link>https://tony.engineer/posts/2019/hexo-theme-muji/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2019/hexo-theme-muji/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/hexo-theme-muji/01.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;由于个人主页荒废太久，心生愧疚，感觉对不起这么好的域名，于是上周末花了一些时间给主页（兼博客）重新做了一个主题。&lt;/p&gt;
+&lt;p&gt;原本是计划从头开始，做一个代码极致简约的 hexo 主题，无奈前端技术太渣，时间又紧，不得不妥协，找了一个 Bootstrap 的 CSS，然后研究了一下 MUJI 官网的颜色，最终做出了一个半成品。&lt;/p&gt;
+&lt;p&gt;GitHub 仓库地址: &lt;a href=&#34;https://github.com/lucups/hexo-theme-muji&#34;&gt;https://github.com/lucups/hexo-theme-muji&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;因为时间紧还没有完善，目前的效果一般般，可以看看我的个人主页。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/hexo-theme-muji/02.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;大家可以试用一把，提提意见。&lt;/p&gt;
+&lt;p&gt;分割线，下面开始扯淡&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;顺便贴一下我的个人主页变迁史，讲一讲这个主题的由来。&lt;/p&gt;
+&lt;p&gt;2016年以前，我的个人主页是这样的：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/hexo-theme-muji/03.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;当时（大概是2014年）抄袭了一位学长的个人主页搞的，甚至还复制了很多代码。&lt;/p&gt;
+&lt;p&gt;PS：刚偷偷看了看，学长的个人主页还是那个样子没有变化，嗯，应该有10年了。&lt;/p&gt;
+&lt;p&gt;2016年那一年正是移动互联网最巅峰的一年，那一年我也换了个风格，用当时的流行语说就是：高端大气上档次，低调奢华有内涵。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/hexo-theme-muji/04.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其实这个主页是改自于 Boostrap 官方的一个模板&lt;/p&gt;
+&lt;p&gt;直到2019年年初，受各种因素的影响，决定选择极简风格，于是复制了 MUJI 官网的两个颜色，搞了一个新主页，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/hexo-theme-muji/05.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;但总感觉差了点意思。&lt;/p&gt;
+&lt;p&gt;于是最终决定自己写一款主题。&lt;/p&gt;
+&lt;p&gt;虽然名字上完全照抄了 MUJI，但实际上跟 MUJI 的网站风格还是不太一样的，毕竟 MUJI 那么多子站，风格也不完全一样，这个以后再详细说。&lt;/p&gt;
+&lt;p&gt;最后想说的是，放心吧，我肯定会持续更新的。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

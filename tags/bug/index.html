@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Bug | 托尼吹雪</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://tony.engineer/tags/bug/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://tony.engineer/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tony.engineer/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tony.engineer/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tony.engineer/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tony.engineer/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://tony.engineer/tags/bug/index.xml">
+<link rel="alternate" hreflang="en" href="https://tony.engineer/tags/bug/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://tony.engineer/tags/bug/">
+  <meta property="og:site_name" content="托尼吹雪">
+  <meta property="og:title" content="Bug">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bug">
+<meta name="twitter:description" content="">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://tony.engineer/" accesskey="h" title="托尼吹雪 (Alt + H)">托尼吹雪</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://tony.engineer/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Bug
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">关于使用 Symfony2 开发时遇到的一个诡异的 bug
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>问题描述 最近在使用symfony 2开发，处于刚入门阶段。昨天完成了注册登录模块，开发阶段一直没有问题，快完成时诡异的错误出现了：注册成功后，查询数据表，记录存在，但登录始终报错。
+由于登录是使用symfony2自带的安全框架，又不知道 symfony2有什么debug的好方法，所以只能检查代码，继续读symfony2文档，因为之前做过登录注册模块，所以对配置什么的还是蛮有信心，确信不会错，搞了半天不知道问题在哪。注册成功，登录始终不成功。
+衣带渐宽终不悔，为 bug 消的人憔悴 最后还是同事过来，问我用什么加密，然后试图寻找登录加密与注册加密的结果是否一致。不成功，因为login的过程完全由symfony来完成的，查文档一时又找不到login具体的代码，最后，我们找了一个在线加密网站，比对加密结果和注册加密结果是否一致，最后结果是一致。。。
+蛋疼！泥马这错太诡异了！难道真要我这个刚入门的去看框架源码？？？
+众里寻bug千百度，蓦然回首，bug 却在灯火阑珊处 正当我垂头丧气心如死灰批头散发郁闷的要死的时候，突然！眼前一亮！为什么网站上加密结果的最后是两个等号而数据库里面的没有等号？？？！！！
+我擦，终于找到了！经过测试，发现快完成的时候改用了架构师设计的数据库，password字段长度只有50,而我之前设计的是255,且密码在采用sha512算法加密后长度大于50,导致写入数据库的只有前面的50个字符，所以我开始比对的时候竟然没有发现这个问题。。。
+我看开头几位都一样就没有关注后面的。。。！！！
+而我的印象里，如果字符串大于数据库设计的长度应该是要报错的，所以要么是mysql截取了，要么是symfony截取了，具体原因等下次再研究吧。。。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-10-18 00:00:00 +0800 CST'>October 18, 2013</span></footer>
+  <a class="entry-link" aria-label="post link to 关于使用 Symfony2 开发时遇到的一个诡异的 bug" href="https://tony.engineer/posts/2013/fix-a-bug-02/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">一次愉快的 bug 修复经历
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>使用 jQuery 插件 Jcrop 裁剪图片时，发现一个问题，如图：
+不知道这里的 radio 哪里来的，很郁闷，因为以前用过一次，没遇到这个问题。到 stackoverflow 上查了也没有类似的问题。
+没办法，只好上官网留言问作者。
+英语不太好，只能勉强描述问题：
+&lt;input type=&#34;radio&#34; class=&#34;jcrop-keymgr&#34; style=&#34;position: fixed; left: -120px; width: 12px; display: inline-block;&#34;&gt; There is a strange radio input in my page, I don’t know where it comes from, I think you can help me.
+If you can give me your email address, I will send the pictue to you.
+几个小时候，收到了作者的回复:
+Hi… I think the option to turn that off is keySupport: false…
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-10-11 00:00:00 +0800 CST'>October 11, 2013</span></footer>
+  <a class="entry-link" aria-label="post link to 一次愉快的 bug 修复经历" href="https://tony.engineer/posts/2013/fix-a-bug-01/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://tony.engineer/">托尼吹雪</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

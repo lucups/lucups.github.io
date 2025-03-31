@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Php on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/php/</link>
+    <description>Recent content in Php on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 30 Dec 2016 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>论软件工程师的职业素养</title>
+      <link>https://tony.engineer/posts/2016/about-engineer/</link>
+      <pubDate>Fri, 30 Dec 2016 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2016/about-engineer/</guid>
+      <description>&lt;p&gt;在过去，工程师是一个极难获得的称谓，通常需要获取相应的学位，有多年的工作经验，甚至还要通过官方的考评，方能取得。&lt;/p&gt;
+&lt;p&gt;那时的工程师，往往要承担着社会责任。比如，作为桥梁工程师，你设计了一座大桥，就得为大桥的质量负责，&lt;/p&gt;
+&lt;p&gt;如果桥垮了，你是要跳河的。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/about-engineer/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然而，自互联网兴盛以来，出现了一大波“软件工程师”，也就是程序员，他们轻易获取了“工程师”的头衔，&lt;/p&gt;
+&lt;p&gt;其中有些人毫无职业素养，毫无责任担当。当然，我并非想要贬低程序员，因为本人也是一个程序员，&lt;/p&gt;
+&lt;p&gt;只是最近掉进坑了，满腹牢骚，愤懑不平，怨气冲天，才不得不作此文，吐槽以泄愤。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/about-engineer/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在我看来，作为一名软件工程师，最基本职业素养就是专业技能，也就是编码和程序设计，其他的比如团队精神等等等这里就不多谈了，&lt;/p&gt;
+&lt;p&gt;因为今天只想吐槽这么多。&lt;/p&gt;
+&lt;p&gt;首先来说说编码。作为一名合格的软件工程师，必须要明白代码的可维护性是多么重要，用来衡量可维护性的，首先是代码的可读性。&lt;/p&gt;
+&lt;p&gt;有些人把代码写得别人看不懂，就飘飘然以为自己多牛逼多厉害。比如判断一个变量是否为 0，0 偏偏要写成 &lt;code&gt;intval(chr(48))&lt;/code&gt;，等等等诸如此类不胜枚举，罄竹难书。&lt;/p&gt;
+&lt;p&gt;殊不知这种行为愚蠢至极，过两年把他拉回来看自己的这些代码，他一定会抽自己嘴巴子，因为他自己也看不懂自己写了什么。&lt;/p&gt;
+&lt;p&gt;所以请记住：你的代码别人看不懂，只有外行人才会觉得你牛逼，同行都会说你傻逼。在编码的时候，一定要想一想，这么写别人能理解我的意图吗？代码要写得傻一点，这一点脚本语言工程师尤其要注意，不要滥用魔法特性。&lt;/p&gt;
+&lt;p&gt;再来扯扯程序设计。其实这一点跟代码的可读性有共通之处，程序设计的目的首先是满足业务需求，其次就是在满足业务需求的前提下保证代码的可维护性，也就是保证代码描述的业务逻辑容易被人理解。&lt;/p&gt;
+&lt;p&gt;偏偏有些人，自以为自己的设计高端大气上档次，一个缓存 key，存了 9999 条数据，我只想问，有一条数据更新了怎么办？&lt;/p&gt;
+&lt;p&gt;恭喜你，答错了。人家的做法不是把这 9999 条数据查出来重新 set（虽然这已经足够奇葩），而是把全表的数据查出来每 9999 条分批 set 一遍（奇葩中的奇葩）。除了数据更新，有新数据插入缓存也要全部更新一遍。&lt;/p&gt;
+&lt;p&gt;哪天内存不够加载全表的数据了怎么办？没事啊，人家已经跑路了！人家跑路了项目怎么办？没事啊，有接盘侠啊！&lt;/p&gt;
+&lt;p&gt;没错，我就是这个接盘侠。昨天我花了一个晚上，把这波缓存改成了正常人的设计。&lt;/p&gt;
+&lt;p&gt;2016年的最后两天，我接了一个盘，不过，我会接好这个盘。&lt;/p&gt;
+&lt;p&gt;我不入地狱，谁入地狱？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>为什么我要写 ResquePanel</title>
+      <link>https://tony.engineer/posts/2016/about-resque-panel/</link>
+      <pubDate>Fri, 03 Jun 2016 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2016/about-resque-panel/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/Lucups/resque-panel&#34;&gt;ResquePanel&lt;/a&gt; 是用于监控 &lt;a href=&#34;https://github.com/chrisboulton/php-resque&#34;&gt;php-resque&lt;/a&gt; 的一款 Web 界面工具。完全使用 PHP 开发。当然，由于 resque 的 “正版” 是 Ruby 写的，所以你也可以用来监控 Ruby 版的 resque。&lt;/p&gt;
+&lt;p&gt;也许有人会说我造轮子，因为很容易可以在 GitHub 上搜到一个叫 &lt;a href=&#34;https://github.com/wa0x6e/ResqueBoard&#34;&gt;ResqueBoard&lt;/a&gt; 的项目，还有个非常漂亮的&lt;a href=&#34;http://resqueboard.kamisama.me/&#34;&gt;介绍网页&lt;/a&gt;，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/about-resque-panel/01.jpg&#34; title=&#34;ResqueBoard 官方介绍页&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看出来，作者花费了不少心思，前端做得也漂亮(我觉得这个前端堪称完美！)。所以刚开始我也用了这个，于是，发现了问题。&lt;/p&gt;
+&lt;h3 id=&#34;resqueboard-的缺陷-resqueboard-的缺陷resqueboard-的缺陷&#34;&gt;&lt;a href=&#34;#ResqueBoard-%E7%9A%84%E7%BC%BA%E9%99%B7&#34; title=&#34;ResqueBoard 的缺陷&#34;&gt;&lt;/a&gt;ResqueBoard 的缺陷&lt;/h3&gt;
+&lt;p&gt;首先是该项目依赖太多，除了 &lt;code&gt;Node.js&lt;/code&gt; 的 &lt;code&gt;Cube&lt;/code&gt;，另外还要装一个 MongoDB，最关键的还在于如果你需要使用作者改写过的 php-resque，这让人很是担心。虽然我毫不怀疑作者的人品，但要我把正在跑的一个项目依赖的库替换掉（因为与原项目冲突），还是有不少担心的。然后就是 Cube 依赖的一个叫 &lt;code&gt;websocket-server&lt;/code&gt; 的项目已经不见了，导致 npm install 安装依赖失败，Google 了半天，最后在该项目的 GitHub Issue List 里找到解决方案，过程参见 &lt;a href=&#34;https://segmentfault.com/q/1010000003990965&#34;&gt;npm install cube Error: No dist in websocket-server package&lt;/a&gt;。折腾了半天，Cube 的两个进程跑起来了。最后就是替换项目里原来用的 php-resque，小心翼翼。配置了 Nginx 后终于跑起来了。&lt;/p&gt;
+&lt;p&gt;跑起来后发现，首页是能看了，其他页面都有问题，一检查，发现 web 目录下有个 &lt;code&gt;.htaccess&lt;/code&gt; 文件，一看尿了，rewrite 规则这么多！只能用 apache 了，于是又给服务器装了 apache，Nginx 做反代，搞了半天终于基本正常了，右上角显示的三个服务正常连接。再对照官方文档，完全正确了。&lt;/p&gt;
+&lt;p&gt;但是，跑了几天后，发现数据有问题。首先是很多数据完全获取不到，基本上除了看到队列、处理了多少个 Job，其他一切显示没有数据。这一点让我很是伤心。各种找原因，反复查看官方文档、Issue 列表，还是没找到问题。&lt;/p&gt;
+&lt;p&gt;我最终决定自己写一个，简单一点的。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PHPCON 2015(北京站)之旅</title>
+      <link>https://tony.engineer/posts/2015/phpcon-2015-beijing/</link>
+      <pubDate>Wed, 17 Jun 2015 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2015/phpcon-2015-beijing/</guid>
+      <description>&lt;p&gt;2014年 PHPCON 上海站举办前夕，老胡问我去不去，当时对这些会议不是很感冒(其实主要原因是没钱)，就没去，不过当时我们约定第二年一起去。到今年北京站举办前一个月，老胡发来链接，问我来否，我自然不想做一个放鸽子的人，领导 Allen 知悉后表示他也要去，于是买门票买车票不提。&lt;/p&gt;
+&lt;p&gt;6月6日早上到达北京，直奔会场，时间刚刚好。此行主要是为了见一见国内的 PHP 大牛的风采（其实我只熟悉两位嘉宾：惠新宸和韩天峰），顺便看看这些会议到底是一个什么样的情况(因为此前曾参加过南京的一个互联网沙龙，看到最后发现全是广告，所以印象极差——也许是因为免费的)。&lt;/p&gt;
+&lt;p&gt;先来张会议的日程：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;会议日程&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpcon-2015-beijing/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;首先开讲的是来自新浪微博的胡波，主要讲 Yaf/Yar 在微博里的使用情况——手机微博服务端这一块从 v4 升级到 v5 的坎坷过程。&lt;/p&gt;
+&lt;p&gt;由于我们正在使用 Yaf/Yar (后来用 Phalcon 替换了 Yaf)，所以胡波的内容让我们极是受用，忍不住多拍了几张现场 PPT (强调一下我一般很少拍照片的)：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;在微博里的使用情况&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpcon-2015-beijing/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;在微博里的使用情况&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpcon-2015-beijing/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这两张图说明了 v4 到 v5 升级过程中要解决的问题，跟我们产品 v2 到 v3 的升级非常类似。&lt;/p&gt;
+&lt;p&gt;我们产品 v2 版本为了求速度，用了我们比较熟悉的 Symfony2，后来使用 &lt;code&gt;ab&lt;/code&gt; 压测发现 QPS 极低，才 8 个左右，分析了一下代码执行时间，发现 Symfony2 框架启动时间太高，所以 v2.1 时 App 的接口部分换成了 &lt;a href=&#34;https://github.com/laruence/yaf&#34;&gt;Yaf&lt;/a&gt;，由于 Yaf 过于简洁，没有 ORM 之类的模块，从 v2.3 开始新的业务模块用 &lt;a href=&#34;http://phalconphp.com&#34;&gt;Phalcon&lt;/a&gt; 写，所以我们的 v2.x 版本用了3个框架。采用了 Yaf/Phalcon 的新的业务模块速度相对老的速度提升明显。&lt;/p&gt;
+&lt;p&gt;胡波的内容对我们从 v2.x 升级到 v3 有很大启发，不过后来由于我们的业务改变巨大，v3 核心基本上是一个新系统，所以只能部分实践。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;在微博里的使用情况&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpcon-2015-beijing/04.jpg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 PHPStorm 中使用 region （代码折叠）</title>
+      <link>https://tony.engineer/posts/2014/phpstrom-region/</link>
+      <pubDate>Fri, 24 Jan 2014 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2014/phpstrom-region/</guid>
+      <description>&lt;p&gt;使用 VS 写 C# 的人都很喜欢 &lt;strong&gt;#region&lt;/strong&gt; 实现的代码折叠功能。PHP 本身没有类似的功能，但作为一个 PHPer，肯定不甘在这一点上示弱。本文就介绍使用史上最强大 PHP IDE —— PHPStorm 实现代码折叠（注：不一定是一个函数或一个类的）。&lt;/p&gt;
+&lt;p&gt;其实前面废话说了这么多，正文就只有三行：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//region description
+code....
+//endregion
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;有人要说没图你说个 Smartisan，好，我就贴个图：&lt;/p&gt;
+&lt;p&gt;展开效果图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;展开效果图&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpstorm-region/01.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;折叠效果图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;折叠效果图：&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpstorm-region/02.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注：只在 PHPStorm 下有效。当然，不仅支持 PHP 代码，也支持 js 代码。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

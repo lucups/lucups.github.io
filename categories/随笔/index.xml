@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>随笔 on 托尼吹雪</title>
+    <link>https://tony.engineer/categories/%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 随笔 on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我停止了 Apple Music 的订阅，顺便聊一下付费订阅制</title>
+      <link>https://tony.engineer/posts/2024/stopped-apple-music-sub/</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2024/stopped-apple-music-sub/</guid>
+      <description>&lt;p&gt;自从两年前开始使用 Apple Music 以来，我一直是付费用户。但是，最近我决定停止订阅。&lt;/p&gt;
+&lt;p&gt;我停止订阅的主要原因是我的听歌习惯，次要原因是很多我想听的歌找不到，最后就是我最近开始听一些播客节目了。&lt;/p&gt;
+&lt;h2 id=&#34;听歌习惯&#34;&gt;听歌习惯&lt;/h2&gt;
+&lt;p&gt;我听歌喜欢听我喜欢的歌，而不是听新歌。我会把我喜欢的歌添加到一个歌单里，然后循环播放。这样，我可以在听歌的时候不用关心是什么歌，也不用担心听到不喜欢的歌。&lt;/p&gt;
+&lt;p&gt;Apple Music 的推荐算法虽然也能给我推荐一些我喜欢的歌，但命中率不高。&lt;/p&gt;
+&lt;h2 id=&#34;找不到歌&#34;&gt;找不到歌&lt;/h2&gt;
+&lt;p&gt;我喜欢听的一些歌，Apple Music 上没有。除了部分是版权的问题，还有一些是因为国内莫名其妙的政策原因。&lt;/p&gt;
+&lt;p&gt;比如《皇后大道东》，这个应该不是版权的问题（至于到底是什么问题懂得都懂），因为 Apple Music 上有这首歌的专辑，但少了两首歌，其中一首就是《皇后大道东》。&lt;/p&gt;
+&lt;p&gt;虽然我可以通过导入本地音乐的方式添加到我的歌单里，但是这样做太麻烦了。&lt;/p&gt;
+&lt;p&gt;加上第一个原因，我还不如把我喜欢的歌下载到手机里，然后用本地播放器播放。&lt;/p&gt;
+&lt;p&gt;虽然这至少有一半不是 Apple Music 的问题，但是我还是得说一下。&lt;/p&gt;
+&lt;h2 id=&#34;听播客&#34;&gt;听播客&lt;/h2&gt;
+&lt;p&gt;最近我开始用小宇宙这个 App 听一些播客节目，比如《半拿铁》、《科技乱炖》、《声动早咖啡》等，这导致我听音乐的时间减少了。&lt;/p&gt;
+&lt;h2 id=&#34;关于订阅制付费的一些想法&#34;&gt;关于订阅制付费的一些想法&lt;/h2&gt;
+&lt;p&gt;以上就是我停止 Apple Music 订阅的原因。&lt;/p&gt;
+&lt;p&gt;这里顺便再说一下订阅制付费。&lt;/p&gt;
+&lt;p&gt;最近 Apple Store 上开始用订阅制收费的应用越来越多了，我觉得这不是一个好的趋势。&lt;/p&gt;
+&lt;p&gt;因为订阅制会让用户感觉到压力，尤其是用户不是很频繁使用这个应用的时候。&lt;/p&gt;
+&lt;p&gt;其次很多应用本身只是一个本地化的小工具，除了一次性的开发成本和后续修 bug 的成本，甚至连服务器都不需要，根本就没有其他成本，订阅制收费这个逻辑就很扯淡。&lt;/p&gt;
+&lt;p&gt;就比如我在用的一款图片压缩的小工具，我本来是想付费的，虽然不付费也不影响我的使用（每天有 20
+张处理额度），但就在我准备付费的时候，我发现这个应用是订阅制收费的，我就放弃了。&lt;/p&gt;
+&lt;p&gt;这个应用只是一个本地化的小工具，没有任何服务器资源消耗，但是却用订阅制收费，这就很不合理，这就很扯淡。&lt;/p&gt;
+&lt;p&gt;除非是 Apple Music 或者 Netflix 这种需要持续更新内容的应用，或者 ChatGPT
+这种需要大量服务器资源的应用，其他的应用都不应该用订阅制收费。&lt;/p&gt;
+&lt;p&gt;你说你会持续更新功能？对不起，我付费的时候是因为我需要这个功能，而不是因为你会持续增加新功能，我不需要新功能，我只需要这个。&lt;/p&gt;
+&lt;p&gt;如果你确实增加了一些新的功能，我觉得开发者应该把这些新功能集合起来，发布个大版本，比如 &lt;code&gt;Downie 4&lt;/code&gt;，用大版本升级收费，这样更合理。&lt;/p&gt;
+&lt;p&gt;而且我还发现有一些应用，故意欺骗不熟悉电子产品的老年人，让他们误以为是一次性付费，结果是订阅制收费，这种行为真的很恶心。&lt;/p&gt;
+&lt;p&gt;工具类应用使用订阅制收费，除了忽悠不懂的人付费、劝退轻度用户外，还能有啥？除非你是杀手级应用，市面上找不到靠谱的替代品，比如
+Adobe 系列、微软 Office、JetBrains 系列等。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PS：JetBrains 即使停止付费，也是可以使用你付费那时候的老版本的，本质上还是一次性付费买断版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以，我觉得订阅制收费不是一个好的趋势，适合订阅制的应用并不多，大多数应用应该使用一次性付费或者按量计费更合理。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>小肚鸡肠的微信</title>
+      <link>https://tony.engineer/posts/2023/small-wechat/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2023/small-wechat/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/1.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;昨天看了一个谷歌开发者的视频，我注意到演示用的编辑器是微软家的 VS Code，使用的笔记本是苹果家的 MacBook。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/2.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我们知道 Google 的 Android 在和 Apple 的 iOS 竞争（当然曾经微软的 WindowsPhone 也是竞品），微软推出的搜索引擎 Bing 也在一步步蚕食
+Google 的市场份额。&lt;/p&gt;
+&lt;p&gt;在 Google，竟然可以使用有着直接竞争关系的厂家的产品，这感觉就好比阿里的员工用微信群沟通项目进度，腾讯的员工用支付宝充值 QQ
+超级会员，非常魔幻。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/3.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;不说内部员工了，因为跟我们普通用户没啥关系。今天就说说我这个普通用户遇到的一个问题吧。&lt;/p&gt;
+&lt;p&gt;有个叫老王的朋友喜欢给我分享抖音视频，于是我经常收到了下面这些微信消息：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/4.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/5.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这是在电脑端的微信截的图，如果是移动端微信，只能看到消息的一半，后面一般都省略了，然后要点开才能查看。&lt;/p&gt;
+&lt;p&gt;但网址打不开，于是只能复制。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/6.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;复制的时候就会发现，一向体验极佳的腾讯系软件，竟然连复制都做不好，长按选不中，选中了复制按钮弹不出来，要反反复复好几次才能复制好。&lt;/p&gt;
+&lt;p&gt;嗯，我相信一定是程序员的锅，腾讯的程序员快来接锅。&lt;/p&gt;
+&lt;p&gt;嗯，说这么多，其实我就想说一句：小肚鸡肠的微信。&lt;/p&gt;
+&lt;p&gt;PS：最近发现网址都能打开了，不知道是不是因为引起群愤被投诉多了没办法了所以稍微把鸡肠撑大一点。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2023年12月更新&#34;&gt;2023年12月更新&lt;/h3&gt;
+&lt;p&gt;最后本文发现的微信里可以直接打开抖音链接，其实只说对了一半。因为仅限于私聊，私聊内能打开，群聊打不开。嗯，企鹅家的骚操作就是这么细微。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>我讨厌内置锂电池</title>
+      <link>https://tony.engineer/posts/2023/i-hate-built-in-lithium-batteries/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2023/i-hate-built-in-lithium-batteries/</guid>
+      <description>&lt;p&gt;从某些角度讲，我是一个保守派。&lt;/p&gt;
+&lt;p&gt;就比如各种家用小电器，电动剃须刀、电动冲牙器，还有玩具之类的，我就非常不喜欢内置锂电池款的。&lt;/p&gt;
+&lt;p&gt;虽说内置电池可以省下买 5 号 7 号电池的钱，但真正使用的时候就就会发现这几个问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;急着用的时候，发现没电了，要充电，这类小电器 99.99% 没有快充，至少得充半小时，然后使用三分钟；&lt;/li&gt;
+&lt;li&gt;电器的寿命往往很长，而锂电池的寿命则是有限的，内置锂电池的寿命限制了电器的寿命，本来能传三代的，现在只能循环几百次了；&lt;/li&gt;
+&lt;li&gt;相当一部分的产品（尤其是一些老牌子）用的都是一些乱七八糟的充电线，Micro-USB 的、Mini-USB
+的，甚至还有那种小圆孔的，真到充电的时候，找不到线了，那就只能下线了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/i-hate-built-in-lithium-batteries/1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;所以，现在还在坚持使用 5 号电池、7 号电池的电子产品、家用小电器，我是十分欣赏的，我也是一贯坚持优先选择无内置电池款的产品。&lt;/p&gt;
+&lt;p&gt;像电视遥控器这类两节电池用几年的产品，普通碱性电池没啥问题。但如果长期使用高功率电器的话，电池的消耗确实是个问题。&lt;/p&gt;
+&lt;p&gt;我最常用的电池牌子是金霸王，5 号电池一节要 2~3 元，平均以 2.5 元计算，以我每日使用的冲牙器为例，基本上每个月都要换一次电池，两节电池就要
+5 元，一年就是 5 x 12 = 60 元，三年就是 180 元。&lt;/p&gt;
+&lt;p&gt;所以，可充电的 5 号电池就成了我的必需品。&lt;/p&gt;
+&lt;p&gt;研究了一下，我选择了京东京造的这款 1.5v 恒压、支持 Type-C 充电的电池。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/i-hate-built-in-lithium-batteries/2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;PS 一下，京东京造的东西我买过好几件，品质还是非常不错的，总体来说比隔壁网易严选家还要强一些。&lt;/p&gt;
+&lt;p&gt;4 节 3000 毫安时充电电池 + Type-C 充电器，99 元，可 1000 次循环。&lt;/p&gt;
+&lt;p&gt;对比了一下金霸王的容量 2000 毫安时左右（网络搜索结果，如果不对请留言），即使打七折，一次循环也抵得上一节新电池，相当于 4000
+节电池，额外还送一个充电器，就当抵电费了。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/i-hate-built-in-lithium-batteries/3.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;算一下 99 ÷ 4000 = 0.2475，也就是说相当于一节电池两毛五，相比金霸王碱性电池两块五，节省了 90%，直接打骨折，真正的老抠比直呼内行。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ChatGPT 是只不错的 “小黄鸭”</title>
+      <link>https://tony.engineer/posts/2023/chatgpt-is-a-good-rubber-duck/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2023/chatgpt-is-a-good-rubber-duck/</guid>
+      <description>&lt;p&gt;今天遇到一个问题，在使用 &lt;a href=&#34;https://symfony.com/&#34;&gt;Symfony 6.x&lt;/a&gt; 框架的项目里，我没有使用框架自带的
+Security 组件，而是自己实现了一个用户认证的土方法。&lt;/p&gt;
+&lt;p&gt;在我的方法中，当用户请求需要登录的接口时，会抛出一个自定义的异常 &lt;code&gt;ApiNotAuthException&lt;/code&gt;，然后我在 &lt;code&gt;ExceptionListener&lt;/code&gt;
+监听器服务中捕获这个异常并封装我自己的返回值结构，最后将状态码强制改为 &lt;code&gt;200&lt;/code&gt;（因为我不喜欢使用 HTTP 状态码来替代业务状态码）。&lt;/p&gt;
+&lt;p&gt;PS: 关于是否应该忽略 HTTP 状态码在前端的处理以及是否应该将业务状态码封装到 HTTP 状态码里，以后有机会我再写一篇博客讨论一下，今天只解决问题。&lt;/p&gt;
+&lt;p&gt;我的异常监听类是这样的：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ExceptionListener&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;onKernelException&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;ExceptionEvent&lt;/span&gt; $event)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        $e &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; $event&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getThrowable&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; ($e &lt;span style=&#34;color:#a6e22e&#34;&gt;instanceof&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ApiNotAuthException&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            $response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;JsonResponse&lt;/span&gt;([
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;success&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;code&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; $e&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getCode&lt;/span&gt;(), &lt;span style=&#34;color:#75715e&#34;&gt;// 我的业务状态码
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;msg&amp;#39;&lt;/span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; $e&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getMessage&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            ], &lt;span style=&#34;color:#a6e22e&#34;&gt;Response&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;HTTP_OK&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// 初始化时设置状态码为 200
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            $response&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setStatusCode&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;Response&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;HTTP_OK&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// 初始化之后再次设置状态码为 200
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            $response&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;headers&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;set&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;X-Status-Code&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Response&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;HTTP_OK&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            $event&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setResponse&lt;/span&gt;($response);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样做的目的是为了让前端可以统一处理业务状态码，而不用关心 HTTP 状态码。 此外因为我觉得 HTTP
+状态码应该是用来表示请求的状态，而不是业务状态，而登录与否应该属于业务层面。&lt;/p&gt;
+&lt;p&gt;总之就是状态码的改变没效果，HTTP Headers 中的 &lt;code&gt;X-Status-Code&lt;/code&gt; 有效果，说明代码确实执行了。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>慎用国产软件</title>
+      <link>https://tony.engineer/posts/2022/do-not-use-chinese-softwares/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2022/do-not-use-chinese-softwares/</guid>
+      <description>&lt;p&gt;几年前，我使用锤子便签分享王某四的文章，结果生成的分享图片是空白的。我抓包后发现，在点击分享按钮时，会调用一个 HTTP 接口，将便签内容全部上传到服务器验证是否包含敏感词。了解了这些，事情就很简单了，我禁用了锤子便签的网络权限，果然分享图片功能正常了。&lt;/p&gt;
+&lt;p&gt;结合这次 WPS 事件，基本可以做出所有的国产软件都有此类功能的结论。&lt;/p&gt;
+&lt;p&gt;我的建议是，如非必要，不要使用任何国产软件。其次是做好信息备份。&lt;/p&gt;
+&lt;p&gt;有些人非常搞笑，说我不怕我没有隐私。嗯，没有隐私是不错，但你辛辛苦苦写了半天的文档因为非常搞笑的原因命中敏感词突然被和谐了，你找谁说理去？你拍的正常照片莫名其妙被云盘识别为色情图片和谐了，你找谁说理去？&lt;/p&gt;
+&lt;p&gt;答案是没地说理，因为人家认为自己做得是对的：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/do-not-use-chinese-softwares/01.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后引用一些网友的评论补充一下细节，真假自辩。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/do-not-use-chinese-softwares/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后的最后，说明一下，本号从来不传谣不信谣不造谣，所有消息来自官方媒体。如有质疑，可以看文末的参考资料。&lt;/p&gt;
+&lt;h5 id=&#34;参考资料&#34;&gt;参考资料&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://guancha.gmw.cn/2022-07/13/content_35881012.htm&#34;&gt;https://guancha.gmw.cn/2022-07/13/content_35881012.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://new.qq.com/omn/20220716/20220716A0391700.html&#34;&gt;https://new.qq.com/omn/20220716/20220716A0391700.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>任务是别人的，身体是自己的</title>
+      <link>https://tony.engineer/posts/2022/take-care-of-yourself/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2022/take-care-of-yourself/</guid>
+      <description>&lt;p&gt;近日老夫观察到上海开始推广中药抗疫，于是搜索“WHO肯定 上海 抗疫 中药”这几个关键词，得到这个结果：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/take-care-of-yourself/1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;新闻里说“WHO肯定:中医药抗疫有效!上海:使用率98% ”。&lt;/p&gt;
+&lt;p&gt;老夫当然不是那么好糊弄的，通过一些特殊的搜索手段，找到了世卫组织的原文（参见参考资料1），并找到了一篇解读的文章《世卫组织承认中医药治新冠有效？别欺负大家不懂英文》（参见参考资料2），解读的不错，原文比较长，老夫就截取几个重点，大家随便看看，有兴趣的可以复制链接去看原文。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/take-care-of-yourself/2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/take-care-of-yourself/3.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;各种偷梁换柱，无中生有，三十六计用得不错。&lt;/p&gt;
+&lt;p&gt;最后作者总结：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本来是寻求进步的常规讨论，断章取义传到国内莫名其妙便成了“世卫组织表示中医药能有效治疗新冠”，冠以“国际权威为中医正名”之称，引发全民狂欢，只不过是欺负大家不懂英文或者懒得去翻报告罢了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一句话，就一次常规讨论会，被报道成了中药有效的鉴定成果会。&lt;/p&gt;
+&lt;p&gt;至于有些网友说 WHO 已经成为了 CHO，这里就不讨论了。&lt;/p&gt;
+&lt;p&gt;可能也有人看到了一些信息，有良心的上海医护已经很委婉地提示大家别喝那个药了：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/take-care-of-yourself/4.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;更有一位网友，很明确地提示大家哪些成分有风险，有什么样的风险：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/take-care-of-yourself/5.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/take-care-of-yourself/6.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;贯众为一蕨类，含绵马酸，有肝脏毒性。&lt;/p&gt;
+&lt;p&gt;槟榔是一级致癌物。&lt;/p&gt;
+&lt;p&gt;看到这些热心的网友，老夫只能说，救人一命，胜造七级浮屠。&lt;/p&gt;
+&lt;p&gt;关于中药的毒性，大家可以买本方舟子的《批评中医》来看看，第59页开始讲中药的毒性，我随便截几张图，大家感受一下：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/take-care-of-yourself/7.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/take-care-of-yourself/8.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后老夫想要说的是，任务是别人的，身体是自己的，上海的朋友们体会一下。老夫只能说这么多了，再说号没了。&lt;/p&gt;
+&lt;h6 id=&#34;参考资料&#34;&gt;参考资料&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.who.int/publications/m/item/who-expert-meeting-on-evaluation-of-traditional-chinese-medicine-in-the-treatment-of-covid-19&#34;&gt;WHO Expert Meeting on Evaluation of Traditional Chinese Medicine in the Treatment of COVID-19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.163.com/dy/article/H4AHO6NS0511AU08.html&#34;&gt;科学公园：世卫组织承认中医药治新冠有效？别欺负大家不懂英文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://item.jd.com/10248041.html&#34;&gt;方舟子《批评中医》&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>聊聊《三体》</title>
+      <link>https://tony.engineer/posts/2022/the-three-body-problem/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2022/the-three-body-problem/</guid>
+      <description>&lt;p&gt;今天来聊聊刘慈欣的《三体》。&lt;/p&gt;
+&lt;p&gt;第一次读《三体》是我大学时代，2010年前后，同班的隔壁舍友推荐的。当时我看了个开头就有点看不下去了，因为明显感到作者是个 24K
+纯理科生，文笔略显生硬。不过作者写到了文革，对于敢在作品中融入这段历史的作者我总是高看一眼的，所以坚持读完了第一部，但最终第二部没看完。
+直到工作以后，才买了电子书翻了一遍。&lt;/p&gt;
+&lt;p&gt;《三体》是一部非常优秀的科幻文学作品，这个没啥问题，虽然从文学层面来说还欠缺很多，但毕竟是一部硬科幻作品，瑕不掩瑜。小说格局宏大，情节跌宕起伏，场面气势磅礴。尤其值得一提的是其对于星际战争的描述，并非傻瓜式的激光枪
+biu~ 来 biu~
+去，而是直接光粒打击恒星毁灭整个星系，或者一张二向箔把整个太阳系拍成一幅梵高的《星空》。这个很像古龙小说里的高手对决，一招定胜负。我个人觉得这种场景更真实，毕竟大战三百回合总感觉是两只菜鸡在互啄。&lt;/p&gt;
+&lt;p&gt;2015
+年《三体》获得第73届雨果奖最佳长篇故事奖，当时这件事很轰动，毕竟是中国人第一次获这个奖，我跟同事聊起时认为获奖至少一半是翻译的功劳。此后，三体越来越火，到处都有人在讨论三体，网上线下都在讨论，买个咖啡都听到人在聊。这些人有个共同的特点，就是对那个&amp;quot;
+黑暗森林法则&amp;quot;
+推崇备至，并代入到现在的国际形势，分析得头头世道。&lt;/p&gt;
+&lt;p&gt;什么是“黑暗森林法则”呢？原文如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“宇宙就是一座黑暗森林，每个文明都是带枪的猎人，像幽灵般潜行于林间，轻轻拨开挡路的树枝，竭力不让脚步发出一点儿声音，连呼吸都必须小心翼翼：他必须小心，因为林中到处都有与他一样潜行的猎人，如果他发现了别的生命，能做的只有一件事：开枪消灭。在这片森林中，他人就是地狱，就是永恒的威胁，任何暴露自己存在的生命都将很快被消灭，这就是宇宙文明的图景，这就是对费米悖论的一种解释。”&lt;/p&gt;
+&lt;p&gt;《三体Ⅱ 黑暗森林》刘慈欣&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;黑暗森林法则可简单理解为，一旦某个宇宙文明暴露了位置，就必然会被其他文明毁灭。我不知道你是不是好人，但为了我的安全，对不起，我得干掉你。&lt;/p&gt;
+&lt;p&gt;我觉得一个正常人，只要稍微动点脑筋，就能针对这条“法则”提出很多疑问，不知道为什么那么多人把这奉为圭臬，好像发现了宇宙终极真理一样，实际上，刘慈欣自己也曾说过：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“至于你具体提到的黑暗森林的设定，我想举另外一个例子，大家都知道的机器人“三定律”。机器人可以保护自己，但是核心基础就是机器人不得伤害人类。其实到现在，机器人早就开始杀人了，巡航导弹本质上就是一个飞行机器人，所以这个“三定律”是根本没有意义的，但是它在小说中是有意义的，它创造了一个逻辑很严密的世界，而在这个逻辑之下来演绎出精彩的故事，这是它的目的。黑暗森林的设定也是一样，可以肯定的说它就是为这部小说而设定的，它不是科学推论，也没有人对它进行过严肃的科学研究，它只能是这部小说设定的一部分。我们不应该把它看作一个严肃的科学结论，这个肯定是不对的。”&lt;/p&gt;
+&lt;p&gt;刘慈欣，香港书展讲座“用科幻的眼睛看现实”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也就是说，小说是小说，现实是现实。&lt;/p&gt;
+&lt;p&gt;没错，写这么多，我就是想怼一下“黑森吹”（整天吹“黑暗森林法则”的那些人）。&lt;/p&gt;
+&lt;p&gt;本文完。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;参考资料&#34;&gt;参考资料&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://tony.engineer/videos/the-three-body-problem/01.mp4&#34;&gt;刘慈欣，香港书展讲座“用科幻的眼睛看现实”现场视频片段&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>辉瑞与慈禧</title>
+      <link>https://tony.engineer/posts/2022/pfizer-and-cixi/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2022/pfizer-and-cixi/</guid>
+      <description>&lt;p&gt;在知乎上看到这样一个问答：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/pfizer-and-cixi/01.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;有网友觉得这听起来有点时空错乱的感觉，好奇这到底是真的还是假的。于是笔者打开维基百科搜索了一下。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/pfizer-and-cixi/02.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/pfizer-and-cixi/03.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;根据搜索结果，我们得到三个时间点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1835年11月29日 慈禧出生&lt;/li&gt;
+&lt;li&gt;1849年 辉瑞成立&lt;/li&gt;
+&lt;li&gt;1852年 慈禧进宫&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也就是说，辉瑞成立时，慈禧 14 岁。又过了三年，17岁的慈禧进宫。看来这位答主并没有有信口开河，基本上符合史实。考虑到古代宫廷的制度，这位答主的正确率还是极大的。&lt;/p&gt;
+&lt;p&gt;关于清宫的宫女制度，笔者尝试搜索了相关资料，可惜支持这个说法的文章都属于自媒体性质且无资料引用来源，可信度不高，遂放弃采用。如果有网友有相关的资料，可以在下面留言。&lt;/p&gt;
+&lt;p&gt;所以到这里，考证就结束了。总之，关于这位答主的说法，不管你信不信，我&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/pfizer-and-cixi/04.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;参考资料&#34;&gt;参考资料：&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%BC%9D%E7%91%9E&#34;&gt;https://zh.wikipedia.org/wiki/%E8%BC%9D%E7%91%9E&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%85%88%E7%A6%A7%E5%A4%AA%E5%90%8E&#34;&gt;https://zh.wikipedia.org/wiki/%E6%85%88%E7%A6%A7%E5%A4%AA%E5%90%8E&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%B8%85%E6%9C%9D%E5%AE%AE%E5%A5%B3&#34;&gt;https://zh.wikipedia.org/wiki/%E6%B8%85%E6%9C%9D%E5%AE%AE%E5%A5%B3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>用户体验杀手——开屏广告</title>
+      <link>https://tony.engineer/posts/2020/open-screen-ad/</link>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2020/open-screen-ad/</guid>
+      <description>&lt;p&gt;作为中国人，开屏广告实在是太熟悉了，以至于见到没有开屏广告的 App 都要感慨一番。&lt;/p&gt;
+&lt;p&gt;今天就来聊聊这个话题。&lt;/p&gt;
+&lt;p&gt;昨天在某快餐门店排队，无聊之余决定看会电子书，于是打开 iReader App，应用启动，一副很具有读书沉浸感的启动页让我迫不及待地想要看书。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/open-screen-ad/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;结果应用启动（大概 2 秒）后立马给我呈现了一张开屏广告，让我像吃了苍蝇一样恶心。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/open-screen-ad/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;由于是单手持手机，在手机屏幕尺寸普遍大于 5 寸的今天，右上角的 &amp;ldquo;跳过 5&amp;rdquo;（截图时已经剩余 4 秒，不要计较）不得不让我拿出另一只手去点击。&lt;/p&gt;
+&lt;p&gt;又由于我的手指较大，这个跳过按钮又特别小，看到广告的心情又比较浮躁，一不留神点歪了就跳转到广告主的落地页去了，最后不得不点击返回才进入主界面。&lt;/p&gt;
+&lt;p&gt;这个过程熟悉不熟悉？刺激不刺激？&lt;/p&gt;
+&lt;p&gt;当今国内 App 的生态，已经到了可以肆意强奸用户的程度，这也算是国内的特色吧。&lt;/p&gt;
+&lt;p&gt;作为一个读书的应用，掌阅内置图书商城，主要的营收应该也不在开屏的这个广告吧？再说了，内部那么多地方可以放广告，为什么偏偏还要在启动页结束后搞个开屏广告呢？凭啥呢？&lt;/p&gt;
+&lt;p&gt;凭国内的用户好欺负呗。&lt;/p&gt;
+&lt;p&gt;为了那么点蝇头小利，就可以牺牲设计师的辛辛苦苦设计的出来的充满阅读氛围的启动页，甚至牺牲付费用户的体验（没错，我是付费用户，但以后不会再付费了），这家公司的格局也就这么大了。&lt;/p&gt;
+&lt;p&gt;相比之下，那些国际化 App 诸如 Twitter、Facebook、Instagram、Youtube 包括 Google 全家桶等无一有此恶劣行径。
+或许，在他们的眼里，根本不知道也不容许这只&amp;quot;苍蝇&amp;quot;的存在吧。&lt;/p&gt;
+&lt;p&gt;当然，国内也有做得不错的。比如代表国内 App 体验上限的微信（对，你没看错，这次我是在夸微信）、逼格满满的星巴克 App、小清新的一鸣真鲜奶吧 inm App 等等，我觉得他们的产品体验和专业度值得国内的同行们效仿。&lt;/p&gt;
+&lt;p&gt;有人说，支付宝也没有开屏广告啊，你为什么不夸夸呢？&lt;/p&gt;
+&lt;p&gt;我不夸支付宝的原因很简单，看看它现在的 ICON 就知道了。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/open-screen-ad/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;抄袭了 iPhone 的刘海屏暂且不表，能把 ICON 敢改这么丑的（并且涉嫌**），除了阿里系其他人办不到，毕竟这得要多大的勇气啊！&lt;/p&gt;
+&lt;p&gt;所以为啥不放开屏广告就很好猜了。既然支付宝根本不 Care 设计，为什么要 Care 用户的支付体验呢？答案很简单，就是竞争。微信支付让支付宝认识到，如果支付宝加了开屏广告，恐怕线下扫码支付的份额就要全交代了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;声明&lt;/strong&gt;：以上关于支付宝的动机纯属我个人的猜测（即基于已有公开信息作出的合理推测），仅限本文讨论，请勿传播，不负法律责任。&lt;/p&gt;
+&lt;p&gt;最后，希望未来的某一天，世间不再有开屏广告！&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>把鸡贼的微信关进笼子里！</title>
+      <link>https://tony.engineer/posts/2020/fuck-wechat/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2020/fuck-wechat/</guid>
+      <description>&lt;p&gt;晚上发朋友圈的时候，再次被微信猥琐的做法恶心到了，愤然之下决定在微信的平台上喷喷它，同时号召大家坚决抵制微信的这个猥琐行为！&lt;/p&gt;
+&lt;p&gt;iOS 14 更新有一项重大的功能，就是可以让 App 只访问部分图片。这也是我一直很期待的功能，因为国内的相当一部分应用厂商毫无底线，商业道德败坏，找各种理由要权限（在谷歌老大缺席的安卓生态里，甚至出现不给权限就闪退不给用的流氓行径），为的就是搜集尽可能多的用户信息，赚更多的昧良心钱。所以 iOS 14 发布后，我第一时间更新了。&lt;/p&gt;
+&lt;p&gt;但万万没想到，微信这货竟然凭借垄断地位毫无廉耻地变相要所有照片的权限，在发送图片或者发朋友圈的时候，直接要求用户允许访问 “所有照片”，而不是用正常的做法（如微博）那样在界面里可以调用系统相册添加照片。&lt;/p&gt;
+&lt;p&gt;下面是微信的骚操作：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fuck-wechat/01.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;首先告诉你无法访问所有照片，让你前往系统设置或者继续访问部分照片。&lt;/p&gt;
+&lt;p&gt;当你点击前往系统设置，就直接到系统设置，当然你可以在这里继续编辑所选照片（就是恶心你）。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fuck-wechat/02.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;点击继续访问部分照片，再次提示你去给微信大爷开所有照片权限：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fuck-wechat/03.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;有人会说，是不是 iOS 14 刚发布，微信还没来得及更新做兼容啊？看看我本地的版本信息，10月02日更新的版本，而 iOS 14 在年中的时候就已经发布了 beta 版本，
+微信的开发者作为国内最顶尖的开发者之一，不可能不知道，所以只有一个可能，就是故意而为之。嗯，就是恶心你，恶心对隐私敏感的用户。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fuck-wechat/04.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;那么，没有照片权限怎么发照片呢？&lt;/p&gt;
+&lt;p&gt;很简单，就是直接从相册里分享到微信。虽然相比之前麻烦了一点，但一想到微信不能偷偷地看我相册了，心里就舒坦多了。&lt;/p&gt;
+&lt;p&gt;相比之下，微博的做法则君子得多，看图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fuck-wechat/05.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;除了你已经选择的允许微博访问的照片外，还有一个更多照片按钮，可以从系统相册增加照片，而不是让用户跳到系统设置里去添加。所以今天要表扬一下微博坚持住了底线。&lt;/p&gt;
+&lt;p&gt;钉钉貌似还没更新，跟没事人一样，所以暂时不评价。其他 App 没发过图片，所以也暂时不评价。&lt;/p&gt;
+&lt;p&gt;总之，在最后，我号召大家不要给任何第三方 App （重点是微信）开所有照片的访问权限，把它们关进笼子里！&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;附：关闭微信所有照片权限的办法：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 设置，找到 微信（往下拉，按音序排列的，或者搜索）点进去；&lt;/li&gt;
+&lt;li&gt;点击 照片，选择 选中的照片（可以参考本文第二张截图）；&lt;/li&gt;
+&lt;li&gt;搞定。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>给 SIM 卡设置 PIN 码，降低手机失窃带来的额外风险</title>
+      <link>https://tony.engineer/posts/2020/sim-pin/</link>
+      <pubDate>Fri, 09 Oct 2020 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2020/sim-pin/</guid>
+      <description>&lt;p&gt;今天上午在朋友圈看到一篇文章——《&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzA3MDIyOTU1OA==&amp;amp;mid=2651655571&amp;amp;idx=1&amp;amp;sn=af42765da4efb972cd81c79919223186&#34;&gt;一部手机失窃引发的惊心动魄的战争&lt;/a&gt;》，
+主要讲的是作者的老婆手机被偷，由此引发手机卡被盗用的悲剧（财产损失）。有兴趣的或者手机关联了巨款的或者信用额度较高的用户一定要认真看一遍。&lt;/p&gt;
+&lt;p&gt;作者（信息安全老骆驼，公众号：知非姑姑）最后总结道：&lt;/p&gt;
+&lt;p&gt;在这一系列过程中，对方有几点还是让我比较服的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;全程用的都是正常的业务操作，只是把各个机构的“弱验证”的相关业务链接起来，形成巨大的破坏；&lt;/li&gt;
+&lt;li&gt;应该是使用了技术手段通过的人脸验证，用图片处理技术来绕过活体人脸识别验证；团队分工协作能力太强，在处理过程中我感觉自己已经用了最快的速度，但总还是晚一步；&lt;/li&gt;
+&lt;li&gt;注重隐蔽，留好后路，包括删掉我云闪付上的一些卡来防止我查明细，通过新建账号的方式，如果我没发现，贸然去解冻银行卡，后续还有第二波的攻击；&lt;/li&gt;
+&lt;li&gt;包括赶在我补卡后改服务密码前，设置了呼叫转移。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;突然想到自己的手机如果被偷，应该也不会好到哪里去。即使无法破解我的 FaceID，犯罪团伙仍然可以第一时间把 SIM 卡拿出来，就可以接收各种验证短信，很多服务和银行卡就直接凉凉了&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;为了降低手机 SIM 卡被盗用的风险，我们可以给 SIM 卡设置 PIN 码。设置方法很简单，iOS 设置方法如下：&lt;/p&gt;
+&lt;p&gt;打开 &lt;code&gt;设置&lt;/code&gt; -&amp;gt; &lt;code&gt;蜂窝网络&lt;/code&gt; -&amp;gt; &lt;code&gt;SIM 卡 PIN 码&lt;/code&gt;，然后点击开关即可。&lt;/p&gt;
+&lt;p&gt;注意默认的 PIN 码是 1234，但你可以设置 6 位数字的  PIN 码。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/sim-pin/01.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安卓一般是这样的（以三星手机为例）：&lt;code&gt;设置&lt;/code&gt; -&amp;gt; &lt;code&gt;生物识别和安全性&lt;/code&gt; -&amp;gt; &lt;code&gt;其他安全设置&lt;/code&gt; -&amp;gt; &lt;code&gt;设置 SIM 卡锁&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;界面是这样的：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/sim-pin/02.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注意事项：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;SIM 卡的 PIN 码输错 3 次 SIM 卡就会被锁，只能再输入 PUK 码才能解锁（在你办理手机卡时会有），如果遗忘了就找运营商的客服；&lt;/li&gt;
+&lt;li&gt;最稳妥的还是到运营商服务点办理换卡；&lt;/li&gt;
+&lt;li&gt;设置 PIN  码后，手机关机重启或 SIM 卡换手机时，要先输入PIN码（三次机会）；&lt;/li&gt;
+&lt;li&gt;如果设置 SIM 卡密码后，手机一直没关机，SIM 卡也没移走，重新点亮屏幕时不需要输入 SIM 卡 PIN 码；&lt;/li&gt;
+&lt;li&gt;如果您给两张卡分别都设了密码，开机时两张卡都会要求输入的；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;也就是说，设置后唯一的麻烦就是手机重启或者换手机时需要输入一下 PIN 码，一直保持开机则无需输入。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>对 MacBook Pro TouchBar 的评价</title>
+      <link>https://tony.engineer/posts/2020/macos-touchbar/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2020/macos-touchbar/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/macos-touchbar.jpg&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;非常容易误触（且无反馈），尤其是躺在床上的时候；&lt;/li&gt;
+&lt;li&gt;耗电，且占用了机器内部的空间，让电池变小（可以参考之前无Bar的版本）；&lt;/li&gt;
+&lt;li&gt;非常容易发烫，加重了散热问题（我怀疑误触跟发烫有一些关系）；&lt;/li&gt;
+&lt;li&gt;增加消费者的成本（对 Apple 来说可能是个优点，可以卖更多的钱）；&lt;/li&gt;
+&lt;li&gt;最关键的是，我用了小半年，还是觉得这东西没什么用，反而让我在常用的调节音量、屏幕亮度功能上多浪费一些时间。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>MUJI 风格的 Hexo 主题</title>
+      <link>https://tony.engineer/posts/2019/hexo-theme-muji/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2019/hexo-theme-muji/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/hexo-theme-muji/01.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;由于个人主页荒废太久，心生愧疚，感觉对不起这么好的域名，于是上周末花了一些时间给主页（兼博客）重新做了一个主题。&lt;/p&gt;
+&lt;p&gt;原本是计划从头开始，做一个代码极致简约的 hexo 主题，无奈前端技术太渣，时间又紧，不得不妥协，找了一个 Bootstrap 的 CSS，然后研究了一下 MUJI 官网的颜色，最终做出了一个半成品。&lt;/p&gt;
+&lt;p&gt;GitHub 仓库地址: &lt;a href=&#34;https://github.com/lucups/hexo-theme-muji&#34;&gt;https://github.com/lucups/hexo-theme-muji&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;因为时间紧还没有完善，目前的效果一般般，可以看看我的个人主页。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/hexo-theme-muji/02.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;大家可以试用一把，提提意见。&lt;/p&gt;
+&lt;p&gt;分割线，下面开始扯淡&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;顺便贴一下我的个人主页变迁史，讲一讲这个主题的由来。&lt;/p&gt;
+&lt;p&gt;2016年以前，我的个人主页是这样的：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/hexo-theme-muji/03.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;当时（大概是2014年）抄袭了一位学长的个人主页搞的，甚至还复制了很多代码。&lt;/p&gt;
+&lt;p&gt;PS：刚偷偷看了看，学长的个人主页还是那个样子没有变化，嗯，应该有10年了。&lt;/p&gt;
+&lt;p&gt;2016年那一年正是移动互联网最巅峰的一年，那一年我也换了个风格，用当时的流行语说就是：高端大气上档次，低调奢华有内涵。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/hexo-theme-muji/04.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其实这个主页是改自于 Boostrap 官方的一个模板&lt;/p&gt;
+&lt;p&gt;直到2019年年初，受各种因素的影响，决定选择极简风格，于是复制了 MUJI 官网的两个颜色，搞了一个新主页，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/hexo-theme-muji/05.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;但总感觉差了点意思。&lt;/p&gt;
+&lt;p&gt;于是最终决定自己写一款主题。&lt;/p&gt;
+&lt;p&gt;虽然名字上完全照抄了 MUJI，但实际上跟 MUJI 的网站风格还是不太一样的，毕竟 MUJI 那么多子站，风格也不完全一样，这个以后再详细说。&lt;/p&gt;
+&lt;p&gt;最后想说的是，放心吧，我肯定会持续更新的。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>一次良心售后</title>
+      <link>https://tony.engineer/posts/2019/apple-service/</link>
+      <pubDate>Wed, 23 Oct 2019 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2019/apple-service/</guid>
+      <description>&lt;p&gt;今年年初的时候，我的 2017 款 MacBook Pro（乞丐版）键盘出了一些问题，&lt;br&gt;
+主要表现是方向键的上键出现了咔咔咔的声音，每按一次就火大一次。&lt;br&gt;
+后来下键也出现问题了，反弹无力，软绵绵的。&lt;br&gt;
+不过由于我大部分时间都在用外接键盘，&lt;br&gt;
+所以就一直没处理（这次并不是因为穷，因为我早就知道了 MacBook Pro 的键盘服务计划）。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/apple-service/01.jpg&#34; title=&#34;Apple 官网的服务计划&#34;&gt;&lt;/p&gt;
+&lt;p&gt;由于前段时间服务器不太稳定，经常需要半夜在家里处理问题，躺在床上只能用自带键盘，&lt;br&gt;
+这导致我的火越来越大，终于忍不住了，于是就在官方的 Apple 支持 APP 上预约了键盘维修。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PS：我事先特意上官网看了一下，确认应该不是我的问题，因为我的自带键盘用得还是很少的，所以才敢预约。😂😂😂&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原以为换个键盘很简单，所以我也没准备，第一次去的时候说是可能要 3～5天检测和维修时间，&lt;br&gt;
+要我先备份一下资料，于是重新预约了国庆期间去。&lt;/p&gt;
+&lt;p&gt;第二次去直接把电脑放那去了，说是要先检测，如果没问题就直接给我换了，&lt;br&gt;
+如果有问题（也就是人为问题比如说进水了）会先告知我维修费用再跟我确认是否维修。&lt;br&gt;
+第二天没收到消息，我估计稳了。果然，第三天收到通知说维修已经完成可以去取了。&lt;br&gt;
+这说明确实不是我的问题，同时也说明 Apple 还是蛮良心的。&lt;/p&gt;
+&lt;p&gt;看到维修单，发现不仅仅是键盘，连电池等都换了，估计是因为集成度太高，仅仅只换键盘人工费用太高，&lt;br&gt;
+所以就直接全换了，用户需要支付的金额为0，嗯，很良心。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/apple-service/02.jpg&#34; title=&#34;维修记录副本&#34;&gt;&lt;/p&gt;
+&lt;p&gt;根据我的这次经历，关于这个键盘服务计划需要注意的是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;键盘非人为损坏（如进水等）；&lt;/li&gt;
+&lt;li&gt;购买之日起 4年内（官方人员跟我说的，但官网上没说，不过笔记本用 4年也差不多该换了）；&lt;/li&gt;
+&lt;li&gt;根据一些网友的经历，可能需要发票，所以我带了发票，但没跟我要，所以也就没拿出来；&lt;/li&gt;
+&lt;li&gt;换了键盘之后，因为其他一些硬件也换了，所以一些付费软件识别到硬件变动取消授权了，导致我又要重新输入激活码，比如 Downie 3。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;除了这次换键盘，之前还换过 iPad 的充电器，iPhone 7 的电池，总的来说，虽然每次都要预约感觉节奏慢了一点，但售后体验还是蛮好的。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/apple-service/03.jpg&#34; title=&#34;Apple 官网技术支持首页&#34;&gt;&lt;/p&gt;
+&lt;p&gt;话说 Apple 官网技术支持页面直接列出了各种更换和维修扩展计划，也就是自己的屁股自己擦。我看了一下其他主流手机厂商们的官网，发现他们都没有，难道是他们品控真的辣么优秀从来不出问题？&lt;/p&gt;
+&lt;p&gt;非也。&lt;/p&gt;
+&lt;p&gt;想当年，某爱国厂商爆出闪存门事件，不仅不承认错误，还说这是“业界通用”做法，关于事件详细的经过，可以参考这篇文章：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/apple-service/04.jpg&#34; title=&#34;链接地址 https://zhuanlan.zhihu.com/p/26508723&#34;&gt;&lt;/p&gt;
+&lt;p&gt;更多可以看知乎上的下面两个问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/58645911&#34;&gt;如何评论华为官方对闪存事件的回复？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/58744564&#34;&gt;如何评价余承东回应华为P10缺疏油层和闪存配置不同的解释？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其他厂商的那些往事比如小米 Note 2 的抹布屏等等就不一一枚举了，有兴趣的可以搜一搜每年的手机厂商质量问题盘点，顺便可以看看有几家厂商做了良心售后的。&lt;/p&gt;
+&lt;p&gt;顺便贴一下其他主流手机厂商的技术支持首页，证明我确实都看过一遍了 ：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.samsung.com/cn/support/&#34;&gt;https://www.samsung.com/cn/support/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.vivo.com.cn/service.html&#34;&gt;https://www.vivo.com.cn/service.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.oppo.com/cn/service.html&#34;&gt;https://www.oppo.com/cn/service.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mi.com/service&#34;&gt;https://www.mi.com/service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://consumer.huawei.com/cn/support/&#34;&gt;https://consumer.huawei.com/cn/support/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;利益相关：Apple 产品用户，非果粉。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>实用手机设计指南</title>
+      <link>https://tony.engineer/posts/2019/how-to-design-phone/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2019/how-to-design-phone/</guid>
+      <description>&lt;p&gt;前年年底 iPhone X 发布的时候，我就打算写篇博客从普通用户的角度吐槽一下时下的手机设计，但转念一想，国内的手机厂商们肯定会纷纷效仿，到时候槽点更多，喷起来更爽，于是一憋就憋了快两年（其实根本原因是懒）。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/how-to-design-phone/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;今年年初的时候，在 V2EX 上看到一篇帖子，甚合我意，当时就截了图，准备开喷，结果又因为懒癌发作，拖延至今。前几天刚好 iPhone 11 发布，感觉我的话题又丰富了许多，所以今天，我决心要把这个坑给填了。&lt;/p&gt;
+&lt;p&gt;首先我要声明我的“手机观”，即手机是一种工具，不是艺术品，也不是奢侈品，更不是装饰品，跟锤子一样，是一种工具，一种让我的生活更加便捷的工具。我知道我这种观点很多人不会赞同，但没关系，本文的目的是告诉手机厂商们如何设计一款实用的手机，而不是一款畅销的手机。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/how-to-design-phone/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这三年来手机最大的变化就是屏幕，大家都在拼屏占比。虽然小米 MIX 不是第一款“全面屏”概念的手机，但这一波确实是 Mix 带起来的节奏。本来 MIX 系列作为小米的量产概念机，给极客们尝尝鲜就好，结果是一发不可收拾。手机厂商们一看“全面屏”概念这么香，立马像一群苍蝇一样一拥而上（当时主流厂商除了三星）。刘海屏、水滴屏、鼻孔屏、通过弹出式摄像头实现的“真全面屏”，争相斗艳，各显奇葩。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/how-to-design-phone/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;问题是全面屏为了极致的屏占比带来了很多问题，牺牲了前置摄像头，牺牲了听筒，牺牲了传感器，牺牲了导航栏/Touch ID，给用户带来了极大的不便，比如当时的小米 Mix 在视频聊天的时候就得把屏幕倒过来。有些设计大大提升了成本，并且同时提升了故障率，比如 OV 的弹出式摄像头设计。&lt;/p&gt;
+&lt;p&gt;然而手机厂商才不管这些，他们要的是卖得更多，因为愚蠢的消费者们更愿意为炫酷的全面屏买单，而不是实用性买单。卖的更多才能有钱去研发屏占比更大更炫酷的手机，然后才会有更多的愚蠢的消费者们买单。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/how-to-design-phone/04.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;顺便说一下三星的曲面屏，用了一年的 Note 9（因为太喜欢 Note 8，所以我成了最早预订 Note 9 的那批用户），给我的感受是，虽然看得爽了，但不带套非常容易误触（我不喜欢戴套），尤其是玩王者荣耀的时候，我的左手食指经常误触到小地图，导致屏幕乱飞，非常影响玩游戏的心情。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/how-to-design-phone/05.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其次是摄像头。此次 iPhone 11 发布，背面的浴霸被网友喷成了狗，没办法，本来正面就丑，现在背面不甘示弱，当然也有可能是不甘寂寞，跟着一起丑，被喷也是正常的。其他厂商的设计好一点，没那么难看，但趋势都一样，孔越来越多。&lt;/p&gt;
+&lt;p&gt;PS：顺便说个题外话，苹果这次没有上 5G 说明还是对用户负责的。我个人认为 5G 两三年内不会有什么前途，所以现在买手机无需考虑 5G，太鸡肋。&lt;/p&gt;
+&lt;p&gt;很多用户追求手机拍照质量，可以理解，但手机毕竟是手机，拍照并不是最重要的功能，更何况大多数拍照片的都是用的前置摄像头，所以没必要在背面挖那么多孔（退一步讲，即使挖也不能挖这么丑啊！）。我的建议是可以花些力气搞一搞拍照，但没必要花那么大力气，毕竟所有厂商的研发资金都是有限的。对摄影真有追求的，应该去用单反，而不是用手机。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/how-to-design-phone/06.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;再说个极端的例子。华为 P30 所谓的“拍月亮”，经网友严格测试，发现原来用的是一种高级的 P 图技术，这种做法就是完全走了邪路，入了魔道，此处不再赘述，有兴趣的可以自己上知乎搜索相关的话题。&lt;/p&gt;
+&lt;p&gt;最后来说一说手机外壳的材质。现在主流的材质就是玻璃、金属、陶瓷（小米旗舰机型用得比较多），极少有旗舰机用塑料。我认为塑料才是手机外壳的最优解。作为一款每天都要使用的消费电子产品，少则一两年，多则三五年就要换新，塑料再适合不过。&lt;/p&gt;
+&lt;p&gt;用玻璃，容易摔碎，一碎就要大出血；用金属，冬天冰手，夏天烫手，春秋滑手（手干的时候，感觉我的 iPhone 7 随时都会滑出去），还有点重，并且对信号还有负面影响；用陶瓷更坑，对于厂商来说良品率低成本高，对于用户来说跟玻璃一样容易碎（所以除了小米也没几家用的）。所以这三种材质，都不适合做手机外壳。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/how-to-design-phone/07.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;相比之下，塑料的优点就很明显了，质量够轻，韧性够强，冬暖夏凉，优秀的工艺能让塑料的触感不逊于前三者，比如当年诺基亚的 Lumia 系列。唯一的缺点就是让消费者感觉廉价，厂商们就很难忽悠钱了。对于商业来讲，这确实是硬伤，因为愚蠢的用户们从来只是看价格，而不是看价值。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/how-to-design-phone/08.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其他材质如皮革、竹子、木头等由于非主流这里就不说了（话说我一直觉得 ThinkPad 用的碳纤维材质很不错，虽然成本略高，但手机也用不了多少啊，不知道为什么没有目前还没有厂商推出）。&lt;/p&gt;
+&lt;p&gt;以上就是我对现在手机设计的一些看法，简单总结一下我提出的三个建议：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;不要为了极致的屏占比牺牲其他硬件；&lt;/li&gt;
+&lt;li&gt;不要为了极致的拍照把背面搞成马蜂窝；&lt;/li&gt;
+&lt;li&gt;不要为了卖高价而舍弃最适合的材质。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;符合这三点的手机才是真正为用户考虑的手机。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>到底是阈值还是阀值？</title>
+      <link>https://tony.engineer/posts/2019/threshold/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2019/threshold/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/threshold/01.jpg&#34; title=&#34;Apple 官网的服务计划&#34;&gt;&lt;/p&gt;
+&lt;p&gt;当然是阈值（yuzhi）！每次听人说“阀值”“阀值”就要发狂。&lt;/p&gt;
+&lt;p&gt;没有“阀值（fazhi）”这个词！&lt;/p&gt;
+&lt;p&gt;没有“阀值（fazhi）”这个词！&lt;/p&gt;
+&lt;p&gt;没有“阀值（fazhi）”这个词！&lt;/p&gt;
+&lt;p&gt;重要的事情说三遍！&lt;/p&gt;
+&lt;p&gt;工作以前根本没听说过 “阀值（fazhi）”，工作以后经常听到，一开始没听懂，后来专门研究了一下，发现根本没有这个词。&lt;/p&gt;
+&lt;p&gt;有一个说法是，建国后大学里的文科的教授们用阈值，理工科的教授们用“阀值”，所以用错的一般都是理工科毕业的学生。&lt;/p&gt;
+&lt;p&gt;我一想还真可能是，我的专业是文科的，我在大学时，老师们确实都是用的阈值；而那些用错的，我问是不是理工科的，都说是。&lt;/p&gt;
+&lt;p&gt;抄一段知乎网友的话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;valve 和 threshold 在工业上都是常用的术语。&lt;br&gt;
+valve（阀）是控制系统中的组件，而 threshold（阈值）这个则是测量中的信号点。&lt;br&gt;
+看着像，区别老大了，所以才更要用不同的字翻译，防止有人把它俩搞混成一个东西。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由此可见，很可能是当年建国前后搞理工科的那些人，有个大佬用了错别字，于是后面的人也跟着用了（文科太差）。。“阀” 一般是“阀门”的意思，容易让人想当然，然而阀门跟临界值并不是一回事。&lt;/p&gt;
+&lt;p&gt;对于说“阀值（fazhi）”的人，我推荐看看这篇知乎问答：&lt;a href=&#34;https://www.zhihu.com/question/20642950&#34;&gt;https://www.zhihu.com/question/20642950&lt;/a&gt; 。&lt;br&gt;
+我不是为了输赢，我只是认真。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>macOS 升级到 Mojave 的经历</title>
+      <link>https://tony.engineer/posts/2019/macos-mojave/</link>
+      <pubDate>Thu, 21 Feb 2019 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2019/macos-mojave/</guid>
+      <description>&lt;p&gt;去年国庆长假后，有个同事问我有没有升级 Mojave，我说没有，立马打开 App Store 一看，瞬间就不淡定了…&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/macos-mojave/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对于我来说，比较有吸引力的几个功能如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dark Mode/黑暗主题&lt;/li&gt;
+&lt;li&gt;Finder 增强&lt;/li&gt;
+&lt;li&gt;截图功能加强&lt;/li&gt;
+&lt;li&gt;动态桌面&lt;/li&gt;
+&lt;li&gt;桌面堆栈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;尤其是黑暗主题，终于可以和我灰色的 MBP 契合了。&lt;/p&gt;
+&lt;p&gt;下班后，手痒难耐，明知 macOS 升级的故障率很高（不过之前我自己没遇到过大问题），终究耐不住寂寞，还是升级了。&lt;/p&gt;
+&lt;p&gt;一切顺利，大概将近一个小时，终于更新完毕，完美，选择了深色主题，UI 颜值提升了许多。&lt;/p&gt;
+&lt;p&gt;用了一会，终于还是发现一个很严重的问题：“隐私”-“辅助功能”-“允许下面的应用控制您的电脑” 里的所有应用都不见了，手动添加也添加不进去！这么严重的 Bug 竟然都没发现…&lt;/p&gt;
+&lt;p&gt;于是我的窗口控制应用 Moom 妥妥地罢工了……&lt;/p&gt;
+&lt;p&gt;所有需要这个权限的应用都跪了……&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/macos-mojave/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;网上搜了一圈，很多人都出现了这个问题，在知乎上 “如何评价 macOS Mojave 10.14？” 一堆人遇到的 bug 跟我一样。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/macos-mojave/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;虽然系统本身功能不受影响，也不影响大多数第三方软件的操作，但严重影响了我的工作心情。&lt;/p&gt;
+&lt;p&gt;折腾了半个月后，实在是受不了了，最终备份数据格盘重新安装了 Mojave。&lt;/p&gt;
+&lt;p&gt;重新安装后，功能上一切良好，主要遇到的问题是黑暗主题下的不兼容。&lt;/p&gt;
+&lt;p&gt;比如 MySQLWorkbench（8.0.13 及之前的版本，从 8.0.14 版本开始已修复）等软件在黑暗主题下有 bug。&lt;/p&gt;
+&lt;p&gt;截止目前（2019年2月20日），我所使用的软件基本上都已经支持了新的暗黑主题。&lt;/p&gt;
+&lt;h3 id=&#34;总结-总结总结&#34;&gt;&lt;a href=&#34;#%E6%80%BB%E7%BB%93%EF%BC%9A&#34; title=&#34;总结：&#34;&gt;&lt;/a&gt;总结：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;macOS 升级需谨慎，做好数据备份工作；&lt;/li&gt;
+&lt;li&gt;目前已经很稳了，可以升级了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;参考资料-参考资料参考资料&#34;&gt;&lt;a href=&#34;#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99%EF%BC%9A&#34; title=&#34;参考资料：&#34;&gt;&lt;/a&gt;参考资料：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/279832723/answer/499132061&#34;&gt;如何评价 macOS Mojave 10.14？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.mysql.com/doc/relnotes/workbench/en/news-8-0-14.html&#34;&gt;Changes in MySQL Workbench 8.0.14 (2019-01-21, General Availability)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://macflow.net/p/635.html&#34;&gt;MacOS Mojave 新功能解析：从未如此强大的Finder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>途牛原创双肩包初级体验</title>
+      <link>https://tony.engineer/posts/2018/tuniu-backpack/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2018/tuniu-backpack/</guid>
+      <description>&lt;p&gt;欣闻我牛自主设计了一款双肩包，虽然我已经有了3个双肩包（都是500块以内的那种。。。），但 as a geek，我还是毅然决然地瞒着老婆买了一个体验一把。&lt;/p&gt;
+&lt;p&gt;看&lt;a href=&#34;http://www.tuniu.com/web-mall/item/300130492&#34;&gt;官网&lt;/a&gt;这货是长这样子的:&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/01.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;下单后过了两天(由于缺货下单时是预订)衍生品的同事提醒我去拿货，拿到后被包装惊艳到了，这么厚的一个防震塑料袋，看起来好高端~&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/02.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然鹅，打开包装之后看起来就一般般了，没有惊喜。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/03.jpeg&#34;&gt; &lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/04.jpeg&#34;&gt; &lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/05.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;途牛经典的 &lt;strong&gt;途牛黄+途牛黑&lt;/strong&gt; 配色，整个包介于电脑包和普通双肩包之间，背部比较硬，不用担心掉到地上导致电脑受伤。&lt;/p&gt;
+&lt;p&gt;亮点是袋子比较多，看图。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/06.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这样看看不出可以放什么，我来上一张装了东西的体验图，继续看图。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/07.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;里面有两个可以放杯子或雨伞的类似于侧口袋的口袋，不过潮湿的雨伞可能就不太好放了……太大的雨伞比如小米的那款，估计放不下。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/08.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;两侧还有侧口袋，以及背部有一个暗口袋（防盗口袋？），还蛮大的，看我的手就知道了，深度至少有包的一半宽度，至少可以放个两三万现金，很适合低调的土豪携巨款出游。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/09.jpeg&#34;&gt; &lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/10.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;至于背起来的效果。。。&lt;/p&gt;
+&lt;p&gt;嗯，虽然此前已经有同事提醒我说背起来像个乌龟壳，但我还是决定原谅它……&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/11.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;PS: 由于上个月理发不幸栽在一个学徒手里，我决定给我的发型打个码……&lt;/p&gt;
+&lt;p&gt;还有几张图随便看看吧~&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/12.jpeg&#34;&gt; &lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/13.jpeg&#34;&gt; &lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/tuniu-backpack/14.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;说说缺点。比较不满意的是拉链设计，由于背部比较硬的那种设计，导致拉拉链的时候不是很顺畅，可能跟品控有关。这是目前感受出来的最明显的缺点。其他暂时没什么，以后有新的体会再来补。&lt;/p&gt;
+&lt;p&gt;不多说了，最近太忙，忙里偷闲写得这篇测评，下面总结一把。&lt;/p&gt;
+&lt;p&gt;总体来说 &lt;code&gt;179&lt;/code&gt; 的这个价格比起小米都市双肩包来性价比要差许多，但不失为一款通勤包的可选项，毕竟口袋多还是蛮有用的，很适合我这种不喜欢把东西堆在一起的人。不过，由于太像乌龟壳以及拉链上的缺陷，我暂时不会把它作为我的主力包。。。&lt;/p&gt;
+&lt;p&gt;鉴定完毕。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello World</title>
+      <link>https://tony.engineer/posts/2018/hello-world/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2018/hello-world/</guid>
+      <description>&lt;p&gt;经历了 CSDN、博客园、点点网、开源中国、WordPress、Hexo、Typecho，以及自己写的一个博客程序，最近听说 GitHub Pages 支持了 https，于是再次回到 Hexo，使用 GitHub Pages 重建了我的博客，估计以后也不会再折腾了。&lt;/p&gt;
+&lt;p&gt;这两年基本没写什么有价值的东西（虽然前几年基本也没写什么），只记了一些流水账，吐槽了一些坑爹的人和事。早期博客由于种种原因，丢失了一些，留下的一些现在看来觉得以前的自己好肤浅好傻X，觉得以前的自己傻X是一件好事，起码说明自己在进步，这也是写博客的意义之一吧。&lt;/p&gt;
+&lt;p&gt;以后尽量每月更新，记录自己的想法和做法，希望能帮助更多人。&lt;/p&gt;
+&lt;p&gt;PS: 如果把人坑了就不要怪我了，那不是我的本意 :)。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>查找 FontAwesome 图标的正确姿势</title>
+      <link>https://tony.engineer/posts/2017/fontawesome/</link>
+      <pubDate>Sun, 13 Aug 2017 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2017/fontawesome/</guid>
+      <description>&lt;p&gt;在做管理后台的时候，由于界面用的是 &lt;a href=&#34;http://fontawesome.io/icons/&#34;&gt;FontAwesome&lt;/a&gt; 的图标，所以需要经常去找合适的图标。每次都很都疼，因为…&lt;/p&gt;
+&lt;p&gt;之前一直以为 FontAwesome 的图标搜索用的是精确搜索，就是直接根据 icon 的名字去匹配，所以懒得去用，一直都是猜测图标的名称然后在网页中 &lt;code&gt;Ctrl+F&lt;/code&gt; 查找的，万万没想到…&lt;/p&gt;
+&lt;p&gt;原来人家的搜索是真正的搜索，不多说了，都是泪，先直接上图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fontawesome/01.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;为了这个“实验室”的图标，我用 &lt;code&gt;Ctrl+F&lt;/code&gt; 尝试了 &lt;code&gt;bottle&lt;/code&gt;、&lt;code&gt;lab&lt;/code&gt;、&lt;code&gt;labs&lt;/code&gt;、&lt;code&gt;experiment&lt;/code&gt;、&lt;code&gt;test&lt;/code&gt; 等等等，都没查找到，最后没办法，一个个地找才找到，花费的时间超过 10分钟！我一怒之下决定写一个搜索的插件，项目脚手架都搭建好了，这时发现原来官方的搜索竟然就是这么好用！&lt;/p&gt;
+&lt;p&gt;泪奔~&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>改变世界的不是技术，而是运用技术的能力</title>
+      <link>https://tony.engineer/posts/2017/what-changed-the-world/</link>
+      <pubDate>Wed, 12 Jul 2017 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2017/what-changed-the-world/</guid>
+      <description>&lt;p&gt;改变世界的不是技术，而是运用技术的能力。作为一个程序员，技术很容易取得，运用的能力却没那么容易。正如少林扫地僧所说，武功越高，越需要相应的佛法化解其戾气，如若不然，就会反噬自身。&lt;/p&gt;
+&lt;p&gt;我看到太多的程序员，一心钻研新技术，寻求百亿并发的解决之道，一上来就是去中心化，满嘴跑火车，却不关心自己的产品有多少人用，不关心如何将现有的技术发挥到极致。&lt;/p&gt;
+&lt;p&gt;这段话是我在手机上码的，当时我正处于暴走状态，本来准备写完发个朋友圈的，但怕朋友突然的关心，所以没发。好在我的博客没什么人看，就发这里了。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>记一次神奇的出差经历</title>
+      <link>https://tony.engineer/posts/2017/a-business-trip/</link>
+      <pubDate>Wed, 12 Jul 2017 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2017/a-business-trip/</guid>
+      <description>&lt;p&gt;今天找资料无意中看到一些前年的照片，其中有几张是我在一次出差途中拍摄的，现在想来，那次出差非常有意思，值得花两个小时记录下来，等老了好跟孙子吹牛。&lt;/p&gt;
+&lt;p&gt;先来交代一下事情的背景吧。那时我就职于一家做教育产品的互联网公司，核心产品简单来说就是幼儿园版微信。虽然终端用户主要是幼儿家长，但主要面向幼儿园推广。有些幼儿园比较难搞，于是 CEO 有时候不得不许诺一些额外的东西，比如做个官网之类的。&lt;/p&gt;
+&lt;p&gt;有家嘉兴的幼儿教育培训机构，提出了要做一个网站，CEO 估计是迫于业绩压力，答应了。后来人家又要求部署到自己的服务器上（估计是因为官方背景），由于我们给人家做的网站是用我们的比较“高大上”的技术栈做的，对方的 IT 人员搞不定，要求我们派人去现场部署，并表示可以报销差旅费。&lt;/p&gt;
+&lt;p&gt;当时我们服务端有四五个人，不过能搞定这个事情的，估计只有我和 Leader，所以问题就简单了，只能我去了。Leader 舍不得工作日放我去，因为那时开发任务也比较紧张，CEO 一番讨价还价后，我自愿决定放弃双休，前往嘉兴帮 CEO “擦屁股”。CEO 打保票说，不会让你白跑一趟。&lt;/p&gt;
+&lt;p&gt;那是我职业生涯中第一次出差。周六一大早从南京南站坐高铁前往嘉兴，由于起床太早，在车上睡着了，于是悲剧了，我睡到了上海，出师不利啊！到嘉兴时已经是下午一点，然后把地址搞错，又折返了一程，到目的地的时候，已经快下午三点。&lt;/p&gt;
+&lt;p&gt;由于是周六，对方办公楼里看不到人。接待我的人带我到机房，机房是这个样子的（当然，这是后面部署中拍的图）&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/a-business-trip/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我一看机房没人，惊出一身冷汗。因为接待我的人（看起来像是一个即将退休的老男人）说自己不是搞技术的，有问题打某某某电话，然后给我一个红包转身就走了。&lt;/p&gt;
+&lt;p&gt;来之前，我意淫过各种美妙的场景，当然最多的还是一群年轻漂亮天真好奇的幼儿园女教师们围着我问这问那亦或是安静地一脸崇拜地看着我忙碌。然而我想多了，我身处几乎空无一人的办公大楼，面对的是几台嗡嗡嗡的服务器——这个就是现实与理想的差距啊。&lt;/p&gt;
+&lt;p&gt;我镇定下来，仔细观察了一下服务器。虽然我之前只接触过学校里的 Windows Server 和阿里云的 ECS，并且都是远程操作没有接触过真机，但凭着我当年在学校里给学姐学妹们数百台笔记本装系统、解决各种疑难杂症的经验，我自信这点小问题难不到我（还有谷歌百度可以用嘛）。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;装了 Windows Server 2003 的服务器&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/a-business-trip/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这是一台装了 Windows Server 2003 的 IBM xSeries 235 塔式服务器，内存 512M，是一台布满灰尘、十几年前就已经停产了的老古董，可以放在博物馆里的那种。情况非常美妙，因为我们的项目只能部署在 &lt;code&gt;*nix&lt;/code&gt; 系统上，并且底层框架需要编译，512M 内存不够用，还得搞个交换分区。另外比较幸运的就是这台服务器可以访问外网。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;满是灰的IBM服务器&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/a-business-trip/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我出发前刻意带了两个优盘，一个刻了 32 位的 lunbuntu，一个刻了 64 位的 Ubuntu Server 版，机智如我。&lt;/p&gt;
+&lt;p&gt;于是打电话问了接待的人提供的 IT 电话，问能不能重装系统，对方说可以。立马掏出优盘插入，重启，进入启动项菜单，等等，怎么优盘识别不到？立即换接口，换优盘，等所有方案都试了一遍后发现，两个优盘在所有 USB 口上都不能识别。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;蛋碎了&amp;hellip;.&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/a-business-trip/04.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;蛋碎了……&lt;br&gt;
+此时我心中一万匹草泥马奔过……&lt;br&gt;
+千算万算还是失算了……&lt;/p&gt;
+&lt;p&gt;这时候我需要的是冷静。&lt;br&gt;
+仔细分析了一下，只剩下一条路可以走，就是使用光驱。当时的时间是 2015年12月12日的下午四点，在一个陌生的城市想要买空白光盘。这个时间点有点尴尬，掐指一算，我上次使用光盘应该是5年前了。看来一天搞定再玩一天的计划要落空了。&lt;/p&gt;
+&lt;p&gt;别无他法，只能拼人品了。&lt;/p&gt;
+&lt;p&gt;出了办公大楼，打开手机上的地图App，发现离市中心比较远，校区北面是一家沃尔玛，决定去碰碰运气。也许是那天人品大爆发，顺利地在超市里找到了 CD 和 DVD 空白盘，犹豫了一下，决定求稳，买了 CD。花了一个多小时，终于带着光盘回到了机房。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>论软件工程师的职业素养</title>
+      <link>https://tony.engineer/posts/2016/about-engineer/</link>
+      <pubDate>Fri, 30 Dec 2016 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2016/about-engineer/</guid>
+      <description>&lt;p&gt;在过去，工程师是一个极难获得的称谓，通常需要获取相应的学位，有多年的工作经验，甚至还要通过官方的考评，方能取得。&lt;/p&gt;
+&lt;p&gt;那时的工程师，往往要承担着社会责任。比如，作为桥梁工程师，你设计了一座大桥，就得为大桥的质量负责，&lt;/p&gt;
+&lt;p&gt;如果桥垮了，你是要跳河的。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/about-engineer/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然而，自互联网兴盛以来，出现了一大波“软件工程师”，也就是程序员，他们轻易获取了“工程师”的头衔，&lt;/p&gt;
+&lt;p&gt;其中有些人毫无职业素养，毫无责任担当。当然，我并非想要贬低程序员，因为本人也是一个程序员，&lt;/p&gt;
+&lt;p&gt;只是最近掉进坑了，满腹牢骚，愤懑不平，怨气冲天，才不得不作此文，吐槽以泄愤。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/about-engineer/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在我看来，作为一名软件工程师，最基本职业素养就是专业技能，也就是编码和程序设计，其他的比如团队精神等等等这里就不多谈了，&lt;/p&gt;
+&lt;p&gt;因为今天只想吐槽这么多。&lt;/p&gt;
+&lt;p&gt;首先来说说编码。作为一名合格的软件工程师，必须要明白代码的可维护性是多么重要，用来衡量可维护性的，首先是代码的可读性。&lt;/p&gt;
+&lt;p&gt;有些人把代码写得别人看不懂，就飘飘然以为自己多牛逼多厉害。比如判断一个变量是否为 0，0 偏偏要写成 &lt;code&gt;intval(chr(48))&lt;/code&gt;，等等等诸如此类不胜枚举，罄竹难书。&lt;/p&gt;
+&lt;p&gt;殊不知这种行为愚蠢至极，过两年把他拉回来看自己的这些代码，他一定会抽自己嘴巴子，因为他自己也看不懂自己写了什么。&lt;/p&gt;
+&lt;p&gt;所以请记住：你的代码别人看不懂，只有外行人才会觉得你牛逼，同行都会说你傻逼。在编码的时候，一定要想一想，这么写别人能理解我的意图吗？代码要写得傻一点，这一点脚本语言工程师尤其要注意，不要滥用魔法特性。&lt;/p&gt;
+&lt;p&gt;再来扯扯程序设计。其实这一点跟代码的可读性有共通之处，程序设计的目的首先是满足业务需求，其次就是在满足业务需求的前提下保证代码的可维护性，也就是保证代码描述的业务逻辑容易被人理解。&lt;/p&gt;
+&lt;p&gt;偏偏有些人，自以为自己的设计高端大气上档次，一个缓存 key，存了 9999 条数据，我只想问，有一条数据更新了怎么办？&lt;/p&gt;
+&lt;p&gt;恭喜你，答错了。人家的做法不是把这 9999 条数据查出来重新 set（虽然这已经足够奇葩），而是把全表的数据查出来每 9999 条分批 set 一遍（奇葩中的奇葩）。除了数据更新，有新数据插入缓存也要全部更新一遍。&lt;/p&gt;
+&lt;p&gt;哪天内存不够加载全表的数据了怎么办？没事啊，人家已经跑路了！人家跑路了项目怎么办？没事啊，有接盘侠啊！&lt;/p&gt;
+&lt;p&gt;没错，我就是这个接盘侠。昨天我花了一个晚上，把这波缓存改成了正常人的设计。&lt;/p&gt;
+&lt;p&gt;2016年的最后两天，我接了一个盘，不过，我会接好这个盘。&lt;/p&gt;
+&lt;p&gt;我不入地狱，谁入地狱？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>用 mermaid 画甘特图</title>
+      <link>https://tony.engineer/posts/2016/mermaid/</link>
+      <pubDate>Tue, 13 Sep 2016 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2016/mermaid/</guid>
+      <description>&lt;p&gt;今天发现了一个比较好用的画甘特图/流程图的工具：&lt;a href=&#34;https://knsv.github.io/mermaid/&#34;&gt;mermaid&lt;/a&gt;，官方的介绍是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Generation of diagram and flowchart from text in a similar manner as markdown”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我说好是因为对程序员好，支持命令行操作并且是开源的，貌似还可以整合进 Markdown，不过我没找到相关的案例。&lt;/p&gt;
+&lt;h3 id=&#34;使用在线工具绘制-使用在线工具绘制使用在线工具绘制&#34;&gt;&lt;a href=&#34;#%E4%BD%BF%E7%94%A8%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E7%BB%98%E5%88%B6&#34; title=&#34;使用在线工具绘制&#34;&gt;&lt;/a&gt;使用在线工具绘制&lt;/h3&gt;
+&lt;p&gt;mermaid 提供了一个&lt;a href=&#34;https://knsv.github.io/mermaid/live_editor/&#34;&gt;在线编辑器&lt;/a&gt;，可以迅速在线作图，下面是官方的 demo&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;生成的效果是这样的:&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/mermaid/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;再来一个甘特图的:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;生成的效果:&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/mermaid/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;画甘特图可以参考官方的 &lt;a href=&#34;https://knsv.github.io/mermaid/gantt.html&#34;&gt;Gantt语法文档&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;使用命令行绘制-使用命令行绘制使用命令行绘制&#34;&gt;&lt;a href=&#34;#%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BB%98%E5%88%B6&#34; title=&#34;使用命令行绘制&#34;&gt;&lt;/a&gt;使用命令行绘制&lt;/h3&gt;
+&lt;p&gt;由于 mermaid 使用 nodejs 写的，所以需要 node 环境，这个不多说，根据自己的平台安装好 node 即可。&lt;br&gt;
+安装 mermaid 一行命令搞定:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install -g phantomjs &amp;amp;&amp;amp; npm install -g mermaid
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;完成之后，就可以使用命令行了。&lt;br&gt;
+先新建一个文本文件，我们这里就来展示一个甘特图，所以命名 &lt;code&gt;demo.gantt&lt;/code&gt;，当然，文件名随意起就好。&lt;code&gt;demo.gantt&lt;/code&gt; 文件内容就用上面的甘特图的例子，然后使用命令：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mermaid demo .gantt -w 1920 -s -p -o images
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;就可以在 &lt;code&gt;images&lt;/code&gt; 目录下生成两个文件，一个是 &lt;code&gt;PNG&lt;/code&gt; 图片，另一个是 &lt;code&gt;SVG&lt;/code&gt; 矢量图。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>为什么我要写 ResquePanel</title>
+      <link>https://tony.engineer/posts/2016/about-resque-panel/</link>
+      <pubDate>Fri, 03 Jun 2016 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2016/about-resque-panel/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/Lucups/resque-panel&#34;&gt;ResquePanel&lt;/a&gt; 是用于监控 &lt;a href=&#34;https://github.com/chrisboulton/php-resque&#34;&gt;php-resque&lt;/a&gt; 的一款 Web 界面工具。完全使用 PHP 开发。当然，由于 resque 的 “正版” 是 Ruby 写的，所以你也可以用来监控 Ruby 版的 resque。&lt;/p&gt;
+&lt;p&gt;也许有人会说我造轮子，因为很容易可以在 GitHub 上搜到一个叫 &lt;a href=&#34;https://github.com/wa0x6e/ResqueBoard&#34;&gt;ResqueBoard&lt;/a&gt; 的项目，还有个非常漂亮的&lt;a href=&#34;http://resqueboard.kamisama.me/&#34;&gt;介绍网页&lt;/a&gt;，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/about-resque-panel/01.jpg&#34; title=&#34;ResqueBoard 官方介绍页&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看出来，作者花费了不少心思，前端做得也漂亮(我觉得这个前端堪称完美！)。所以刚开始我也用了这个，于是，发现了问题。&lt;/p&gt;
+&lt;h3 id=&#34;resqueboard-的缺陷-resqueboard-的缺陷resqueboard-的缺陷&#34;&gt;&lt;a href=&#34;#ResqueBoard-%E7%9A%84%E7%BC%BA%E9%99%B7&#34; title=&#34;ResqueBoard 的缺陷&#34;&gt;&lt;/a&gt;ResqueBoard 的缺陷&lt;/h3&gt;
+&lt;p&gt;首先是该项目依赖太多，除了 &lt;code&gt;Node.js&lt;/code&gt; 的 &lt;code&gt;Cube&lt;/code&gt;，另外还要装一个 MongoDB，最关键的还在于如果你需要使用作者改写过的 php-resque，这让人很是担心。虽然我毫不怀疑作者的人品，但要我把正在跑的一个项目依赖的库替换掉（因为与原项目冲突），还是有不少担心的。然后就是 Cube 依赖的一个叫 &lt;code&gt;websocket-server&lt;/code&gt; 的项目已经不见了，导致 npm install 安装依赖失败，Google 了半天，最后在该项目的 GitHub Issue List 里找到解决方案，过程参见 &lt;a href=&#34;https://segmentfault.com/q/1010000003990965&#34;&gt;npm install cube Error: No dist in websocket-server package&lt;/a&gt;。折腾了半天，Cube 的两个进程跑起来了。最后就是替换项目里原来用的 php-resque，小心翼翼。配置了 Nginx 后终于跑起来了。&lt;/p&gt;
+&lt;p&gt;跑起来后发现，首页是能看了，其他页面都有问题，一检查，发现 web 目录下有个 &lt;code&gt;.htaccess&lt;/code&gt; 文件，一看尿了，rewrite 规则这么多！只能用 apache 了，于是又给服务器装了 apache，Nginx 做反代，搞了半天终于基本正常了，右上角显示的三个服务正常连接。再对照官方文档，完全正确了。&lt;/p&gt;
+&lt;p&gt;但是，跑了几天后，发现数据有问题。首先是很多数据完全获取不到，基本上除了看到队列、处理了多少个 Job，其他一切显示没有数据。这一点让我很是伤心。各种找原因，反复查看官方文档、Issue 列表，还是没找到问题。&lt;/p&gt;
+&lt;p&gt;我最终决定自己写一个，简单一点的。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>为什么我不用钢化膜</title>
+      <link>https://tony.engineer/posts/2015/steel-film/</link>
+      <pubDate>Mon, 30 Nov 2015 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2015/steel-film/</guid>
+      <description>&lt;p&gt;钢化膜一定要做得易碎，这样手机摔在地上时，膜碎的概率要远远大于屏幕碎的概率：&lt;/p&gt;
+&lt;p&gt;—— 当用户拿起手机返现膜碎了屏没碎，会说，啊，我的钢化膜保护了手机，如果不是它，估计屏幕就要碎了！然后果断再买一块新的钢化膜。结果是用户消费了更多的钢化膜。&lt;/p&gt;
+&lt;p&gt;—— 反之，如果屏幕碎了膜没碎，用户会说，我擦，贴个膜没卵用！以后再也不贴了！结果是最后没人用钢化膜了。&lt;/p&gt;
+&lt;p&gt;所以，钢化膜一定要做得易碎，越容易碎越好！&lt;/p&gt;
+&lt;p&gt;PS: 当有人问我为什么不贴膜时，我想到了上面这段话。 : )&lt;/p&gt;
+&lt;h3 id=&#34;2016年1月29日补记&#34;&gt;2016年1月29日补记&lt;/h3&gt;
+&lt;p&gt;一朋友看到此文后给我发来下面这张图片，以彰余智。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/steel-film/01.jpg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PHPCON 2015(北京站)之旅</title>
+      <link>https://tony.engineer/posts/2015/phpcon-2015-beijing/</link>
+      <pubDate>Wed, 17 Jun 2015 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2015/phpcon-2015-beijing/</guid>
+      <description>&lt;p&gt;2014年 PHPCON 上海站举办前夕，老胡问我去不去，当时对这些会议不是很感冒(其实主要原因是没钱)，就没去，不过当时我们约定第二年一起去。到今年北京站举办前一个月，老胡发来链接，问我来否，我自然不想做一个放鸽子的人，领导 Allen 知悉后表示他也要去，于是买门票买车票不提。&lt;/p&gt;
+&lt;p&gt;6月6日早上到达北京，直奔会场，时间刚刚好。此行主要是为了见一见国内的 PHP 大牛的风采（其实我只熟悉两位嘉宾：惠新宸和韩天峰），顺便看看这些会议到底是一个什么样的情况(因为此前曾参加过南京的一个互联网沙龙，看到最后发现全是广告，所以印象极差——也许是因为免费的)。&lt;/p&gt;
+&lt;p&gt;先来张会议的日程：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;会议日程&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpcon-2015-beijing/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;首先开讲的是来自新浪微博的胡波，主要讲 Yaf/Yar 在微博里的使用情况——手机微博服务端这一块从 v4 升级到 v5 的坎坷过程。&lt;/p&gt;
+&lt;p&gt;由于我们正在使用 Yaf/Yar (后来用 Phalcon 替换了 Yaf)，所以胡波的内容让我们极是受用，忍不住多拍了几张现场 PPT (强调一下我一般很少拍照片的)：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;在微博里的使用情况&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpcon-2015-beijing/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;在微博里的使用情况&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpcon-2015-beijing/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这两张图说明了 v4 到 v5 升级过程中要解决的问题，跟我们产品 v2 到 v3 的升级非常类似。&lt;/p&gt;
+&lt;p&gt;我们产品 v2 版本为了求速度，用了我们比较熟悉的 Symfony2，后来使用 &lt;code&gt;ab&lt;/code&gt; 压测发现 QPS 极低，才 8 个左右，分析了一下代码执行时间，发现 Symfony2 框架启动时间太高，所以 v2.1 时 App 的接口部分换成了 &lt;a href=&#34;https://github.com/laruence/yaf&#34;&gt;Yaf&lt;/a&gt;，由于 Yaf 过于简洁，没有 ORM 之类的模块，从 v2.3 开始新的业务模块用 &lt;a href=&#34;http://phalconphp.com&#34;&gt;Phalcon&lt;/a&gt; 写，所以我们的 v2.x 版本用了3个框架。采用了 Yaf/Phalcon 的新的业务模块速度相对老的速度提升明显。&lt;/p&gt;
+&lt;p&gt;胡波的内容对我们从 v2.x 升级到 v3 有很大启发，不过后来由于我们的业务改变巨大，v3 核心基本上是一个新系统，所以只能部分实践。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;在微博里的使用情况&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpcon-2015-beijing/04.jpg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 PHPStorm 中使用 region （代码折叠）</title>
+      <link>https://tony.engineer/posts/2014/phpstrom-region/</link>
+      <pubDate>Fri, 24 Jan 2014 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2014/phpstrom-region/</guid>
+      <description>&lt;p&gt;使用 VS 写 C# 的人都很喜欢 &lt;strong&gt;#region&lt;/strong&gt; 实现的代码折叠功能。PHP 本身没有类似的功能，但作为一个 PHPer，肯定不甘在这一点上示弱。本文就介绍使用史上最强大 PHP IDE —— PHPStorm 实现代码折叠（注：不一定是一个函数或一个类的）。&lt;/p&gt;
+&lt;p&gt;其实前面废话说了这么多，正文就只有三行：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//region description
+code....
+//endregion
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;有人要说没图你说个 Smartisan，好，我就贴个图：&lt;/p&gt;
+&lt;p&gt;展开效果图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;展开效果图&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpstorm-region/01.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;折叠效果图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;折叠效果图：&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpstorm-region/02.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注：只在 PHPStorm 下有效。当然，不仅支持 PHP 代码，也支持 js 代码。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>我的Linux发行版/桌面环境选择之路</title>
+      <link>https://tony.engineer/posts/2013/the-road-of-my-linux-dist/</link>
+      <pubDate>Sat, 30 Nov 2013 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2013/the-road-of-my-linux-dist/</guid>
+      <description>&lt;p&gt;PS：这是一个年轻程序员折腾 Linux 桌面的流水账。。。&lt;/p&gt;
+&lt;h3 id=&#34;2013年3月份-unity&#34;&gt;2013年3月份 Unity&lt;/h3&gt;
+&lt;p&gt;这个时间用的是Ubuntu 12.10，默认的Unity界面，稳定性一般，最不习惯的是，窗口操作按钮（最小化最大化关闭）在左上角，用惯了Windows的我很不习惯。然后就是，Unity的菜单很炫，但不幸的是，09年的ThinkPad R400表示反应有点迟钝，所以我决定换个不那么炫的桌面环境。&lt;/p&gt;
+&lt;h3 id=&#34;2013年47月份-kde-4&#34;&gt;2013年4~7月份 KDE 4&lt;/h3&gt;
+&lt;p&gt;这几个月先是在原来Ubuntu 12.10装了KDE 4、BlackBox、Xfce、GNome 3，都折腾了一遍之后，决定使用 KDE 4。KDE 4的优点就是插件多，使用习惯类似Windows，然后就是默认的资源管理器功能强大，远超Unity。&lt;/p&gt;
+&lt;p&gt;不选GNome3的原因是，感觉跟Unity有点像（个人觉得本质上区别不大，按下WinKey，机械硬盘就会表示压力很大），至于其他的几个，都感觉上个世纪来的。这时候Ubuntu13.04来了，于是直接下了个Kubuntu装了。&lt;/p&gt;
+&lt;h3 id=&#34;2013年8月份-回归unity&#34;&gt;2013年8月份 回归Unity&lt;/h3&gt;
+&lt;p&gt;时间一长，就发现Kubuntu的不好了。主要还是Ubuntu的原罪——每次开机都会提示一个错误，永远修复不了。然后就是KDE本身的一些问题，比如对多屏支持不好（我费了好大力气解决的），然后就是发现KDE并不是那么漂亮、精致。&lt;/p&gt;
+&lt;p&gt;8月份离开前公司，换系统，又换回了Ubuntu，换回了Unity。&lt;/p&gt;
+&lt;h3 id=&#34;2013年911月份-linux-mintcinnamon&#34;&gt;2013年9~11月份 Linux Mint（Cinnamon）&lt;/h3&gt;
+&lt;p&gt;月份来到现在的公司，无意中发现Unity的一个重大Bug，就是鼠标按着拖来拖去时可能导致图形界面崩溃——即时升级到13.10，等Bug修复不知何年何月，再加上对Unity的种种不满，于是，决心放弃Ubuntu。&lt;/p&gt;
+&lt;p&gt;又开始折腾，这时已经相对来讲比较熟悉Linux了，于是尝试使用Debian——终于还是被驱动击败了。。。Debian都搞不定，更别提Gentoo了，于是，还是回到Ubuntu系上。&lt;/p&gt;
+&lt;p&gt;找来找去，无意中尝试了一下Linux Mint（其实我还在下载的时候，并没有报任何希望，因为感觉Linux Mint的官网略显。。。寒酸），使用的Cinnamon桌面环境，一切都是那么美好&amp;hellip;..&lt;/p&gt;
+&lt;p&gt;适合我多年的Windows下的习惯，又满足了我对Terminal的需求，至于稳定性，还需要时间去验证，至少目前来看，不输于Unity。最终选定Linux Mint（Cinnamon桌面环境）。&lt;/p&gt;
+&lt;h3 id=&#34;2013年12月1日更新&#34;&gt;2013年12月1日更新&lt;/h3&gt;
+&lt;p&gt;前几日给笔记本换了块硬盘，装了Fedora19。感觉GNOME3还是不错的。不过我主要的目的是尝试一下yum。我觉得貌似 Fedora 比 Ubuntu 要快那么一点点。。。难道是我的错觉？&lt;/p&gt;
+&lt;h3 id=&#34;2014年3月12日更新&#34;&gt;2014年3月12日更新&lt;/h3&gt;
+&lt;p&gt;折腾了一年的 Linux桌面，最终还是找不到一个稳定又好用且漂亮的，最终还是在新年到来之前回归了 Win7，还特别安装了 &lt;strong&gt;Cygwin&lt;/strong&gt; 以及 &lt;strong&gt;Gow&lt;/strong&gt;，让好用的 grep 等命令保留下来。Win7终归是“温妻”啊！&lt;/p&gt;
+&lt;h3 id=&#34;2014年5月29日更新&#34;&gt;2014年5月29日更新&lt;/h3&gt;
+&lt;p&gt;3月底入手 ThinkPad X240 后，开始转到 Win8.1，这个过程还好，尤其是 X240 的触控板，在 Windows 下很好用，在 Linux 下很不好用，没办法，没有驱动的支持，再牛叉的硬件也是扯淡啊。&lt;/p&gt;
+&lt;h3 id=&#34;2025年4月1日更新&#34;&gt;2025年4月1日更新&lt;/h3&gt;
+&lt;p&gt;自2015年5月开始正式切换到 macOS（彼时还叫 Mac OS X），至今已有整整 10 年。&lt;/p&gt;
+&lt;p&gt;macOS 虽然在很多方面都比不过 Windows，但在 Web 开发方便，便利性远超 Windows。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>关于使用 Symfony2 开发时遇到的一个诡异的 bug</title>
+      <link>https://tony.engineer/posts/2013/fix-a-bug-02/</link>
+      <pubDate>Fri, 18 Oct 2013 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2013/fix-a-bug-02/</guid>
+      <description>&lt;h3 id=&#34;问题描述&#34;&gt;问题描述&lt;/h3&gt;
+&lt;p&gt;最近在使用symfony 2开发，处于刚入门阶段。昨天完成了注册登录模块，开发阶段一直没有问题，快完成时诡异的错误出现了：注册成功后，查询数据表，记录存在，但登录始终报错。&lt;/p&gt;
+&lt;p&gt;由于登录是使用symfony2自带的安全框架，又不知道 symfony2有什么debug的好方法，所以只能检查代码，继续读symfony2文档，因为之前做过登录注册模块，所以对配置什么的还是蛮有信心，确信不会错，搞了半天不知道问题在哪。注册成功，登录始终不成功。&lt;/p&gt;
+&lt;h3 id=&#34;衣带渐宽终不悔为-bug-消的人憔悴&#34;&gt;衣带渐宽终不悔，为 bug 消的人憔悴&lt;/h3&gt;
+&lt;p&gt;最后还是同事过来，问我用什么加密，然后试图寻找登录加密与注册加密的结果是否一致。不成功，因为login的过程完全由symfony来完成的，查文档一时又找不到login具体的代码，最后，我们找了一个在线加密网站，比对加密结果和注册加密结果是否一致，最后结果是一致。。。&lt;/p&gt;
+&lt;p&gt;蛋疼！泥马这错太诡异了！难道真要我这个刚入门的去看框架源码？？？&lt;/p&gt;
+&lt;h3 id=&#34;众里寻bug千百度蓦然回首bug-却在灯火阑珊处&#34;&gt;众里寻bug千百度，蓦然回首，bug 却在灯火阑珊处&lt;/h3&gt;
+&lt;p&gt;正当我垂头丧气心如死灰批头散发郁闷的要死的时候，突然！眼前一亮！为什么网站上加密结果的最后是两个等号而数据库里面的没有等号？？？！！！&lt;/p&gt;
+&lt;p&gt;我擦，终于找到了！经过测试，发现快完成的时候改用了架构师设计的数据库，password字段长度只有50,而我之前设计的是255,且密码在采用sha512算法加密后长度大于50,导致写入数据库的只有前面的50个字符，所以我开始比对的时候竟然没有发现这个问题。。。&lt;/p&gt;
+&lt;p&gt;我看开头几位都一样就没有关注后面的。。。！！！&lt;/p&gt;
+&lt;p&gt;而我的印象里，如果字符串大于数据库设计的长度应该是要报错的，所以要么是mysql截取了，要么是symfony截取了，具体原因等下次再研究吧。。。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>一次愉快的 bug 修复经历</title>
+      <link>https://tony.engineer/posts/2013/fix-a-bug-01/</link>
+      <pubDate>Fri, 11 Oct 2013 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2013/fix-a-bug-01/</guid>
+      <description>&lt;p&gt;使用 jQuery 插件 Jcrop 裁剪图片时，发现一个问题，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fix-a-bug-01.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;不知道这里的 radio 哪里来的，很郁闷，因为以前用过一次，没遇到这个问题。到 stackoverflow 上查了也没有类似的问题。&lt;/p&gt;
+&lt;p&gt;没办法，只好上官网留言问作者。&lt;/p&gt;
+&lt;p&gt;英语不太好，只能勉强描述问题：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;input type=&amp;#34;radio&amp;#34; class=&amp;#34;jcrop-keymgr&amp;#34; style=&amp;#34;position: fixed; left: -120px; width: 12px; display: inline-block;&amp;#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There is a strange radio input in my page, I don’t know where it comes from, I think you can help me.&lt;/p&gt;
+&lt;p&gt;If you can give me your email address, I will send the pictue to you.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;几个小时候，收到了作者的回复:&lt;/p&gt;
+&lt;p&gt;Hi… I think the option to turn that off is keySupport: false…&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

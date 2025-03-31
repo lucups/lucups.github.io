@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Icon on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/icon/</link>
+    <description>Recent content in Icon on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 13 Aug 2017 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/icon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>查找 FontAwesome 图标的正确姿势</title>
+      <link>https://tony.engineer/posts/2017/fontawesome/</link>
+      <pubDate>Sun, 13 Aug 2017 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2017/fontawesome/</guid>
+      <description>&lt;p&gt;在做管理后台的时候，由于界面用的是 &lt;a href=&#34;http://fontawesome.io/icons/&#34;&gt;FontAwesome&lt;/a&gt; 的图标，所以需要经常去找合适的图标。每次都很都疼，因为…&lt;/p&gt;
+&lt;p&gt;之前一直以为 FontAwesome 的图标搜索用的是精确搜索，就是直接根据 icon 的名字去匹配，所以懒得去用，一直都是猜测图标的名称然后在网页中 &lt;code&gt;Ctrl+F&lt;/code&gt; 查找的，万万没想到…&lt;/p&gt;
+&lt;p&gt;原来人家的搜索是真正的搜索，不多说了，都是泪，先直接上图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fontawesome/01.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;为了这个“实验室”的图标，我用 &lt;code&gt;Ctrl+F&lt;/code&gt; 尝试了 &lt;code&gt;bottle&lt;/code&gt;、&lt;code&gt;lab&lt;/code&gt;、&lt;code&gt;labs&lt;/code&gt;、&lt;code&gt;experiment&lt;/code&gt;、&lt;code&gt;test&lt;/code&gt; 等等等，都没查找到，最后没办法，一个个地找才找到，花费的时间超过 10分钟！我一怒之下决定写一个搜索的插件，项目脚手架都搭建好了，这时发现原来官方的搜索竟然就是这么好用！&lt;/p&gt;
+&lt;p&gt;泪奔~&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

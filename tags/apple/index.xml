@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Apple on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/apple/</link>
+    <description>Recent content in Apple on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/apple/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我停止了 Apple Music 的订阅，顺便聊一下付费订阅制</title>
+      <link>https://tony.engineer/posts/2024/stopped-apple-music-sub/</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2024/stopped-apple-music-sub/</guid>
+      <description>&lt;p&gt;自从两年前开始使用 Apple Music 以来，我一直是付费用户。但是，最近我决定停止订阅。&lt;/p&gt;
+&lt;p&gt;我停止订阅的主要原因是我的听歌习惯，次要原因是很多我想听的歌找不到，最后就是我最近开始听一些播客节目了。&lt;/p&gt;
+&lt;h2 id=&#34;听歌习惯&#34;&gt;听歌习惯&lt;/h2&gt;
+&lt;p&gt;我听歌喜欢听我喜欢的歌，而不是听新歌。我会把我喜欢的歌添加到一个歌单里，然后循环播放。这样，我可以在听歌的时候不用关心是什么歌，也不用担心听到不喜欢的歌。&lt;/p&gt;
+&lt;p&gt;Apple Music 的推荐算法虽然也能给我推荐一些我喜欢的歌，但命中率不高。&lt;/p&gt;
+&lt;h2 id=&#34;找不到歌&#34;&gt;找不到歌&lt;/h2&gt;
+&lt;p&gt;我喜欢听的一些歌，Apple Music 上没有。除了部分是版权的问题，还有一些是因为国内莫名其妙的政策原因。&lt;/p&gt;
+&lt;p&gt;比如《皇后大道东》，这个应该不是版权的问题（至于到底是什么问题懂得都懂），因为 Apple Music 上有这首歌的专辑，但少了两首歌，其中一首就是《皇后大道东》。&lt;/p&gt;
+&lt;p&gt;虽然我可以通过导入本地音乐的方式添加到我的歌单里，但是这样做太麻烦了。&lt;/p&gt;
+&lt;p&gt;加上第一个原因，我还不如把我喜欢的歌下载到手机里，然后用本地播放器播放。&lt;/p&gt;
+&lt;p&gt;虽然这至少有一半不是 Apple Music 的问题，但是我还是得说一下。&lt;/p&gt;
+&lt;h2 id=&#34;听播客&#34;&gt;听播客&lt;/h2&gt;
+&lt;p&gt;最近我开始用小宇宙这个 App 听一些播客节目，比如《半拿铁》、《科技乱炖》、《声动早咖啡》等，这导致我听音乐的时间减少了。&lt;/p&gt;
+&lt;h2 id=&#34;关于订阅制付费的一些想法&#34;&gt;关于订阅制付费的一些想法&lt;/h2&gt;
+&lt;p&gt;以上就是我停止 Apple Music 订阅的原因。&lt;/p&gt;
+&lt;p&gt;这里顺便再说一下订阅制付费。&lt;/p&gt;
+&lt;p&gt;最近 Apple Store 上开始用订阅制收费的应用越来越多了，我觉得这不是一个好的趋势。&lt;/p&gt;
+&lt;p&gt;因为订阅制会让用户感觉到压力，尤其是用户不是很频繁使用这个应用的时候。&lt;/p&gt;
+&lt;p&gt;其次很多应用本身只是一个本地化的小工具，除了一次性的开发成本和后续修 bug 的成本，甚至连服务器都不需要，根本就没有其他成本，订阅制收费这个逻辑就很扯淡。&lt;/p&gt;
+&lt;p&gt;就比如我在用的一款图片压缩的小工具，我本来是想付费的，虽然不付费也不影响我的使用（每天有 20
+张处理额度），但就在我准备付费的时候，我发现这个应用是订阅制收费的，我就放弃了。&lt;/p&gt;
+&lt;p&gt;这个应用只是一个本地化的小工具，没有任何服务器资源消耗，但是却用订阅制收费，这就很不合理，这就很扯淡。&lt;/p&gt;
+&lt;p&gt;除非是 Apple Music 或者 Netflix 这种需要持续更新内容的应用，或者 ChatGPT
+这种需要大量服务器资源的应用，其他的应用都不应该用订阅制收费。&lt;/p&gt;
+&lt;p&gt;你说你会持续更新功能？对不起，我付费的时候是因为我需要这个功能，而不是因为你会持续增加新功能，我不需要新功能，我只需要这个。&lt;/p&gt;
+&lt;p&gt;如果你确实增加了一些新的功能，我觉得开发者应该把这些新功能集合起来，发布个大版本，比如 &lt;code&gt;Downie 4&lt;/code&gt;，用大版本升级收费，这样更合理。&lt;/p&gt;
+&lt;p&gt;而且我还发现有一些应用，故意欺骗不熟悉电子产品的老年人，让他们误以为是一次性付费，结果是订阅制收费，这种行为真的很恶心。&lt;/p&gt;
+&lt;p&gt;工具类应用使用订阅制收费，除了忽悠不懂的人付费、劝退轻度用户外，还能有啥？除非你是杀手级应用，市面上找不到靠谱的替代品，比如
+Adobe 系列、微软 Office、JetBrains 系列等。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PS：JetBrains 即使停止付费，也是可以使用你付费那时候的老版本的，本质上还是一次性付费买断版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以，我觉得订阅制收费不是一个好的趋势，适合订阅制的应用并不多，大多数应用应该使用一次性付费或者按量计费更合理。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>一次良心售后</title>
+      <link>https://tony.engineer/posts/2019/apple-service/</link>
+      <pubDate>Wed, 23 Oct 2019 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2019/apple-service/</guid>
+      <description>&lt;p&gt;今年年初的时候，我的 2017 款 MacBook Pro（乞丐版）键盘出了一些问题，&lt;br&gt;
+主要表现是方向键的上键出现了咔咔咔的声音，每按一次就火大一次。&lt;br&gt;
+后来下键也出现问题了，反弹无力，软绵绵的。&lt;br&gt;
+不过由于我大部分时间都在用外接键盘，&lt;br&gt;
+所以就一直没处理（这次并不是因为穷，因为我早就知道了 MacBook Pro 的键盘服务计划）。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/apple-service/01.jpg&#34; title=&#34;Apple 官网的服务计划&#34;&gt;&lt;/p&gt;
+&lt;p&gt;由于前段时间服务器不太稳定，经常需要半夜在家里处理问题，躺在床上只能用自带键盘，&lt;br&gt;
+这导致我的火越来越大，终于忍不住了，于是就在官方的 Apple 支持 APP 上预约了键盘维修。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PS：我事先特意上官网看了一下，确认应该不是我的问题，因为我的自带键盘用得还是很少的，所以才敢预约。😂😂😂&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原以为换个键盘很简单，所以我也没准备，第一次去的时候说是可能要 3～5天检测和维修时间，&lt;br&gt;
+要我先备份一下资料，于是重新预约了国庆期间去。&lt;/p&gt;
+&lt;p&gt;第二次去直接把电脑放那去了，说是要先检测，如果没问题就直接给我换了，&lt;br&gt;
+如果有问题（也就是人为问题比如说进水了）会先告知我维修费用再跟我确认是否维修。&lt;br&gt;
+第二天没收到消息，我估计稳了。果然，第三天收到通知说维修已经完成可以去取了。&lt;br&gt;
+这说明确实不是我的问题，同时也说明 Apple 还是蛮良心的。&lt;/p&gt;
+&lt;p&gt;看到维修单，发现不仅仅是键盘，连电池等都换了，估计是因为集成度太高，仅仅只换键盘人工费用太高，&lt;br&gt;
+所以就直接全换了，用户需要支付的金额为0，嗯，很良心。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/apple-service/02.jpg&#34; title=&#34;维修记录副本&#34;&gt;&lt;/p&gt;
+&lt;p&gt;根据我的这次经历，关于这个键盘服务计划需要注意的是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;键盘非人为损坏（如进水等）；&lt;/li&gt;
+&lt;li&gt;购买之日起 4年内（官方人员跟我说的，但官网上没说，不过笔记本用 4年也差不多该换了）；&lt;/li&gt;
+&lt;li&gt;根据一些网友的经历，可能需要发票，所以我带了发票，但没跟我要，所以也就没拿出来；&lt;/li&gt;
+&lt;li&gt;换了键盘之后，因为其他一些硬件也换了，所以一些付费软件识别到硬件变动取消授权了，导致我又要重新输入激活码，比如 Downie 3。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;除了这次换键盘，之前还换过 iPad 的充电器，iPhone 7 的电池，总的来说，虽然每次都要预约感觉节奏慢了一点，但售后体验还是蛮好的。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/apple-service/03.jpg&#34; title=&#34;Apple 官网技术支持首页&#34;&gt;&lt;/p&gt;
+&lt;p&gt;话说 Apple 官网技术支持页面直接列出了各种更换和维修扩展计划，也就是自己的屁股自己擦。我看了一下其他主流手机厂商们的官网，发现他们都没有，难道是他们品控真的辣么优秀从来不出问题？&lt;/p&gt;
+&lt;p&gt;非也。&lt;/p&gt;
+&lt;p&gt;想当年，某爱国厂商爆出闪存门事件，不仅不承认错误，还说这是“业界通用”做法，关于事件详细的经过，可以参考这篇文章：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/apple-service/04.jpg&#34; title=&#34;链接地址 https://zhuanlan.zhihu.com/p/26508723&#34;&gt;&lt;/p&gt;
+&lt;p&gt;更多可以看知乎上的下面两个问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/58645911&#34;&gt;如何评论华为官方对闪存事件的回复？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/58744564&#34;&gt;如何评价余承东回应华为P10缺疏油层和闪存配置不同的解释？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其他厂商的那些往事比如小米 Note 2 的抹布屏等等就不一一枚举了，有兴趣的可以搜一搜每年的手机厂商质量问题盘点，顺便可以看看有几家厂商做了良心售后的。&lt;/p&gt;
+&lt;p&gt;顺便贴一下其他主流手机厂商的技术支持首页，证明我确实都看过一遍了 ：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.samsung.com/cn/support/&#34;&gt;https://www.samsung.com/cn/support/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.vivo.com.cn/service.html&#34;&gt;https://www.vivo.com.cn/service.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.oppo.com/cn/service.html&#34;&gt;https://www.oppo.com/cn/service.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mi.com/service&#34;&gt;https://www.mi.com/service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://consumer.huawei.com/cn/support/&#34;&gt;https://consumer.huawei.com/cn/support/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;利益相关：Apple 产品用户，非果粉。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

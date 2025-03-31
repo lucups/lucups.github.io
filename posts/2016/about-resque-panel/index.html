@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>为什么我要写 ResquePanel | 托尼吹雪</title>
+<meta name="keywords" content="php">
+<meta name="description" content="ResquePanel 是用于监控 php-resque 的一款 Web 界面工具。完全使用 PHP 开发。当然，由于 resque 的 “正版” 是 Ruby 写的，所以你也可以用来监控 Ruby 版的 resque。
+也许有人会说我造轮子，因为很容易可以在 GitHub 上搜到一个叫 ResqueBoard 的项目，还有个非常漂亮的介绍网页，如图：
+
+可以看出来，作者花费了不少心思，前端做得也漂亮(我觉得这个前端堪称完美！)。所以刚开始我也用了这个，于是，发现了问题。
+ResqueBoard 的缺陷
+首先是该项目依赖太多，除了 Node.js 的 Cube，另外还要装一个 MongoDB，最关键的还在于如果你需要使用作者改写过的 php-resque，这让人很是担心。虽然我毫不怀疑作者的人品，但要我把正在跑的一个项目依赖的库替换掉（因为与原项目冲突），还是有不少担心的。然后就是 Cube 依赖的一个叫 websocket-server 的项目已经不见了，导致 npm install 安装依赖失败，Google 了半天，最后在该项目的 GitHub Issue List 里找到解决方案，过程参见 npm install cube Error: No dist in websocket-server package。折腾了半天，Cube 的两个进程跑起来了。最后就是替换项目里原来用的 php-resque，小心翼翼。配置了 Nginx 后终于跑起来了。
+跑起来后发现，首页是能看了，其他页面都有问题，一检查，发现 web 目录下有个 .htaccess 文件，一看尿了，rewrite 规则这么多！只能用 apache 了，于是又给服务器装了 apache，Nginx 做反代，搞了半天终于基本正常了，右上角显示的三个服务正常连接。再对照官方文档，完全正确了。
+但是，跑了几天后，发现数据有问题。首先是很多数据完全获取不到，基本上除了看到队列、处理了多少个 Job，其他一切显示没有数据。这一点让我很是伤心。各种找原因，反复查看官方文档、Issue 列表，还是没找到问题。
+我最终决定自己写一个，简单一点的。">
+<meta name="author" content="">
+<link rel="canonical" href="https://tony.engineer/posts/2016/about-resque-panel/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://tony.engineer/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tony.engineer/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tony.engineer/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tony.engineer/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tony.engineer/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://tony.engineer/posts/2016/about-resque-panel/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://tony.engineer/posts/2016/about-resque-panel/">
+  <meta property="og:site_name" content="托尼吹雪">
+  <meta property="og:title" content="为什么我要写 ResquePanel">
+  <meta property="og:description" content="ResquePanel 是用于监控 php-resque 的一款 Web 界面工具。完全使用 PHP 开发。当然，由于 resque 的 “正版” 是 Ruby 写的，所以你也可以用来监控 Ruby 版的 resque。
+也许有人会说我造轮子，因为很容易可以在 GitHub 上搜到一个叫 ResqueBoard 的项目，还有个非常漂亮的介绍网页，如图：
+可以看出来，作者花费了不少心思，前端做得也漂亮(我觉得这个前端堪称完美！)。所以刚开始我也用了这个，于是，发现了问题。
+ResqueBoard 的缺陷 首先是该项目依赖太多，除了 Node.js 的 Cube，另外还要装一个 MongoDB，最关键的还在于如果你需要使用作者改写过的 php-resque，这让人很是担心。虽然我毫不怀疑作者的人品，但要我把正在跑的一个项目依赖的库替换掉（因为与原项目冲突），还是有不少担心的。然后就是 Cube 依赖的一个叫 websocket-server 的项目已经不见了，导致 npm install 安装依赖失败，Google 了半天，最后在该项目的 GitHub Issue List 里找到解决方案，过程参见 npm install cube Error: No dist in websocket-server package。折腾了半天，Cube 的两个进程跑起来了。最后就是替换项目里原来用的 php-resque，小心翼翼。配置了 Nginx 后终于跑起来了。
+跑起来后发现，首页是能看了，其他页面都有问题，一检查，发现 web 目录下有个 .htaccess 文件，一看尿了，rewrite 规则这么多！只能用 apache 了，于是又给服务器装了 apache，Nginx 做反代，搞了半天终于基本正常了，右上角显示的三个服务正常连接。再对照官方文档，完全正确了。
+但是，跑了几天后，发现数据有问题。首先是很多数据完全获取不到，基本上除了看到队列、处理了多少个 Job，其他一切显示没有数据。这一点让我很是伤心。各种找原因，反复查看官方文档、Issue 列表，还是没找到问题。
+我最终决定自己写一个，简单一点的。">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-06-03T00:00:00+08:00">
+    <meta property="article:modified_time" content="2016-06-03T00:00:00+08:00">
+    <meta property="article:tag" content="Php">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="为什么我要写 ResquePanel">
+<meta name="twitter:description" content="ResquePanel 是用于监控 php-resque 的一款 Web 界面工具。完全使用 PHP 开发。当然，由于 resque 的 “正版” 是 Ruby 写的，所以你也可以用来监控 Ruby 版的 resque。
+也许有人会说我造轮子，因为很容易可以在 GitHub 上搜到一个叫 ResqueBoard 的项目，还有个非常漂亮的介绍网页，如图：
+
+可以看出来，作者花费了不少心思，前端做得也漂亮(我觉得这个前端堪称完美！)。所以刚开始我也用了这个，于是，发现了问题。
+ResqueBoard 的缺陷
+首先是该项目依赖太多，除了 Node.js 的 Cube，另外还要装一个 MongoDB，最关键的还在于如果你需要使用作者改写过的 php-resque，这让人很是担心。虽然我毫不怀疑作者的人品，但要我把正在跑的一个项目依赖的库替换掉（因为与原项目冲突），还是有不少担心的。然后就是 Cube 依赖的一个叫 websocket-server 的项目已经不见了，导致 npm install 安装依赖失败，Google 了半天，最后在该项目的 GitHub Issue List 里找到解决方案，过程参见 npm install cube Error: No dist in websocket-server package。折腾了半天，Cube 的两个进程跑起来了。最后就是替换项目里原来用的 php-resque，小心翼翼。配置了 Nginx 后终于跑起来了。
+跑起来后发现，首页是能看了，其他页面都有问题，一检查，发现 web 目录下有个 .htaccess 文件，一看尿了，rewrite 规则这么多！只能用 apache 了，于是又给服务器装了 apache，Nginx 做反代，搞了半天终于基本正常了，右上角显示的三个服务正常连接。再对照官方文档，完全正确了。
+但是，跑了几天后，发现数据有问题。首先是很多数据完全获取不到，基本上除了看到队列、处理了多少个 Job，其他一切显示没有数据。这一点让我很是伤心。各种找原因，反复查看官方文档、Issue 列表，还是没找到问题。
+我最终决定自己写一个，简单一点的。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://tony.engineer/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "为什么我要写 ResquePanel",
+      "item": "https://tony.engineer/posts/2016/about-resque-panel/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "为什么我要写 ResquePanel",
+  "name": "为什么我要写 ResquePanel",
+  "description": "ResquePanel 是用于监控 php-resque 的一款 Web 界面工具。完全使用 PHP 开发。当然，由于 resque 的 “正版” 是 Ruby 写的，所以你也可以用来监控 Ruby 版的 resque。\n也许有人会说我造轮子，因为很容易可以在 GitHub 上搜到一个叫 ResqueBoard 的项目，还有个非常漂亮的介绍网页，如图：\n可以看出来，作者花费了不少心思，前端做得也漂亮(我觉得这个前端堪称完美！)。所以刚开始我也用了这个，于是，发现了问题。\nResqueBoard 的缺陷 首先是该项目依赖太多，除了 Node.js 的 Cube，另外还要装一个 MongoDB，最关键的还在于如果你需要使用作者改写过的 php-resque，这让人很是担心。虽然我毫不怀疑作者的人品，但要我把正在跑的一个项目依赖的库替换掉（因为与原项目冲突），还是有不少担心的。然后就是 Cube 依赖的一个叫 websocket-server 的项目已经不见了，导致 npm install 安装依赖失败，Google 了半天，最后在该项目的 GitHub Issue List 里找到解决方案，过程参见 npm install cube Error: No dist in websocket-server package。折腾了半天，Cube 的两个进程跑起来了。最后就是替换项目里原来用的 php-resque，小心翼翼。配置了 Nginx 后终于跑起来了。\n跑起来后发现，首页是能看了，其他页面都有问题，一检查，发现 web 目录下有个 .htaccess 文件，一看尿了，rewrite 规则这么多！只能用 apache 了，于是又给服务器装了 apache，Nginx 做反代，搞了半天终于基本正常了，右上角显示的三个服务正常连接。再对照官方文档，完全正确了。\n但是，跑了几天后，发现数据有问题。首先是很多数据完全获取不到，基本上除了看到队列、处理了多少个 Job，其他一切显示没有数据。这一点让我很是伤心。各种找原因，反复查看官方文档、Issue 列表，还是没找到问题。\n我最终决定自己写一个，简单一点的。\n",
+  "keywords": [
+    "php"
+  ],
+  "articleBody": "ResquePanel 是用于监控 php-resque 的一款 Web 界面工具。完全使用 PHP 开发。当然，由于 resque 的 “正版” 是 Ruby 写的，所以你也可以用来监控 Ruby 版的 resque。\n也许有人会说我造轮子，因为很容易可以在 GitHub 上搜到一个叫 ResqueBoard 的项目，还有个非常漂亮的介绍网页，如图：\n可以看出来，作者花费了不少心思，前端做得也漂亮(我觉得这个前端堪称完美！)。所以刚开始我也用了这个，于是，发现了问题。\nResqueBoard 的缺陷 首先是该项目依赖太多，除了 Node.js 的 Cube，另外还要装一个 MongoDB，最关键的还在于如果你需要使用作者改写过的 php-resque，这让人很是担心。虽然我毫不怀疑作者的人品，但要我把正在跑的一个项目依赖的库替换掉（因为与原项目冲突），还是有不少担心的。然后就是 Cube 依赖的一个叫 websocket-server 的项目已经不见了，导致 npm install 安装依赖失败，Google 了半天，最后在该项目的 GitHub Issue List 里找到解决方案，过程参见 npm install cube Error: No dist in websocket-server package。折腾了半天，Cube 的两个进程跑起来了。最后就是替换项目里原来用的 php-resque，小心翼翼。配置了 Nginx 后终于跑起来了。\n跑起来后发现，首页是能看了，其他页面都有问题，一检查，发现 web 目录下有个 .htaccess 文件，一看尿了，rewrite 规则这么多！只能用 apache 了，于是又给服务器装了 apache，Nginx 做反代，搞了半天终于基本正常了，右上角显示的三个服务正常连接。再对照官方文档，完全正确了。\n但是，跑了几天后，发现数据有问题。首先是很多数据完全获取不到，基本上除了看到队列、处理了多少个 Job，其他一切显示没有数据。这一点让我很是伤心。各种找原因，反复查看官方文档、Issue 列表，还是没找到问题。\n我最终决定自己写一个，简单一点的。\n我菜我认怂 有人会说，明明是你自己菜，还怪人家太复杂！\n我菜我认怂行不？\n我并不否认 ResqueBoard 的价值，也并不怀疑作者的人品(不会故意给一个不好用的东西出来)。但是，作为一个产品经理(我觉得我更是一个产品经理)，我觉得无论是什么工具，做出来都是给人用的，既然给人用，就要考虑用户的感受。当然，对于开源软件，这一条并不适用，因为很多工具都是作者给自己用的，顺便开源出来，让用得上的人顺便用用。\n其实，我不需要查看那么多指标，我只是想简简单单看看队列的情况而已，当然，如果可能，可以加一个 Retry 的功能。所以你也可以说，并不是 ResqueBoard 不好，而是不适合我。\n为什么造轮子 有人会问，那你为什么不向作者咨询一下，而是自己造个轮子？\n首先我本人是一个不喜欢麻烦别人的人，如果有问题，我会尽一切可能自己解决，这事跟借钱一样，我宁愿向银行向支付宝借钱也不愿意向朋友借钱，像银行借钱只不过交点利息，向朋友借钱要交的就太多了。当然，这是我自己的观点，我只是自己不想做这个事，不代表我反对这个事。就好比我不会穿丝袜，但不反对别人穿，如果是美女穿，我还喜欢呢，哈哈！\n跑题了。话说回来，我觉得 ResqueBoard 是一个好看但并不好用(或者说实用)的工具，首先是安装过程太折腾，限制条件太多，虽然功能强大，但对于使用 php-resque 作为队列的用户来说，并不是一个好的选择。(既然选择了 php-resque 作为队列服务，首先可以认为用户对队列的要求并不高，否则肯定选择更加强大更加完善的方案。)\n所以，我在 ResquePanel 里使用的都是 PHPer 比较熟悉的技术，最“精深”的也只不过是 swoole 实现的 WebSocket (外加一个 swoole 实现的 child process，其实没必要使用这个特性的，我只是为了尝试一下，也许会在正式版本中移除)，安装简单快捷，甚至都不用安装 HTTP Server。当然，代价就是功能没那么多，目前最核心的功能除了查看队列情况(包括 Queues/Workers/Jobs 的各种信息)外，还有一个 Retry 的功能，都是按照我们实际需要来开发的，所以比较简单实用。\nResquePanel 的未来计划 目前 ResquePanel 只是一个简单的查看 php-resque 队列运行情况的 web 界面工具，我计划将其发展成一个完整的队列工具，甚至包含一个微型的 MVC 框架，这样在某些场景下，可以完全依靠 ResquePanel 来解决问题，为开发者提供方便。\n当然，以上只是美好的构想，也许由于我太懒会停更这个项目。\n",
+  "wordCount" : "124",
+  "inLanguage": "en",
+  "datePublished": "2016-06-03T00:00:00+08:00",
+  "dateModified": "2016-06-03T00:00:00+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tony.engineer/posts/2016/about-resque-panel/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "托尼吹雪",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tony.engineer/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://tony.engineer/" accesskey="h" title="托尼吹雪 (Alt + H)">托尼吹雪</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://tony.engineer/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      为什么我要写 ResquePanel
+    </h1>
+    <div class="post-meta"><span title='2016-06-03 00:00:00 +0800 CST'>June 3, 2016</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><a href="https://github.com/Lucups/resque-panel">ResquePanel</a> 是用于监控 <a href="https://github.com/chrisboulton/php-resque">php-resque</a> 的一款 Web 界面工具。完全使用 PHP 开发。当然，由于 resque 的 “正版” 是 Ruby 写的，所以你也可以用来监控 Ruby 版的 resque。</p>
+<p>也许有人会说我造轮子，因为很容易可以在 GitHub 上搜到一个叫 <a href="https://github.com/wa0x6e/ResqueBoard">ResqueBoard</a> 的项目，还有个非常漂亮的<a href="http://resqueboard.kamisama.me/">介绍网页</a>，如图：</p>
+<p><img loading="lazy" src="/images/about-resque-panel/01.jpg" title="ResqueBoard 官方介绍页"></p>
+<p>可以看出来，作者花费了不少心思，前端做得也漂亮(我觉得这个前端堪称完美！)。所以刚开始我也用了这个，于是，发现了问题。</p>
+<h3 id="resqueboard-的缺陷-resqueboard-的缺陷resqueboard-的缺陷"><a href="#ResqueBoard-%E7%9A%84%E7%BC%BA%E9%99%B7" title="ResqueBoard 的缺陷"></a>ResqueBoard 的缺陷<a hidden class="anchor" aria-hidden="true" href="#resqueboard-的缺陷-resqueboard-的缺陷resqueboard-的缺陷">#</a></h3>
+<p>首先是该项目依赖太多，除了 <code>Node.js</code> 的 <code>Cube</code>，另外还要装一个 MongoDB，最关键的还在于如果你需要使用作者改写过的 php-resque，这让人很是担心。虽然我毫不怀疑作者的人品，但要我把正在跑的一个项目依赖的库替换掉（因为与原项目冲突），还是有不少担心的。然后就是 Cube 依赖的一个叫 <code>websocket-server</code> 的项目已经不见了，导致 npm install 安装依赖失败，Google 了半天，最后在该项目的 GitHub Issue List 里找到解决方案，过程参见 <a href="https://segmentfault.com/q/1010000003990965">npm install cube Error: No dist in websocket-server package</a>。折腾了半天，Cube 的两个进程跑起来了。最后就是替换项目里原来用的 php-resque，小心翼翼。配置了 Nginx 后终于跑起来了。</p>
+<p>跑起来后发现，首页是能看了，其他页面都有问题，一检查，发现 web 目录下有个 <code>.htaccess</code> 文件，一看尿了，rewrite 规则这么多！只能用 apache 了，于是又给服务器装了 apache，Nginx 做反代，搞了半天终于基本正常了，右上角显示的三个服务正常连接。再对照官方文档，完全正确了。</p>
+<p>但是，跑了几天后，发现数据有问题。首先是很多数据完全获取不到，基本上除了看到队列、处理了多少个 Job，其他一切显示没有数据。这一点让我很是伤心。各种找原因，反复查看官方文档、Issue 列表，还是没找到问题。</p>
+<p>我最终决定自己写一个，简单一点的。</p>
+<h3 id="我菜我认怂-我菜我认怂我菜我认怂"><a href="#%E6%88%91%E8%8F%9C%E6%88%91%E8%AE%A4%E6%80%82" title="我菜我认怂"></a>我菜我认怂<a hidden class="anchor" aria-hidden="true" href="#我菜我认怂-我菜我认怂我菜我认怂">#</a></h3>
+<p>有人会说，明明是你自己菜，还怪人家太复杂！<br>
+我菜我认怂行不？<br>
+我并不否认 ResqueBoard 的价值，也并不怀疑作者的人品(不会故意给一个不好用的东西出来)。但是，作为一个<strong>产品经理</strong>(我觉得我更是一个产品经理)，我觉得无论是什么工具，做出来都是给人用的，既然给人用，就要考虑用户的感受。当然，对于开源软件，这一条并不适用，因为很多工具都是作者给自己用的，顺便开源出来，让用得上的人顺便用用。</p>
+<p>其实，我不需要查看那么多指标，我只是想简简单单看看队列的情况而已，当然，如果可能，可以加一个 <code>Retry</code> 的功能。所以你也可以说，并不是 ResqueBoard 不好，而是不适合我。</p>
+<h3 id="为什么造轮子-为什么造轮子为什么造轮子"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%A0%E8%BD%AE%E5%AD%90" title="为什么造轮子"></a>为什么造轮子<a hidden class="anchor" aria-hidden="true" href="#为什么造轮子-为什么造轮子为什么造轮子">#</a></h3>
+<p>有人会问，那你为什么不向作者咨询一下，而是自己造个轮子？</p>
+<p>首先我本人是一个不喜欢麻烦别人的人，如果有问题，我会尽一切可能自己解决，这事跟借钱一样，我宁愿向银行向支付宝借钱也不愿意向朋友借钱，像银行借钱只不过交点利息，向朋友借钱要交的就太多了。当然，这是我自己的观点，我只是自己不想做这个事，不代表我反对这个事。就好比我不会穿丝袜，但不反对别人穿，如果是美女穿，我还喜欢呢，哈哈！</p>
+<p>跑题了。话说回来，我觉得 ResqueBoard 是一个好看但并不好用(或者说实用)的工具，首先是安装过程太折腾，限制条件太多，虽然功能强大，但对于使用 php-resque 作为队列的用户来说，并不是一个好的选择。(既然选择了 php-resque 作为队列服务，首先可以认为用户对队列的要求并不高，否则肯定选择更加强大更加完善的方案。)</p>
+<p>所以，我在 ResquePanel 里使用的都是 PHPer 比较熟悉的技术，最“精深”的也只不过是 <a href="http://www.swoole.com/">swoole</a> 实现的 WebSocket (外加一个 swoole 实现的 child process，其实没必要使用这个特性的，我只是为了尝试一下，也许会在正式版本中移除)，安装简单快捷，甚至都不用安装 HTTP Server。当然，代价就是功能没那么多，目前最核心的功能除了查看队列情况(包括 Queues/Workers/Jobs 的各种信息)外，还有一个 <code>Retry</code> 的功能，都是按照我们实际需要来开发的，所以比较简单实用。</p>
+<h3 id="resquepanel-的未来计划-resquepanel-的未来计划resquepanel-的未来计划"><a href="#ResquePanel-%E7%9A%84%E6%9C%AA%E6%9D%A5%E8%AE%A1%E5%88%92" title="ResquePanel 的未来计划"></a>ResquePanel 的未来计划<a hidden class="anchor" aria-hidden="true" href="#resquepanel-的未来计划-resquepanel-的未来计划resquepanel-的未来计划">#</a></h3>
+<p>目前 ResquePanel 只是一个简单的查看 php-resque 队列运行情况的 web 界面工具，我计划将其发展成一个完整的队列工具，甚至包含一个微型的 MVC 框架，这样在某些场景下，可以完全依靠 ResquePanel 来解决问题，为开发者提供方便。</p>
+<p>当然，以上只是美好的构想，也许由于我太懒会停更这个项目。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://tony.engineer/tags/php/">Php</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://tony.engineer/">托尼吹雪</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

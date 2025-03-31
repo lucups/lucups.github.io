@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Threshold on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/threshold/</link>
+    <description>Recent content in Threshold on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/threshold/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>到底是阈值还是阀值？</title>
+      <link>https://tony.engineer/posts/2019/threshold/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2019/threshold/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/threshold/01.jpg&#34; title=&#34;Apple 官网的服务计划&#34;&gt;&lt;/p&gt;
+&lt;p&gt;当然是阈值（yuzhi）！每次听人说“阀值”“阀值”就要发狂。&lt;/p&gt;
+&lt;p&gt;没有“阀值（fazhi）”这个词！&lt;/p&gt;
+&lt;p&gt;没有“阀值（fazhi）”这个词！&lt;/p&gt;
+&lt;p&gt;没有“阀值（fazhi）”这个词！&lt;/p&gt;
+&lt;p&gt;重要的事情说三遍！&lt;/p&gt;
+&lt;p&gt;工作以前根本没听说过 “阀值（fazhi）”，工作以后经常听到，一开始没听懂，后来专门研究了一下，发现根本没有这个词。&lt;/p&gt;
+&lt;p&gt;有一个说法是，建国后大学里的文科的教授们用阈值，理工科的教授们用“阀值”，所以用错的一般都是理工科毕业的学生。&lt;/p&gt;
+&lt;p&gt;我一想还真可能是，我的专业是文科的，我在大学时，老师们确实都是用的阈值；而那些用错的，我问是不是理工科的，都说是。&lt;/p&gt;
+&lt;p&gt;抄一段知乎网友的话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;valve 和 threshold 在工业上都是常用的术语。&lt;br&gt;
+valve（阀）是控制系统中的组件，而 threshold（阈值）这个则是测量中的信号点。&lt;br&gt;
+看着像，区别老大了，所以才更要用不同的字翻译，防止有人把它俩搞混成一个东西。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由此可见，很可能是当年建国前后搞理工科的那些人，有个大佬用了错别字，于是后面的人也跟着用了（文科太差）。。“阀” 一般是“阀门”的意思，容易让人想当然，然而阀门跟临界值并不是一回事。&lt;/p&gt;
+&lt;p&gt;对于说“阀值（fazhi）”的人，我推荐看看这篇知乎问答：&lt;a href=&#34;https://www.zhihu.com/question/20642950&#34;&gt;https://www.zhihu.com/question/20642950&lt;/a&gt; 。&lt;br&gt;
+我不是为了输赢，我只是认真。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

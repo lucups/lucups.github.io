@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Design on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/design/</link>
+    <description>Recent content in Design on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 28 Sep 2023 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我讨厌内置锂电池</title>
+      <link>https://tony.engineer/posts/2023/i-hate-built-in-lithium-batteries/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2023/i-hate-built-in-lithium-batteries/</guid>
+      <description>&lt;p&gt;从某些角度讲，我是一个保守派。&lt;/p&gt;
+&lt;p&gt;就比如各种家用小电器，电动剃须刀、电动冲牙器，还有玩具之类的，我就非常不喜欢内置锂电池款的。&lt;/p&gt;
+&lt;p&gt;虽说内置电池可以省下买 5 号 7 号电池的钱，但真正使用的时候就就会发现这几个问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;急着用的时候，发现没电了，要充电，这类小电器 99.99% 没有快充，至少得充半小时，然后使用三分钟；&lt;/li&gt;
+&lt;li&gt;电器的寿命往往很长，而锂电池的寿命则是有限的，内置锂电池的寿命限制了电器的寿命，本来能传三代的，现在只能循环几百次了；&lt;/li&gt;
+&lt;li&gt;相当一部分的产品（尤其是一些老牌子）用的都是一些乱七八糟的充电线，Micro-USB 的、Mini-USB
+的，甚至还有那种小圆孔的，真到充电的时候，找不到线了，那就只能下线了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/i-hate-built-in-lithium-batteries/1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;所以，现在还在坚持使用 5 号电池、7 号电池的电子产品、家用小电器，我是十分欣赏的，我也是一贯坚持优先选择无内置电池款的产品。&lt;/p&gt;
+&lt;p&gt;像电视遥控器这类两节电池用几年的产品，普通碱性电池没啥问题。但如果长期使用高功率电器的话，电池的消耗确实是个问题。&lt;/p&gt;
+&lt;p&gt;我最常用的电池牌子是金霸王，5 号电池一节要 2~3 元，平均以 2.5 元计算，以我每日使用的冲牙器为例，基本上每个月都要换一次电池，两节电池就要
+5 元，一年就是 5 x 12 = 60 元，三年就是 180 元。&lt;/p&gt;
+&lt;p&gt;所以，可充电的 5 号电池就成了我的必需品。&lt;/p&gt;
+&lt;p&gt;研究了一下，我选择了京东京造的这款 1.5v 恒压、支持 Type-C 充电的电池。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/i-hate-built-in-lithium-batteries/2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;PS 一下，京东京造的东西我买过好几件，品质还是非常不错的，总体来说比隔壁网易严选家还要强一些。&lt;/p&gt;
+&lt;p&gt;4 节 3000 毫安时充电电池 + Type-C 充电器，99 元，可 1000 次循环。&lt;/p&gt;
+&lt;p&gt;对比了一下金霸王的容量 2000 毫安时左右（网络搜索结果，如果不对请留言），即使打七折，一次循环也抵得上一节新电池，相当于 4000
+节电池，额外还送一个充电器，就当抵电费了。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/i-hate-built-in-lithium-batteries/3.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;算一下 99 ÷ 4000 = 0.2475，也就是说相当于一节电池两毛五，相比金霸王碱性电池两块五，节省了 90%，直接打骨折，真正的老抠比直呼内行。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>用户体验杀手——开屏广告</title>
+      <link>https://tony.engineer/posts/2020/open-screen-ad/</link>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2020/open-screen-ad/</guid>
+      <description>&lt;p&gt;作为中国人，开屏广告实在是太熟悉了，以至于见到没有开屏广告的 App 都要感慨一番。&lt;/p&gt;
+&lt;p&gt;今天就来聊聊这个话题。&lt;/p&gt;
+&lt;p&gt;昨天在某快餐门店排队，无聊之余决定看会电子书，于是打开 iReader App，应用启动，一副很具有读书沉浸感的启动页让我迫不及待地想要看书。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/open-screen-ad/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;结果应用启动（大概 2 秒）后立马给我呈现了一张开屏广告，让我像吃了苍蝇一样恶心。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/open-screen-ad/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;由于是单手持手机，在手机屏幕尺寸普遍大于 5 寸的今天，右上角的 &amp;ldquo;跳过 5&amp;rdquo;（截图时已经剩余 4 秒，不要计较）不得不让我拿出另一只手去点击。&lt;/p&gt;
+&lt;p&gt;又由于我的手指较大，这个跳过按钮又特别小，看到广告的心情又比较浮躁，一不留神点歪了就跳转到广告主的落地页去了，最后不得不点击返回才进入主界面。&lt;/p&gt;
+&lt;p&gt;这个过程熟悉不熟悉？刺激不刺激？&lt;/p&gt;
+&lt;p&gt;当今国内 App 的生态，已经到了可以肆意强奸用户的程度，这也算是国内的特色吧。&lt;/p&gt;
+&lt;p&gt;作为一个读书的应用，掌阅内置图书商城，主要的营收应该也不在开屏的这个广告吧？再说了，内部那么多地方可以放广告，为什么偏偏还要在启动页结束后搞个开屏广告呢？凭啥呢？&lt;/p&gt;
+&lt;p&gt;凭国内的用户好欺负呗。&lt;/p&gt;
+&lt;p&gt;为了那么点蝇头小利，就可以牺牲设计师的辛辛苦苦设计的出来的充满阅读氛围的启动页，甚至牺牲付费用户的体验（没错，我是付费用户，但以后不会再付费了），这家公司的格局也就这么大了。&lt;/p&gt;
+&lt;p&gt;相比之下，那些国际化 App 诸如 Twitter、Facebook、Instagram、Youtube 包括 Google 全家桶等无一有此恶劣行径。
+或许，在他们的眼里，根本不知道也不容许这只&amp;quot;苍蝇&amp;quot;的存在吧。&lt;/p&gt;
+&lt;p&gt;当然，国内也有做得不错的。比如代表国内 App 体验上限的微信（对，你没看错，这次我是在夸微信）、逼格满满的星巴克 App、小清新的一鸣真鲜奶吧 inm App 等等，我觉得他们的产品体验和专业度值得国内的同行们效仿。&lt;/p&gt;
+&lt;p&gt;有人说，支付宝也没有开屏广告啊，你为什么不夸夸呢？&lt;/p&gt;
+&lt;p&gt;我不夸支付宝的原因很简单，看看它现在的 ICON 就知道了。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/open-screen-ad/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;抄袭了 iPhone 的刘海屏暂且不表，能把 ICON 敢改这么丑的（并且涉嫌**），除了阿里系其他人办不到，毕竟这得要多大的勇气啊！&lt;/p&gt;
+&lt;p&gt;所以为啥不放开屏广告就很好猜了。既然支付宝根本不 Care 设计，为什么要 Care 用户的支付体验呢？答案很简单，就是竞争。微信支付让支付宝认识到，如果支付宝加了开屏广告，恐怕线下扫码支付的份额就要全交代了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;声明&lt;/strong&gt;：以上关于支付宝的动机纯属我个人的猜测（即基于已有公开信息作出的合理推测），仅限本文讨论，请勿传播，不负法律责任。&lt;/p&gt;
+&lt;p&gt;最后，希望未来的某一天，世间不再有开屏广告！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Jetbrains on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/jetbrains/</link>
+    <description>Recent content in Jetbrains on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 24 Jan 2014 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/jetbrains/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 PHPStorm 中使用 region （代码折叠）</title>
+      <link>https://tony.engineer/posts/2014/phpstrom-region/</link>
+      <pubDate>Fri, 24 Jan 2014 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2014/phpstrom-region/</guid>
+      <description>&lt;p&gt;使用 VS 写 C# 的人都很喜欢 &lt;strong&gt;#region&lt;/strong&gt; 实现的代码折叠功能。PHP 本身没有类似的功能，但作为一个 PHPer，肯定不甘在这一点上示弱。本文就介绍使用史上最强大 PHP IDE —— PHPStorm 实现代码折叠（注：不一定是一个函数或一个类的）。&lt;/p&gt;
+&lt;p&gt;其实前面废话说了这么多，正文就只有三行：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//region description
+code....
+//endregion
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;有人要说没图你说个 Smartisan，好，我就贴个图：&lt;/p&gt;
+&lt;p&gt;展开效果图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;展开效果图&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpstorm-region/01.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;折叠效果图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;折叠效果图：&#34; loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/phpstorm-region/02.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注：只在 PHPStorm 下有效。当然，不仅支持 PHP 代码，也支持 js 代码。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bug on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/bug/</link>
+    <description>Recent content in Bug on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 18 Oct 2013 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/bug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于使用 Symfony2 开发时遇到的一个诡异的 bug</title>
+      <link>https://tony.engineer/posts/2013/fix-a-bug-02/</link>
+      <pubDate>Fri, 18 Oct 2013 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2013/fix-a-bug-02/</guid>
+      <description>&lt;h3 id=&#34;问题描述&#34;&gt;问题描述&lt;/h3&gt;
+&lt;p&gt;最近在使用symfony 2开发，处于刚入门阶段。昨天完成了注册登录模块，开发阶段一直没有问题，快完成时诡异的错误出现了：注册成功后，查询数据表，记录存在，但登录始终报错。&lt;/p&gt;
+&lt;p&gt;由于登录是使用symfony2自带的安全框架，又不知道 symfony2有什么debug的好方法，所以只能检查代码，继续读symfony2文档，因为之前做过登录注册模块，所以对配置什么的还是蛮有信心，确信不会错，搞了半天不知道问题在哪。注册成功，登录始终不成功。&lt;/p&gt;
+&lt;h3 id=&#34;衣带渐宽终不悔为-bug-消的人憔悴&#34;&gt;衣带渐宽终不悔，为 bug 消的人憔悴&lt;/h3&gt;
+&lt;p&gt;最后还是同事过来，问我用什么加密，然后试图寻找登录加密与注册加密的结果是否一致。不成功，因为login的过程完全由symfony来完成的，查文档一时又找不到login具体的代码，最后，我们找了一个在线加密网站，比对加密结果和注册加密结果是否一致，最后结果是一致。。。&lt;/p&gt;
+&lt;p&gt;蛋疼！泥马这错太诡异了！难道真要我这个刚入门的去看框架源码？？？&lt;/p&gt;
+&lt;h3 id=&#34;众里寻bug千百度蓦然回首bug-却在灯火阑珊处&#34;&gt;众里寻bug千百度，蓦然回首，bug 却在灯火阑珊处&lt;/h3&gt;
+&lt;p&gt;正当我垂头丧气心如死灰批头散发郁闷的要死的时候，突然！眼前一亮！为什么网站上加密结果的最后是两个等号而数据库里面的没有等号？？？！！！&lt;/p&gt;
+&lt;p&gt;我擦，终于找到了！经过测试，发现快完成的时候改用了架构师设计的数据库，password字段长度只有50,而我之前设计的是255,且密码在采用sha512算法加密后长度大于50,导致写入数据库的只有前面的50个字符，所以我开始比对的时候竟然没有发现这个问题。。。&lt;/p&gt;
+&lt;p&gt;我看开头几位都一样就没有关注后面的。。。！！！&lt;/p&gt;
+&lt;p&gt;而我的印象里，如果字符串大于数据库设计的长度应该是要报错的，所以要么是mysql截取了，要么是symfony截取了，具体原因等下次再研究吧。。。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>一次愉快的 bug 修复经历</title>
+      <link>https://tony.engineer/posts/2013/fix-a-bug-01/</link>
+      <pubDate>Fri, 11 Oct 2013 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2013/fix-a-bug-01/</guid>
+      <description>&lt;p&gt;使用 jQuery 插件 Jcrop 裁剪图片时，发现一个问题，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fix-a-bug-01.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;不知道这里的 radio 哪里来的，很郁闷，因为以前用过一次，没遇到这个问题。到 stackoverflow 上查了也没有类似的问题。&lt;/p&gt;
+&lt;p&gt;没办法，只好上官网留言问作者。&lt;/p&gt;
+&lt;p&gt;英语不太好，只能勉强描述问题：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;input type=&amp;#34;radio&amp;#34; class=&amp;#34;jcrop-keymgr&amp;#34; style=&amp;#34;position: fixed; left: -120px; width: 12px; display: inline-block;&amp;#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There is a strange radio input in my page, I don’t know where it comes from, I think you can help me.&lt;/p&gt;
+&lt;p&gt;If you can give me your email address, I will send the pictue to you.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;几个小时候，收到了作者的回复:&lt;/p&gt;
+&lt;p&gt;Hi… I think the option to turn that off is keySupport: false…&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

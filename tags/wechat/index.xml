@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Wechat on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/wechat/</link>
+    <description>Recent content in Wechat on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/wechat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小肚鸡肠的微信</title>
+      <link>https://tony.engineer/posts/2023/small-wechat/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2023/small-wechat/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/1.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;昨天看了一个谷歌开发者的视频，我注意到演示用的编辑器是微软家的 VS Code，使用的笔记本是苹果家的 MacBook。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/2.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我们知道 Google 的 Android 在和 Apple 的 iOS 竞争（当然曾经微软的 WindowsPhone 也是竞品），微软推出的搜索引擎 Bing 也在一步步蚕食
+Google 的市场份额。&lt;/p&gt;
+&lt;p&gt;在 Google，竟然可以使用有着直接竞争关系的厂家的产品，这感觉就好比阿里的员工用微信群沟通项目进度，腾讯的员工用支付宝充值 QQ
+超级会员，非常魔幻。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/3.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;不说内部员工了，因为跟我们普通用户没啥关系。今天就说说我这个普通用户遇到的一个问题吧。&lt;/p&gt;
+&lt;p&gt;有个叫老王的朋友喜欢给我分享抖音视频，于是我经常收到了下面这些微信消息：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/4.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/5.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这是在电脑端的微信截的图，如果是移动端微信，只能看到消息的一半，后面一般都省略了，然后要点开才能查看。&lt;/p&gt;
+&lt;p&gt;但网址打不开，于是只能复制。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/small-wechat/6.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;复制的时候就会发现，一向体验极佳的腾讯系软件，竟然连复制都做不好，长按选不中，选中了复制按钮弹不出来，要反反复复好几次才能复制好。&lt;/p&gt;
+&lt;p&gt;嗯，我相信一定是程序员的锅，腾讯的程序员快来接锅。&lt;/p&gt;
+&lt;p&gt;嗯，说这么多，其实我就想说一句：小肚鸡肠的微信。&lt;/p&gt;
+&lt;p&gt;PS：最近发现网址都能打开了，不知道是不是因为引起群愤被投诉多了没办法了所以稍微把鸡肠撑大一点。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2023年12月更新&#34;&gt;2023年12月更新&lt;/h3&gt;
+&lt;p&gt;最后本文发现的微信里可以直接打开抖音链接，其实只说对了一半。因为仅限于私聊，私聊内能打开，群聊打不开。嗯，企鹅家的骚操作就是这么细微。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>把鸡贼的微信关进笼子里！</title>
+      <link>https://tony.engineer/posts/2020/fuck-wechat/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2020/fuck-wechat/</guid>
+      <description>&lt;p&gt;晚上发朋友圈的时候，再次被微信猥琐的做法恶心到了，愤然之下决定在微信的平台上喷喷它，同时号召大家坚决抵制微信的这个猥琐行为！&lt;/p&gt;
+&lt;p&gt;iOS 14 更新有一项重大的功能，就是可以让 App 只访问部分图片。这也是我一直很期待的功能，因为国内的相当一部分应用厂商毫无底线，商业道德败坏，找各种理由要权限（在谷歌老大缺席的安卓生态里，甚至出现不给权限就闪退不给用的流氓行径），为的就是搜集尽可能多的用户信息，赚更多的昧良心钱。所以 iOS 14 发布后，我第一时间更新了。&lt;/p&gt;
+&lt;p&gt;但万万没想到，微信这货竟然凭借垄断地位毫无廉耻地变相要所有照片的权限，在发送图片或者发朋友圈的时候，直接要求用户允许访问 “所有照片”，而不是用正常的做法（如微博）那样在界面里可以调用系统相册添加照片。&lt;/p&gt;
+&lt;p&gt;下面是微信的骚操作：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fuck-wechat/01.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;首先告诉你无法访问所有照片，让你前往系统设置或者继续访问部分照片。&lt;/p&gt;
+&lt;p&gt;当你点击前往系统设置，就直接到系统设置，当然你可以在这里继续编辑所选照片（就是恶心你）。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fuck-wechat/02.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;点击继续访问部分照片，再次提示你去给微信大爷开所有照片权限：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fuck-wechat/03.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;有人会说，是不是 iOS 14 刚发布，微信还没来得及更新做兼容啊？看看我本地的版本信息，10月02日更新的版本，而 iOS 14 在年中的时候就已经发布了 beta 版本，
+微信的开发者作为国内最顶尖的开发者之一，不可能不知道，所以只有一个可能，就是故意而为之。嗯，就是恶心你，恶心对隐私敏感的用户。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fuck-wechat/04.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;那么，没有照片权限怎么发照片呢？&lt;/p&gt;
+&lt;p&gt;很简单，就是直接从相册里分享到微信。虽然相比之前麻烦了一点，但一想到微信不能偷偷地看我相册了，心里就舒坦多了。&lt;/p&gt;
+&lt;p&gt;相比之下，微博的做法则君子得多，看图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/fuck-wechat/05.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;除了你已经选择的允许微博访问的照片外，还有一个更多照片按钮，可以从系统相册增加照片，而不是让用户跳到系统设置里去添加。所以今天要表扬一下微博坚持住了底线。&lt;/p&gt;
+&lt;p&gt;钉钉貌似还没更新，跟没事人一样，所以暂时不评价。其他 App 没发过图片，所以也暂时不评价。&lt;/p&gt;
+&lt;p&gt;总之，在最后，我号召大家不要给任何第三方 App （重点是微信）开所有照片的访问权限，把它们关进笼子里！&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;附：关闭微信所有照片权限的办法：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 设置，找到 微信（往下拉，按音序排列的，或者搜索）点进去；&lt;/li&gt;
+&lt;li&gt;点击 照片，选择 选中的照片（可以参考本文第二张截图）；&lt;/li&gt;
+&lt;li&gt;搞定。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>

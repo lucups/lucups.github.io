@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>PHPCON 2015(北京站)之旅 | 托尼吹雪</title>
+<meta name="keywords" content="php">
+<meta name="description" content="2014年 PHPCON 上海站举办前夕，老胡问我去不去，当时对这些会议不是很感冒(其实主要原因是没钱)，就没去，不过当时我们约定第二年一起去。到今年北京站举办前一个月，老胡发来链接，问我来否，我自然不想做一个放鸽子的人，领导 Allen 知悉后表示他也要去，于是买门票买车票不提。
+6月6日早上到达北京，直奔会场，时间刚刚好。此行主要是为了见一见国内的 PHP 大牛的风采（其实我只熟悉两位嘉宾：惠新宸和韩天峰），顺便看看这些会议到底是一个什么样的情况(因为此前曾参加过南京的一个互联网沙龙，看到最后发现全是广告，所以印象极差——也许是因为免费的)。
+先来张会议的日程：
+
+首先开讲的是来自新浪微博的胡波，主要讲 Yaf/Yar 在微博里的使用情况——手机微博服务端这一块从 v4 升级到 v5 的坎坷过程。
+由于我们正在使用 Yaf/Yar (后来用 Phalcon 替换了 Yaf)，所以胡波的内容让我们极是受用，忍不住多拍了几张现场 PPT (强调一下我一般很少拍照片的)：
+
+
+这两张图说明了 v4 到 v5 升级过程中要解决的问题，跟我们产品 v2 到 v3 的升级非常类似。
+我们产品 v2 版本为了求速度，用了我们比较熟悉的 Symfony2，后来使用 ab 压测发现 QPS 极低，才 8 个左右，分析了一下代码执行时间，发现 Symfony2 框架启动时间太高，所以 v2.1 时 App 的接口部分换成了 Yaf，由于 Yaf 过于简洁，没有 ORM 之类的模块，从 v2.3 开始新的业务模块用 Phalcon 写，所以我们的 v2.x 版本用了3个框架。采用了 Yaf/Phalcon 的新的业务模块速度相对老的速度提升明显。
+胡波的内容对我们从 v2.x 升级到 v3 有很大启发，不过后来由于我们的业务改变巨大，v3 核心基本上是一个新系统，所以只能部分实践。
+">
+<meta name="author" content="">
+<link rel="canonical" href="https://tony.engineer/posts/2015/phpcon-2015-beijing/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://tony.engineer/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tony.engineer/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tony.engineer/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tony.engineer/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tony.engineer/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://tony.engineer/posts/2015/phpcon-2015-beijing/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://tony.engineer/posts/2015/phpcon-2015-beijing/">
+  <meta property="og:site_name" content="托尼吹雪">
+  <meta property="og:title" content="PHPCON 2015(北京站)之旅">
+  <meta property="og:description" content="2014年 PHPCON 上海站举办前夕，老胡问我去不去，当时对这些会议不是很感冒(其实主要原因是没钱)，就没去，不过当时我们约定第二年一起去。到今年北京站举办前一个月，老胡发来链接，问我来否，我自然不想做一个放鸽子的人，领导 Allen 知悉后表示他也要去，于是买门票买车票不提。
+6月6日早上到达北京，直奔会场，时间刚刚好。此行主要是为了见一见国内的 PHP 大牛的风采（其实我只熟悉两位嘉宾：惠新宸和韩天峰），顺便看看这些会议到底是一个什么样的情况(因为此前曾参加过南京的一个互联网沙龙，看到最后发现全是广告，所以印象极差——也许是因为免费的)。
+先来张会议的日程：
+首先开讲的是来自新浪微博的胡波，主要讲 Yaf/Yar 在微博里的使用情况——手机微博服务端这一块从 v4 升级到 v5 的坎坷过程。
+由于我们正在使用 Yaf/Yar (后来用 Phalcon 替换了 Yaf)，所以胡波的内容让我们极是受用，忍不住多拍了几张现场 PPT (强调一下我一般很少拍照片的)：
+这两张图说明了 v4 到 v5 升级过程中要解决的问题，跟我们产品 v2 到 v3 的升级非常类似。
+我们产品 v2 版本为了求速度，用了我们比较熟悉的 Symfony2，后来使用 ab 压测发现 QPS 极低，才 8 个左右，分析了一下代码执行时间，发现 Symfony2 框架启动时间太高，所以 v2.1 时 App 的接口部分换成了 Yaf，由于 Yaf 过于简洁，没有 ORM 之类的模块，从 v2.3 开始新的业务模块用 Phalcon 写，所以我们的 v2.x 版本用了3个框架。采用了 Yaf/Phalcon 的新的业务模块速度相对老的速度提升明显。
+胡波的内容对我们从 v2.x 升级到 v3 有很大启发，不过后来由于我们的业务改变巨大，v3 核心基本上是一个新系统，所以只能部分实践。">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2015-06-17T00:00:00+08:00">
+    <meta property="article:modified_time" content="2015-06-17T00:00:00+08:00">
+    <meta property="article:tag" content="Php">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHPCON 2015(北京站)之旅">
+<meta name="twitter:description" content="2014年 PHPCON 上海站举办前夕，老胡问我去不去，当时对这些会议不是很感冒(其实主要原因是没钱)，就没去，不过当时我们约定第二年一起去。到今年北京站举办前一个月，老胡发来链接，问我来否，我自然不想做一个放鸽子的人，领导 Allen 知悉后表示他也要去，于是买门票买车票不提。
+6月6日早上到达北京，直奔会场，时间刚刚好。此行主要是为了见一见国内的 PHP 大牛的风采（其实我只熟悉两位嘉宾：惠新宸和韩天峰），顺便看看这些会议到底是一个什么样的情况(因为此前曾参加过南京的一个互联网沙龙，看到最后发现全是广告，所以印象极差——也许是因为免费的)。
+先来张会议的日程：
+
+首先开讲的是来自新浪微博的胡波，主要讲 Yaf/Yar 在微博里的使用情况——手机微博服务端这一块从 v4 升级到 v5 的坎坷过程。
+由于我们正在使用 Yaf/Yar (后来用 Phalcon 替换了 Yaf)，所以胡波的内容让我们极是受用，忍不住多拍了几张现场 PPT (强调一下我一般很少拍照片的)：
+
+
+这两张图说明了 v4 到 v5 升级过程中要解决的问题，跟我们产品 v2 到 v3 的升级非常类似。
+我们产品 v2 版本为了求速度，用了我们比较熟悉的 Symfony2，后来使用 ab 压测发现 QPS 极低，才 8 个左右，分析了一下代码执行时间，发现 Symfony2 框架启动时间太高，所以 v2.1 时 App 的接口部分换成了 Yaf，由于 Yaf 过于简洁，没有 ORM 之类的模块，从 v2.3 开始新的业务模块用 Phalcon 写，所以我们的 v2.x 版本用了3个框架。采用了 Yaf/Phalcon 的新的业务模块速度相对老的速度提升明显。
+胡波的内容对我们从 v2.x 升级到 v3 有很大启发，不过后来由于我们的业务改变巨大，v3 核心基本上是一个新系统，所以只能部分实践。
+">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://tony.engineer/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "PHPCON 2015(北京站)之旅",
+      "item": "https://tony.engineer/posts/2015/phpcon-2015-beijing/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "PHPCON 2015(北京站)之旅",
+  "name": "PHPCON 2015(北京站)之旅",
+  "description": "2014年 PHPCON 上海站举办前夕，老胡问我去不去，当时对这些会议不是很感冒(其实主要原因是没钱)，就没去，不过当时我们约定第二年一起去。到今年北京站举办前一个月，老胡发来链接，问我来否，我自然不想做一个放鸽子的人，领导 Allen 知悉后表示他也要去，于是买门票买车票不提。\n6月6日早上到达北京，直奔会场，时间刚刚好。此行主要是为了见一见国内的 PHP 大牛的风采（其实我只熟悉两位嘉宾：惠新宸和韩天峰），顺便看看这些会议到底是一个什么样的情况(因为此前曾参加过南京的一个互联网沙龙，看到最后发现全是广告，所以印象极差——也许是因为免费的)。\n先来张会议的日程：\n首先开讲的是来自新浪微博的胡波，主要讲 Yaf/Yar 在微博里的使用情况——手机微博服务端这一块从 v4 升级到 v5 的坎坷过程。\n由于我们正在使用 Yaf/Yar (后来用 Phalcon 替换了 Yaf)，所以胡波的内容让我们极是受用，忍不住多拍了几张现场 PPT (强调一下我一般很少拍照片的)：\n这两张图说明了 v4 到 v5 升级过程中要解决的问题，跟我们产品 v2 到 v3 的升级非常类似。\n我们产品 v2 版本为了求速度，用了我们比较熟悉的 Symfony2，后来使用 ab 压测发现 QPS 极低，才 8 个左右，分析了一下代码执行时间，发现 Symfony2 框架启动时间太高，所以 v2.1 时 App 的接口部分换成了 Yaf，由于 Yaf 过于简洁，没有 ORM 之类的模块，从 v2.3 开始新的业务模块用 Phalcon 写，所以我们的 v2.x 版本用了3个框架。采用了 Yaf/Phalcon 的新的业务模块速度相对老的速度提升明显。\n胡波的内容对我们从 v2.x 升级到 v3 有很大启发，不过后来由于我们的业务改变巨大，v3 核心基本上是一个新系统，所以只能部分实践。\n",
+  "keywords": [
+    "php"
+  ],
+  "articleBody": "2014年 PHPCON 上海站举办前夕，老胡问我去不去，当时对这些会议不是很感冒(其实主要原因是没钱)，就没去，不过当时我们约定第二年一起去。到今年北京站举办前一个月，老胡发来链接，问我来否，我自然不想做一个放鸽子的人，领导 Allen 知悉后表示他也要去，于是买门票买车票不提。\n6月6日早上到达北京，直奔会场，时间刚刚好。此行主要是为了见一见国内的 PHP 大牛的风采（其实我只熟悉两位嘉宾：惠新宸和韩天峰），顺便看看这些会议到底是一个什么样的情况(因为此前曾参加过南京的一个互联网沙龙，看到最后发现全是广告，所以印象极差——也许是因为免费的)。\n先来张会议的日程：\n首先开讲的是来自新浪微博的胡波，主要讲 Yaf/Yar 在微博里的使用情况——手机微博服务端这一块从 v4 升级到 v5 的坎坷过程。\n由于我们正在使用 Yaf/Yar (后来用 Phalcon 替换了 Yaf)，所以胡波的内容让我们极是受用，忍不住多拍了几张现场 PPT (强调一下我一般很少拍照片的)：\n这两张图说明了 v4 到 v5 升级过程中要解决的问题，跟我们产品 v2 到 v3 的升级非常类似。\n我们产品 v2 版本为了求速度，用了我们比较熟悉的 Symfony2，后来使用 ab 压测发现 QPS 极低，才 8 个左右，分析了一下代码执行时间，发现 Symfony2 框架启动时间太高，所以 v2.1 时 App 的接口部分换成了 Yaf，由于 Yaf 过于简洁，没有 ORM 之类的模块，从 v2.3 开始新的业务模块用 Phalcon 写，所以我们的 v2.x 版本用了3个框架。采用了 Yaf/Phalcon 的新的业务模块速度相对老的速度提升明显。\n胡波的内容对我们从 v2.x 升级到 v3 有很大启发，不过后来由于我们的业务改变巨大，v3 核心基本上是一个新系统，所以只能部分实践。\n使用扩展，这是性能提升的一部分。因为使用 C 系框架后，性能提升明显，所以这部分也没有实践，为了以后极致的性能提升备用吧。\n使用 RPC 框架 Yar 也是我们 v2.x 后来性能提升的一大原因。实际上，后来我们的主要业务全部在 RPC 里实现，大部分 Controller 只是充当一个过滤器/组装器的作用。当然由于 Windows 不支持 Concurrent 调用，导致我帮同事们一个个配环境(在我的推荐下使用了 Vagrant + VirtualBox)——当然这也是好事，全体开发人员的开发环境转向 *nix 系操作系统。\n最后当然要说的就是坑啦！\n说说 Phalcon 吧，其实我们最初使用的是 Phalcon v1.3.x，后来 v2.x 发布了(说是采用 Zephir这种堪称 “PHP外挂” 的语言写的)，虽然明知有很多坑，但我们产品的 v3 到发布还有一段时间，并且 Phalcon 的 v2.x 与 v1.x 仅仅只有两处不兼容，代码稍微改一下就可以用 v1.3.x 了，所以我们果断上新版。\n新版果然坑，被坑得印象最深刻的两次果断被我记录下来了，如下：\n1. find 绑定数组问题 $array = [\"a\",\"b\",\"c\"]; $robots = Robots::find( array( 'letter IN ({letter:array})', 'bind' =\u003e array( 'letter' =\u003e $array ) ) ); 这段代码有些人在运行时报错: Scanning error before 'letter:array})' when parsing...，问题就在于这个特性是 Phalcon 2.0.5 才有的，如果版本低于 2.0.5 的话，就会报错，因为还没有这个特性。\n解决办法就是更新你的 Phalcon，下载地址: Download Phalcon。\n当时我被文档上这段代码弄郁闷了好久，我写得明明很正确，但却报错，找了半天中文字符/特殊字符，最后无意一撇文档版本是 2.0.5，貌似记得前两天更新的时候是 2.0.4，一查果然！话说新增这大的一个特性应该放在 2.1 里吧，0.0.1 个版本更新至于嘛。。。\n2. Model save 方法更新失败不报错不抛异常 如果你的表里面有个字段是 not null，而在更新这个 entity 的时候你不小心设置了该字段为 null，那么你的数据将 save 不进去，这不算坑，但不抛异常不报错这也太坑了吧！\n好吧，扯太远了，继续我们的 PHPCON，这时候有个人上来讲了关于 PHP 安全编程的内容，前面一部分耳熟能详，后面一部分没认真听，因为看到漂亮妹子了！\n哎，要是公司的女同事们都这样多好······\n下午的时候见到了 韩天峰，由于上午拍了太多照片，下午没电了，就没拍照片。\n韩天峰是个喜欢开挂的人，他的 Swoole 就是 PHP 的一个外挂，赋予了 PHP 开发异步、并行、高性能网络通信框架的能力。还是用 Swoole 官网的介绍吧：\nPHP语言的异步、并行、高性能网络通信框架，使用纯C语言编写，提供了PHP语言的异步多线程服务器，异步TCP/UDP网络客户端，异步MySQL，数据库连接池，AsyncTask，消息队列，毫秒定时器，异步文件读写，异步DNS查询。\nSwoole可以广泛应用于互联网、移动通信、企业软件、云计算、网络游戏、物联网、车联网、智能家居等领域。 使用PHP+Swoole作为网络通信框架，可以使企业IT研发团队的效率大大提升，更加专注于开发创新产品。\n我之前听说这个人是因为老胡，当时他向 Swoole 提交了一些代码，加入了开发组，这才了解到韩天峰。不过老胡这个人天性寡言，不善言辞，不过很有天赋，技术扎实，沉得下心，我从他身上看到了爱因斯坦的影子。\nPS：这里本来放了一张老胡的照片，在老胡的强烈抗议下移除掉了。。。\n整个会议的两天，在我一再地怂恿下，他都没去跟韩天峰打个招呼。老胡也曾跟我坦白，说自己说话的时候总慢半拍，所以面试很吃亏。其实看老胡的 Github 就知道老胡的水平，进 BAT 绝对不是问题。\n又扯远了，算了，我跟韩天峰也不熟，但他的 Swoole 其实我很感兴趣，我们公司也有人在用，做了一个主动推送更新的考勤机，我这部分业务没用到。等以后有机会用的时候再来一篇感概吧。\n第一天结束后去了天安门，时值大雨，广场上的行人到卫兵的伞下躲雨，被卫兵驱赶，有个小卫兵叫我大叔，同行的老胡和 Allen 都快笑尿了。。。我只想说，你 TMD 怎么不叫大爷？\n回程的路上看到彩虹，我大叫一声，行人纷纷抬头，举机拍照。\n第二天，终于看到了传说中的鸟哥，真名惠新宸，ID是 Laruence，好吧，我承认之前一直以为是 Laurence…\n鸟哥说他昨天喝多了，头疼，中场休息的时候我在酒店门抽烟，突然发现鸟哥就在旁边，原来鸟哥。。。，以后戒烟的理由又少了一个。。。哎！\n上照片：\n鸟哥开场照。\n这一张是现场表演写代码，演示 PHP7 的一些新特性。\nLaurence 的演讲分为两部分，先是 PHP7 的一些新特性以及弃用的一些东西，简单说了一下如何将代码迁移到新版本；然后就是性能。这也是他在 PHP 项目组中的主要工作。根据他自己测试的数据，7的性能提升确实明显，已经达到跟 HHVM 不相上下的程度，瞬间甩开 Python、Ruby 好大一截。目测 PHP 程序员工资要涨的节奏啊！\n结束的时候鸟哥回顾了一下成长经历，对我等深有启发。\n下午场主要是关于 SAE(Sina App Engine) 和程序员职业生涯的一段介绍，没怎么仔细听。\n最后是圆桌会议，听听前辈们的对于 PHP 看法。嘉宾都被问到为什么选择了 PHP，韩天峰回答，因为只有 PHP 的环境被我配起来了。果然是世界上最好的语言！（PS: 其实我的真爱是 Ruby。。。也许正是这个原因，两天的抽奖都没抽到我。）\n晚上离开北京，在广场上，八点整，响起了一段伴随着钟声的音乐，Allen 问我，这是什么钟声？我不知道，答：丧钟为谁而鸣？\nAllen 道：仔细听，这叫《东方红》。\n我环顾广场一圈，看着背包上的 PHP 吉祥物道：感觉回到了七十年代。\n附一个现场视频 Think 2015 PHP 技术峰会(北京站）\n",
+  "wordCount" : "253",
+  "inLanguage": "en",
+  "datePublished": "2015-06-17T00:00:00+08:00",
+  "dateModified": "2015-06-17T00:00:00+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tony.engineer/posts/2015/phpcon-2015-beijing/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "托尼吹雪",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tony.engineer/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://tony.engineer/" accesskey="h" title="托尼吹雪 (Alt + H)">托尼吹雪</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://tony.engineer/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      PHPCON 2015(北京站)之旅
+    </h1>
+    <div class="post-meta"><span title='2015-06-17 00:00:00 +0800 CST'>June 17, 2015</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>2014年 PHPCON 上海站举办前夕，老胡问我去不去，当时对这些会议不是很感冒(其实主要原因是没钱)，就没去，不过当时我们约定第二年一起去。到今年北京站举办前一个月，老胡发来链接，问我来否，我自然不想做一个放鸽子的人，领导 Allen 知悉后表示他也要去，于是买门票买车票不提。</p>
+<p>6月6日早上到达北京，直奔会场，时间刚刚好。此行主要是为了见一见国内的 PHP 大牛的风采（其实我只熟悉两位嘉宾：惠新宸和韩天峰），顺便看看这些会议到底是一个什么样的情况(因为此前曾参加过南京的一个互联网沙龙，看到最后发现全是广告，所以印象极差——也许是因为免费的)。</p>
+<p>先来张会议的日程：</p>
+<p><img alt="会议日程" loading="lazy" src="/images/phpcon-2015-beijing/01.jpg"></p>
+<p>首先开讲的是来自新浪微博的胡波，主要讲 Yaf/Yar 在微博里的使用情况——手机微博服务端这一块从 v4 升级到 v5 的坎坷过程。</p>
+<p>由于我们正在使用 Yaf/Yar (后来用 Phalcon 替换了 Yaf)，所以胡波的内容让我们极是受用，忍不住多拍了几张现场 PPT (强调一下我一般很少拍照片的)：</p>
+<p><img alt="在微博里的使用情况" loading="lazy" src="/images/phpcon-2015-beijing/02.jpg"></p>
+<p><img alt="在微博里的使用情况" loading="lazy" src="/images/phpcon-2015-beijing/03.jpg"></p>
+<p>这两张图说明了 v4 到 v5 升级过程中要解决的问题，跟我们产品 v2 到 v3 的升级非常类似。</p>
+<p>我们产品 v2 版本为了求速度，用了我们比较熟悉的 Symfony2，后来使用 <code>ab</code> 压测发现 QPS 极低，才 8 个左右，分析了一下代码执行时间，发现 Symfony2 框架启动时间太高，所以 v2.1 时 App 的接口部分换成了 <a href="https://github.com/laruence/yaf">Yaf</a>，由于 Yaf 过于简洁，没有 ORM 之类的模块，从 v2.3 开始新的业务模块用 <a href="http://phalconphp.com">Phalcon</a> 写，所以我们的 v2.x 版本用了3个框架。采用了 Yaf/Phalcon 的新的业务模块速度相对老的速度提升明显。</p>
+<p>胡波的内容对我们从 v2.x 升级到 v3 有很大启发，不过后来由于我们的业务改变巨大，v3 核心基本上是一个新系统，所以只能部分实践。</p>
+<p><img alt="在微博里的使用情况" loading="lazy" src="/images/phpcon-2015-beijing/04.jpg"></p>
+<p>使用扩展，这是性能提升的一部分。因为使用 C 系框架后，性能提升明显，所以这部分也没有实践，为了以后极致的性能提升备用吧。</p>
+<p><img alt="在微博里的使用情况" loading="lazy" src="/images/phpcon-2015-beijing/05.jpg"></p>
+<p>使用 RPC 框架 Yar 也是我们 v2.x 后来性能提升的一大原因。实际上，后来我们的主要业务全部在 RPC 里实现，大部分 Controller 只是充当一个过滤器/组装器的作用。当然由于 Windows 不支持 Concurrent 调用，导致我帮同事们一个个配环境(在我的推荐下使用了 <a href="https://www.vagrantup.com/">Vagrant</a>  + VirtualBox)——当然这也是好事，全体开发人员的开发环境转向 *nix 系操作系统。</p>
+<p><img alt="在微博里的使用情况" loading="lazy" src="/images/phpcon-2015-beijing/06.jpg"></p>
+<p>最后当然要说的就是坑啦！</p>
+<p>说说 Phalcon 吧，其实我们最初使用的是 Phalcon v1.3.x，后来 v2.x 发布了(说是采用 <a href="http://zephir-lang.com/">Zephir</a>这种堪称 “PHP外挂” 的语言写的)，虽然明知有很多坑，但我们产品的 v3 到发布还有一段时间，并且 Phalcon 的 v2.x 与  v1.x 仅仅只有两处不兼容，代码稍微改一下就可以用 v1.3.x 了，所以我们果断上新版。</p>
+<p>新版果然坑，被坑得印象最深刻的两次果断被我记录下来了，如下：</p>
+<h4 id="1-find-绑定数组问题">1. find 绑定数组问题<a hidden class="anchor" aria-hidden="true" href="#1-find-绑定数组问题">#</a></h4>
+<pre tabindex="0"><code>$array = [&#34;a&#34;,&#34;b&#34;,&#34;c&#34;];
+$robots = Robots::find(
+    array(
+        &#39;letter IN ({letter:array})&#39;,
+        &#39;bind&#39; =&gt; array(
+            &#39;letter&#39; =&gt; $array
+        )
+    )
+);
+</code></pre><p>这段代码有些人在运行时报错: <code>Scanning error before 'letter:array})' when parsing...</code>，问题就在于这个特性是 Phalcon 2.0.5 才有的，如果版本低于 2.0.5 的话，就会报错，因为还没有这个特性。</p>
+<p>解决办法就是更新你的 Phalcon，下载地址: <a href="https://phalconphp.com/zh/download">Download Phalcon</a>。</p>
+<p>当时我被文档上这段代码弄郁闷了好久，我写得明明很正确，但却报错，找了半天中文字符/特殊字符，最后无意一撇文档版本是 2.0.5，貌似记得前两天更新的时候是 2.0.4，一查果然！话说新增这大的一个特性应该放在 2.1 里吧，0.0.1 个版本更新至于嘛。。。</p>
+<h4 id="2-model-save-方法更新失败不报错不抛异常">2. Model save 方法更新失败不报错不抛异常<a hidden class="anchor" aria-hidden="true" href="#2-model-save-方法更新失败不报错不抛异常">#</a></h4>
+<p>如果你的表里面有个字段是 not null，而在更新这个 entity 的时候你不小心设置了该字段为 null，那么你的数据将 save 不进去，这不算坑，但不抛异常不报错这也太坑了吧！</p>
+<p>好吧，扯太远了，继续我们的 PHPCON，这时候有个人上来讲了关于 PHP 安全编程的内容，前面一部分耳熟能详，后面一部分没认真听，因为看到漂亮妹子了！</p>
+<p><img alt="美女" loading="lazy" src="/images/phpcon-2015-beijing/07.jpg"></p>
+<p>哎，要是公司的女同事们都这样多好······</p>
+<p>下午的时候见到了 <a href="http://rango.swoole.com/">韩天峰</a>，由于上午拍了太多照片，下午没电了，就没拍照片。</p>
+<p>韩天峰是个喜欢开挂的人，他的 <a href="http://www.swoole.com">Swoole</a> 就是 PHP 的一个外挂，赋予了 PHP 开发异步、并行、高性能网络通信框架的能力。还是用 Swoole 官网的介绍吧：</p>
+<blockquote>
+<p>PHP语言的异步、并行、高性能网络通信框架，使用纯C语言编写，提供了PHP语言的异步多线程服务器，异步TCP/UDP网络客户端，异步MySQL，数据库连接池，AsyncTask，消息队列，毫秒定时器，异步文件读写，异步DNS查询。</p>
+</blockquote>
+<blockquote>
+<p>Swoole可以广泛应用于互联网、移动通信、企业软件、云计算、网络游戏、物联网、车联网、智能家居等领域。 使用PHP+Swoole作为网络通信框架，可以使企业IT研发团队的效率大大提升，更加专注于开发创新产品。</p>
+</blockquote>
+<p>我之前听说这个人是因为<a href="https://github.com/bixuehujin">老胡</a>，当时他向 Swoole 提交了一些代码，加入了开发组，这才了解到韩天峰。不过老胡这个人天性寡言，不善言辞，不过很有天赋，技术扎实，沉得下心，我从他身上看到了爱因斯坦的影子。</p>
+<p>PS：这里本来放了一张老胡的照片，在老胡的强烈抗议下移除掉了。。。</p>
+<blockquote>
+<p>整个会议的两天，在我一再地怂恿下，他都没去跟韩天峰打个招呼。老胡也曾跟我坦白，说自己说话的时候总慢半拍，所以面试很吃亏。其实看老胡的 Github 就知道老胡的水平，进 BAT 绝对不是问题。</p>
+</blockquote>
+<p>又扯远了，算了，我跟韩天峰也不熟，但他的 Swoole 其实我很感兴趣，我们公司也有人在用，做了一个主动推送更新的考勤机，我这部分业务没用到。等以后有机会用的时候再来一篇感概吧。</p>
+<p>第一天结束后去了天安门，时值大雨，广场上的行人到卫兵的伞下躲雨，被卫兵驱赶，有个小卫兵叫我大叔，同行的老胡和 Allen 都快笑尿了。。。我只想说，你 TMD 怎么不叫大爷？</p>
+<p><img alt="彩虹" loading="lazy" src="/images/phpcon-2015-beijing/08.jpg"></p>
+<p>回程的路上看到彩虹，我大叫一声，行人纷纷抬头，举机拍照。</p>
+<p>第二天，终于看到了传说中的鸟哥，真名惠新宸，ID是 Laruence，好吧，我承认之前一直以为是 Laurence…</p>
+<p>鸟哥说他昨天喝多了，头疼，中场休息的时候我在酒店门抽烟，突然发现鸟哥就在旁边，原来鸟哥。。。，以后戒烟的理由又少了一个。。。哎！</p>
+<p>上照片：</p>
+<p><img alt="鸟哥" loading="lazy" src="/images/phpcon-2015-beijing/09.jpg"></p>
+<p>鸟哥开场照。</p>
+<p><img alt="鸟哥" loading="lazy" src="/images/phpcon-2015-beijing/10.jpg"></p>
+<p>这一张是现场表演写代码，演示 PHP7 的一些新特性。</p>
+<p>Laurence 的演讲分为两部分，先是 PHP7 的一些新特性以及弃用的一些东西，简单说了一下如何将代码迁移到新版本；然后就是性能。这也是他在 PHP 项目组中的主要工作。根据他自己测试的数据，7的性能提升确实明显，已经达到跟 HHVM 不相上下的程度，瞬间甩开 Python、Ruby 好大一截。目测 PHP 程序员工资要涨的节奏啊！</p>
+<p>结束的时候鸟哥回顾了一下成长经历，对我等深有启发。</p>
+<p>下午场主要是关于 SAE(Sina App Engine) 和程序员职业生涯的一段介绍，没怎么仔细听。</p>
+<p><img alt="圆桌会议" loading="lazy" src="/images/phpcon-2015-beijing/11.jpg"></p>
+<p>最后是圆桌会议，听听前辈们的对于 PHP 看法。嘉宾都被问到为什么选择了 PHP，韩天峰回答，因为只有 PHP 的环境被我配起来了。果然是世界上最好的语言！（PS: 其实我的真爱是 Ruby。。。也许正是这个原因，两天的抽奖都没抽到我。）</p>
+<p><img loading="lazy" src="/images/phpcon-2015-beijing/12.jpg"></p>
+<p>晚上离开北京，在广场上，八点整，响起了一段伴随着钟声的音乐，Allen 问我，这是什么钟声？我不知道，答：丧钟为谁而鸣？</p>
+<p>Allen 道：仔细听，这叫《东方红》。</p>
+<p><img loading="lazy" src="/images/phpcon-2015-beijing/13.jpg"></p>
+<p>我环顾广场一圈，看着背包上的 PHP 吉祥物道：感觉回到了七十年代。</p>
+<p><img loading="lazy" src="/images/phpcon-2015-beijing/14.jpg"></p>
+<hr>
+<p>附一个现场视频 <a href="http://www.imooc.com/learn/469">Think 2015 PHP 技术峰会(北京站）</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://tony.engineer/tags/php/">Php</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://tony.engineer/">托尼吹雪</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

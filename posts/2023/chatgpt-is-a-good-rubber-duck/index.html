@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ChatGPT 是只不错的 “小黄鸭” | 托尼吹雪</title>
+<meta name="keywords" content="ChatGPT, AI">
+<meta name="description" content="今天遇到一个问题，在使用 Symfony 6.x 框架的项目里，我没有使用框架自带的
+Security 组件，而是自己实现了一个用户认证的土方法。
+在我的方法中，当用户请求需要登录的接口时，会抛出一个自定义的异常 ApiNotAuthException，然后我在 ExceptionListener
+监听器服务中捕获这个异常并封装我自己的返回值结构，最后将状态码强制改为 200（因为我不喜欢使用 HTTP 状态码来替代业务状态码）。
+PS: 关于是否应该忽略 HTTP 状态码在前端的处理以及是否应该将业务状态码封装到 HTTP 状态码里，以后有机会我再写一篇博客讨论一下，今天只解决问题。
+我的异常监听类是这样的：
+final class ExceptionListener
+{
+     public function onKernelException(ExceptionEvent $event)
+    {
+        $e = $event-&gt;getThrowable();
+        
+        if ($e instanceof ApiNotAuthException) {
+
+            $response = new JsonResponse([
+                &#39;success&#39; =&gt; false,
+                &#39;code&#39;    =&gt; $e-&gt;getCode(), // 我的业务状态码
+                &#39;msg&#39;     =&gt; $e-&gt;getMessage(),
+                &#39;data&#39;    =&gt; null,
+            ], Response::HTTP_OK); // 初始化时设置状态码为 200
+
+            $response-&gt;setStatusCode(Response::HTTP_OK); // 初始化之后再次设置状态码为 200
+            $response-&gt;headers-&gt;set(&#39;X-Status-Code&#39;, Response::HTTP_OK);
+            $event-&gt;setResponse($response);
+        }
+    }
+}
+这样做的目的是为了让前端可以统一处理业务状态码，而不用关心 HTTP 状态码。 此外因为我觉得 HTTP
+状态码应该是用来表示请求的状态，而不是业务状态，而登录与否应该属于业务层面。
+总之就是状态码的改变没效果，HTTP Headers 中的 X-Status-Code 有效果，说明代码确实执行了。">
+<meta name="author" content="">
+<link rel="canonical" href="https://tony.engineer/posts/2023/chatgpt-is-a-good-rubber-duck/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://tony.engineer/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tony.engineer/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tony.engineer/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tony.engineer/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tony.engineer/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://tony.engineer/posts/2023/chatgpt-is-a-good-rubber-duck/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://tony.engineer/posts/2023/chatgpt-is-a-good-rubber-duck/">
+  <meta property="og:site_name" content="托尼吹雪">
+  <meta property="og:title" content="ChatGPT 是只不错的 “小黄鸭”">
+  <meta property="og:description" content="今天遇到一个问题，在使用 Symfony 6.x 框架的项目里，我没有使用框架自带的 Security 组件，而是自己实现了一个用户认证的土方法。
+在我的方法中，当用户请求需要登录的接口时，会抛出一个自定义的异常 ApiNotAuthException，然后我在 ExceptionListener 监听器服务中捕获这个异常并封装我自己的返回值结构，最后将状态码强制改为 200（因为我不喜欢使用 HTTP 状态码来替代业务状态码）。
+PS: 关于是否应该忽略 HTTP 状态码在前端的处理以及是否应该将业务状态码封装到 HTTP 状态码里，以后有机会我再写一篇博客讨论一下，今天只解决问题。
+我的异常监听类是这样的：
+final class ExceptionListener { public function onKernelException(ExceptionEvent $event) { $e = $event-&gt;getThrowable(); if ($e instanceof ApiNotAuthException) { $response = new JsonResponse([ &#39;success&#39; =&gt; false, &#39;code&#39; =&gt; $e-&gt;getCode(), // 我的业务状态码 &#39;msg&#39; =&gt; $e-&gt;getMessage(), &#39;data&#39; =&gt; null, ], Response::HTTP_OK); // 初始化时设置状态码为 200 $response-&gt;setStatusCode(Response::HTTP_OK); // 初始化之后再次设置状态码为 200 $response-&gt;headers-&gt;set(&#39;X-Status-Code&#39;, Response::HTTP_OK); $event-&gt;setResponse($response); } } } 这样做的目的是为了让前端可以统一处理业务状态码，而不用关心 HTTP 状态码。 此外因为我觉得 HTTP 状态码应该是用来表示请求的状态，而不是业务状态，而登录与否应该属于业务层面。
+总之就是状态码的改变没效果，HTTP Headers 中的 X-Status-Code 有效果，说明代码确实执行了。">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-09-06T00:00:00+08:00">
+    <meta property="article:modified_time" content="2023-09-06T00:00:00+08:00">
+    <meta property="article:tag" content="ChatGPT">
+    <meta property="article:tag" content="AI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ChatGPT 是只不错的 “小黄鸭”">
+<meta name="twitter:description" content="今天遇到一个问题，在使用 Symfony 6.x 框架的项目里，我没有使用框架自带的
+Security 组件，而是自己实现了一个用户认证的土方法。
+在我的方法中，当用户请求需要登录的接口时，会抛出一个自定义的异常 ApiNotAuthException，然后我在 ExceptionListener
+监听器服务中捕获这个异常并封装我自己的返回值结构，最后将状态码强制改为 200（因为我不喜欢使用 HTTP 状态码来替代业务状态码）。
+PS: 关于是否应该忽略 HTTP 状态码在前端的处理以及是否应该将业务状态码封装到 HTTP 状态码里，以后有机会我再写一篇博客讨论一下，今天只解决问题。
+我的异常监听类是这样的：
+final class ExceptionListener
+{
+     public function onKernelException(ExceptionEvent $event)
+    {
+        $e = $event-&gt;getThrowable();
+        
+        if ($e instanceof ApiNotAuthException) {
+
+            $response = new JsonResponse([
+                &#39;success&#39; =&gt; false,
+                &#39;code&#39;    =&gt; $e-&gt;getCode(), // 我的业务状态码
+                &#39;msg&#39;     =&gt; $e-&gt;getMessage(),
+                &#39;data&#39;    =&gt; null,
+            ], Response::HTTP_OK); // 初始化时设置状态码为 200
+
+            $response-&gt;setStatusCode(Response::HTTP_OK); // 初始化之后再次设置状态码为 200
+            $response-&gt;headers-&gt;set(&#39;X-Status-Code&#39;, Response::HTTP_OK);
+            $event-&gt;setResponse($response);
+        }
+    }
+}
+这样做的目的是为了让前端可以统一处理业务状态码，而不用关心 HTTP 状态码。 此外因为我觉得 HTTP
+状态码应该是用来表示请求的状态，而不是业务状态，而登录与否应该属于业务层面。
+总之就是状态码的改变没效果，HTTP Headers 中的 X-Status-Code 有效果，说明代码确实执行了。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://tony.engineer/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "ChatGPT 是只不错的 “小黄鸭”",
+      "item": "https://tony.engineer/posts/2023/chatgpt-is-a-good-rubber-duck/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ChatGPT 是只不错的 “小黄鸭”",
+  "name": "ChatGPT 是只不错的 “小黄鸭”",
+  "description": "今天遇到一个问题，在使用 Symfony 6.x 框架的项目里，我没有使用框架自带的 Security 组件，而是自己实现了一个用户认证的土方法。\n在我的方法中，当用户请求需要登录的接口时，会抛出一个自定义的异常 ApiNotAuthException，然后我在 ExceptionListener 监听器服务中捕获这个异常并封装我自己的返回值结构，最后将状态码强制改为 200（因为我不喜欢使用 HTTP 状态码来替代业务状态码）。\nPS: 关于是否应该忽略 HTTP 状态码在前端的处理以及是否应该将业务状态码封装到 HTTP 状态码里，以后有机会我再写一篇博客讨论一下，今天只解决问题。\n我的异常监听类是这样的：\nfinal class ExceptionListener { public function onKernelException(ExceptionEvent $event) { $e = $event-\u0026gt;getThrowable(); if ($e instanceof ApiNotAuthException) { $response = new JsonResponse([ \u0026#39;success\u0026#39; =\u0026gt; false, \u0026#39;code\u0026#39; =\u0026gt; $e-\u0026gt;getCode(), // 我的业务状态码 \u0026#39;msg\u0026#39; =\u0026gt; $e-\u0026gt;getMessage(), \u0026#39;data\u0026#39; =\u0026gt; null, ], Response::HTTP_OK); // 初始化时设置状态码为 200 $response-\u0026gt;setStatusCode(Response::HTTP_OK); // 初始化之后再次设置状态码为 200 $response-\u0026gt;headers-\u0026gt;set(\u0026#39;X-Status-Code\u0026#39;, Response::HTTP_OK); $event-\u0026gt;setResponse($response); } } } 这样做的目的是为了让前端可以统一处理业务状态码，而不用关心 HTTP 状态码。 此外因为我觉得 HTTP 状态码应该是用来表示请求的状态，而不是业务状态，而登录与否应该属于业务层面。\n总之就是状态码的改变没效果，HTTP Headers 中的 X-Status-Code 有效果，说明代码确实执行了。\n",
+  "keywords": [
+    "ChatGPT", "AI"
+  ],
+  "articleBody": "今天遇到一个问题，在使用 Symfony 6.x 框架的项目里，我没有使用框架自带的 Security 组件，而是自己实现了一个用户认证的土方法。\n在我的方法中，当用户请求需要登录的接口时，会抛出一个自定义的异常 ApiNotAuthException，然后我在 ExceptionListener 监听器服务中捕获这个异常并封装我自己的返回值结构，最后将状态码强制改为 200（因为我不喜欢使用 HTTP 状态码来替代业务状态码）。\nPS: 关于是否应该忽略 HTTP 状态码在前端的处理以及是否应该将业务状态码封装到 HTTP 状态码里，以后有机会我再写一篇博客讨论一下，今天只解决问题。\n我的异常监听类是这样的：\nfinal class ExceptionListener { public function onKernelException(ExceptionEvent $event) { $e = $event-\u003egetThrowable(); if ($e instanceof ApiNotAuthException) { $response = new JsonResponse([ 'success' =\u003e false, 'code' =\u003e $e-\u003egetCode(), // 我的业务状态码 'msg' =\u003e $e-\u003egetMessage(), 'data' =\u003e null, ], Response::HTTP_OK); // 初始化时设置状态码为 200 $response-\u003esetStatusCode(Response::HTTP_OK); // 初始化之后再次设置状态码为 200 $response-\u003eheaders-\u003eset('X-Status-Code', Response::HTTP_OK); $event-\u003esetResponse($response); } } } 这样做的目的是为了让前端可以统一处理业务状态码，而不用关心 HTTP 状态码。 此外因为我觉得 HTTP 状态码应该是用来表示请求的状态，而不是业务状态，而登录与否应该属于业务层面。\n总之就是状态码的改变没效果，HTTP Headers 中的 X-Status-Code 有效果，说明代码确实执行了。\n我猜测就是某个默认配置的问题，导致我的这个设置被覆盖了，但官方文档看了一遍，网上搜了一圈，也没找到解决方案。\n最后没办法了，我就想试试 ChatGPT。\n我们之间的第一次对话是这样的：\n文字版本的在 这里。\n中间 ChatGPT 提出了服务优先级的问题，这个与我之前的猜测是一致的，但尝试了没有效果，无论是设置为最高还是最低。\n最终 ChatGPT 给了我一个不太优雅的解决方案，虽然我对结果不太满意，但对话过程中的回答还是蛮让我惊艳的，因为它似乎已经完全看懂了 Symfony 官方文档 以及 StackOverflow 上的一些问答。\n我回想了一下，觉得是不是因为我给它设置的人设（ “高级软件工程师”、“熟悉 Symfony 框架” ）不够强大，所以没给出一个让我满意的解决方案？\n于是我和 ChatGPT 开始了第二次对话：\n第二次对话的文字版本的在 这里。\n这次对话我将 ChatGPT 的人设提升到了 “软件技术专家”，感觉确实感觉不一样，可以明显看到代码变少了，文字变多了，也许这就是 “高级软件工程师” 和 “软件技术专家” 的区别？工程师更多的给代码，专家更多的给思路？那 Linus 的 \"Talk is cheap, show me the code\" 怎么解释？哈哈哈。\n根据 ChatGPT 给我的各种可能性提示，我逐一排除，最终推测可能是框架内核里有什么特殊逻辑导致的。\n直接看 Symfony\\Component\\HttpKernel\\HttpKernel 类的 handle 方法，这个方法是框架内核的核心方法，所有的请求最终都是在这里处理的，它会调用 handleThrowable 来处理异常。此时，我发现了端倪。\n在 handleThrowable 方法中，有这样一段代码：\n$response = $event-\u003egetResponse(); // the developer asked for a specific status code if (!$event-\u003eisAllowingCustomResponseCode() \u0026\u0026 !$response-\u003eisClientError() \u0026\u0026 !$response-\u003eisServerError() \u0026\u0026 !$response-\u003eisRedirect()) { // ensure that we actually have an error response if ($e instanceof HttpExceptionInterface) { // keep the HTTP status code and headers $response-\u003esetStatusCode($e-\u003egetStatusCode()); $response-\u003eheaders-\u003eadd($e-\u003egetHeaders()); } else { $response-\u003esetStatusCode(500); } } 这里注释说明了当开发者需要一个特殊的状态码时的处理逻辑。这个逻辑很简单，就是判断异常类是否实现了 HttpExceptionInterface 接口，如果没有，一律 500；有的话，从异常里获取 HTTP 状态码和头部信息赋值给 Response 对象。\n看来框架是想将异常错误码也就是我认为的业务状态码当做 HTTP 状态码来处理（我不喜欢也不需要），如果不符合 HTTP 规范则一律判定为 500，太残暴了。\n所以解决问题的方案就是让自定义异常类实现这个接口就行了。之前修改不生效的原因就在这里，当然也可以认为是我的代码在这段代码之前执行了，也就是优先级太高，问题是高低我都试过了，都失败了。 既然如此，那就不纠结执行的优先级的问题了，直接实现接口就行了。\nuse Symfony\\Component\\HttpFoundation\\Response; use Symfony\\Component\\HttpKernel\\Exception\\HttpExceptionInterface; class ApiNotAuthException extends \\RuntimeException implements HttpExceptionInterface { public function __construct($message = \"未登录\", $code = 1, \\Throwable $previous = null) { parent::__construct($message, $code, $previous); } public function getStatusCode(): int { return Response::HTTP_OK; // 直接返回 200 } public function getHeaders(): array { return []; } } 再次测试，问题解决。\n总结一下，虽然 ChatGPT 并没有直接给出解决方案（因为没有用 GPT4 尝试，所以不知道 GPT 最强实力），但是它的提示已经很专业很厉害了。\n以前我调试的时候喜欢找个 “小黄鸭” 来边说边操作，因为在说的过程中，由于对方不了解细节，你需要详细描述你是怎么做的，以及为什么这么做，会慢慢的把问题说清楚，往往自己说着说着，就发现问题所在了，所以从我的经验来说 “小黄鸭调试法” 确实很有效果。\n但如果只有一个人的时候，就只能对着图中的小黄鸭说话，此时总是感觉会有点奇怪。可能是因为面对的并非真人，说话的时候就不会那么严谨，期间也没有互动，对方也不会提问，导致效果不佳。\n而 ChatGPT 不仅解决了说话对象的问题，甚至因为它什么都“懂”，还能给你一些很有价值的提示，甚至你还可以指定它的专业程度，简直就是一个完美的 “小黄鸭” 啊！\nPS：本文的写作有几句话是由 GitHub Copilot 提示完成的，所以你可能感觉有些句子的语气并非完全是我的风格。\n",
+  "wordCount" : "277",
+  "inLanguage": "en",
+  "datePublished": "2023-09-06T00:00:00+08:00",
+  "dateModified": "2023-09-06T00:00:00+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tony.engineer/posts/2023/chatgpt-is-a-good-rubber-duck/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "托尼吹雪",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tony.engineer/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://tony.engineer/" accesskey="h" title="托尼吹雪 (Alt + H)">托尼吹雪</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://tony.engineer/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      ChatGPT 是只不错的 “小黄鸭”
+    </h1>
+    <div class="post-meta"><span title='2023-09-06 00:00:00 +0800 CST'>September 6, 2023</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>今天遇到一个问题，在使用 <a href="https://symfony.com/">Symfony 6.x</a> 框架的项目里，我没有使用框架自带的
+Security 组件，而是自己实现了一个用户认证的土方法。</p>
+<p>在我的方法中，当用户请求需要登录的接口时，会抛出一个自定义的异常 <code>ApiNotAuthException</code>，然后我在 <code>ExceptionListener</code>
+监听器服务中捕获这个异常并封装我自己的返回值结构，最后将状态码强制改为 <code>200</code>（因为我不喜欢使用 HTTP 状态码来替代业务状态码）。</p>
+<p>PS: 关于是否应该忽略 HTTP 状态码在前端的处理以及是否应该将业务状态码封装到 HTTP 状态码里，以后有机会我再写一篇博客讨论一下，今天只解决问题。</p>
+<p>我的异常监听类是这样的：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExceptionListener</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onKernelException</span>(<span style="color:#a6e22e">ExceptionEvent</span> $event)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        $e <span style="color:#f92672">=</span> $event<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getThrowable</span>();
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ($e <span style="color:#a6e22e">instanceof</span> <span style="color:#a6e22e">ApiNotAuthException</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $response <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">JsonResponse</span>([
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;success&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;code&#39;</span>    <span style="color:#f92672">=&gt;</span> $e<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getCode</span>(), <span style="color:#75715e">// 我的业务状态码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#e6db74">&#39;msg&#39;</span>     <span style="color:#f92672">=&gt;</span> $e<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getMessage</span>(),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;data&#39;</span>    <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>            ], <span style="color:#a6e22e">Response</span><span style="color:#f92672">::</span><span style="color:#a6e22e">HTTP_OK</span>); <span style="color:#75715e">// 初始化时设置状态码为 200
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            $response<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setStatusCode</span>(<span style="color:#a6e22e">Response</span><span style="color:#f92672">::</span><span style="color:#a6e22e">HTTP_OK</span>); <span style="color:#75715e">// 初始化之后再次设置状态码为 200
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            $response<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">headers</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#39;X-Status-Code&#39;</span>, <span style="color:#a6e22e">Response</span><span style="color:#f92672">::</span><span style="color:#a6e22e">HTTP_OK</span>);
+</span></span><span style="display:flex;"><span>            $event<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setResponse</span>($response);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>这样做的目的是为了让前端可以统一处理业务状态码，而不用关心 HTTP 状态码。 此外因为我觉得 HTTP
+状态码应该是用来表示请求的状态，而不是业务状态，而登录与否应该属于业务层面。</p>
+<p>总之就是状态码的改变没效果，HTTP Headers 中的 <code>X-Status-Code</code> 有效果，说明代码确实执行了。</p>
+<p>我猜测就是某个默认配置的问题，导致我的这个设置被覆盖了，但官方文档看了一遍，网上搜了一圈，也没找到解决方案。</p>
+<p>最后没办法了，我就想试试 ChatGPT。</p>
+<p>我们之间的第一次对话是这样的：</p>
+<p><img loading="lazy" src="/images/chatgpt-is-a-good-rubber-duck/gpt-01.png"></p>
+<p>文字版本的在 <a href="/files/chatgpt-01.md">这里</a>。</p>
+<p>中间 ChatGPT 提出了服务优先级的问题，这个与我之前的猜测是一致的，但尝试了没有效果，无论是设置为最高还是最低。</p>
+<p>最终 ChatGPT
+给了我一个不太优雅的解决方案，虽然我对结果不太满意，但对话过程中的回答还是蛮让我惊艳的，因为它似乎已经完全看懂了 <a href="https://symfony.com/doc/current/index.html">Symfony 官方文档</a>
+以及 <a href="https://stackoverflow.com/">StackOverflow</a> 上的一些问答。</p>
+<p>我回想了一下，觉得是不是因为我给它设置的人设（ “高级软件工程师”、“熟悉 Symfony 框架” ）不够强大，所以没给出一个让我满意的解决方案？</p>
+<p>于是我和 ChatGPT 开始了第二次对话：</p>
+<p><img loading="lazy" src="/images/chatgpt-is-a-good-rubber-duck/gpt-02.png"></p>
+<p>第二次对话的文字版本的在 <a href="/files/chatgpt-02.md">这里</a>。</p>
+<p>这次对话我将 ChatGPT 的人设提升到了 “软件技术专家”，感觉确实感觉不一样，可以明显看到代码变少了，文字变多了，也许这就是
+“高级软件工程师” 和 “软件技术专家”
+的区别？工程师更多的给代码，专家更多的给思路？那 Linus 的 <code>&quot;Talk is cheap, show me the code&quot;</code> 怎么解释？哈哈哈。</p>
+<p>根据 ChatGPT 给我的各种可能性提示，我逐一排除，最终推测可能是框架内核里有什么特殊逻辑导致的。</p>
+<p>直接看
+<code>Symfony\Component\HttpKernel\HttpKernel</code> 类的 <code>handle</code>
+方法，这个方法是框架内核的核心方法，所有的请求最终都是在这里处理的，它会调用 <code>handleThrowable</code> 来处理异常。此时，我发现了端倪。</p>
+<p>在 <code>handleThrowable</code> 方法中，有这样一段代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$response <span style="color:#f92672">=</span> $event<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getResponse</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// the developer asked for a specific status code
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$event<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">isAllowingCustomResponseCode</span>() <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>$response<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">isClientError</span>() <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>$response<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">isServerError</span>() <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>$response<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">isRedirect</span>()) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ensure that we actually have an error response
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> ($e <span style="color:#a6e22e">instanceof</span> <span style="color:#a6e22e">HttpExceptionInterface</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// keep the HTTP status code and headers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        $response<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setStatusCode</span>($e<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getStatusCode</span>());
+</span></span><span style="display:flex;"><span>        $response<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">headers</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">add</span>($e<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getHeaders</span>());
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        $response<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setStatusCode</span>(<span style="color:#ae81ff">500</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>这里注释说明了当开发者需要一个特殊的状态码时的处理逻辑。这个逻辑很简单，就是判断异常类是否实现了 <code>HttpExceptionInterface</code>
+接口，如果没有，一律 500；有的话，从异常里获取 HTTP 状态码和头部信息赋值给 <code>Response</code> 对象。</p>
+<p>看来框架是想将异常错误码也就是我认为的业务状态码当做 HTTP 状态码来处理（我不喜欢也不需要），如果不符合 HTTP 规范则一律判定为
+500，太残暴了。</p>
+<p>所以解决问题的方案就是让自定义异常类实现这个接口就行了。之前修改不生效的原因就在这里，当然也可以认为是我的代码在这段代码之前执行了，也就是优先级太高，问题是高低我都试过了，都失败了。
+既然如此，那就不纠结执行的优先级的问题了，直接实现接口就行了。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Symfony\Component\HttpFoundation\Response</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Symfony\Component\HttpKernel\Exception\HttpExceptionInterface</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApiNotAuthException</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">\RuntimeException</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">HttpExceptionInterface</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct($message <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;未登录&#34;</span>, $code <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">\Throwable</span> $previous <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">parent</span><span style="color:#f92672">::</span><span style="color:#a6e22e">__construct</span>($message, $code, $previous);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getStatusCode</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Response</span><span style="color:#f92672">::</span><span style="color:#a6e22e">HTTP_OK</span>; <span style="color:#75715e">// 直接返回 200
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getHeaders</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">array</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> [];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>再次测试，问题解决。</p>
+<p>总结一下，虽然 ChatGPT 并没有直接给出解决方案（因为没有用 GPT4 尝试，所以不知道 GPT 最强实力），但是它的提示已经很专业很厉害了。</p>
+<p>以前我调试的时候喜欢找个 “小黄鸭”
+来边说边操作，因为在说的过程中，由于对方不了解细节，你需要详细描述你是怎么做的，以及为什么这么做，会慢慢的把问题说清楚，往往自己说着说着，就发现问题所在了，所以从我的经验来说
+“<a href="https://zh.wikipedia.org/zh-hans/%E5%B0%8F%E9%BB%84%E9%B8%AD%E8%B0%83%E8%AF%95%E6%B3%95">小黄鸭调试法</a>”
+确实很有效果。</p>
+<p><img alt="在电脑旁“帮忙”代码审查的小黄鸭" loading="lazy" src="/images/chatgpt-is-a-good-rubber-duck/duck.jpg"></p>
+<p>但如果只有一个人的时候，就只能对着图中的小黄鸭说话，此时总是感觉会有点奇怪。可能是因为面对的并非真人，说话的时候就不会那么严谨，期间也没有互动，对方也不会提问，导致效果不佳。</p>
+<p>而 ChatGPT 不仅解决了说话对象的问题，甚至因为它什么都“懂”，还能给你一些很有价值的提示，甚至你还可以指定它的专业程度，简直就是一个完美的
+“小黄鸭” 啊！</p>
+<p>PS：本文的写作有几句话是由 <a href="https://github.com/features/copilot">GitHub Copilot</a> 提示完成的，所以你可能感觉有些句子的语气并非完全是我的风格。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://tony.engineer/tags/chatgpt/">ChatGPT</a></li>
+      <li><a href="https://tony.engineer/tags/ai/">AI</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://tony.engineer/">托尼吹雪</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

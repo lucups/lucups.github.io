@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>给 SIM 卡设置 PIN 码，降低手机失窃带来的额外风险 | 托尼吹雪</title>
+<meta name="keywords" content="phone">
+<meta name="description" content="今天上午在朋友圈看到一篇文章——《一部手机失窃引发的惊心动魄的战争》，
+主要讲的是作者的老婆手机被偷，由此引发手机卡被盗用的悲剧（财产损失）。有兴趣的或者手机关联了巨款的或者信用额度较高的用户一定要认真看一遍。
+作者（信息安全老骆驼，公众号：知非姑姑）最后总结道：
+在这一系列过程中，对方有几点还是让我比较服的：
+
+全程用的都是正常的业务操作，只是把各个机构的“弱验证”的相关业务链接起来，形成巨大的破坏；
+应该是使用了技术手段通过的人脸验证，用图片处理技术来绕过活体人脸识别验证；团队分工协作能力太强，在处理过程中我感觉自己已经用了最快的速度，但总还是晚一步；
+注重隐蔽，留好后路，包括删掉我云闪付上的一些卡来防止我查明细，通过新建账号的方式，如果我没发现，贸然去解冻银行卡，后续还有第二波的攻击；
+包括赶在我补卡后改服务密码前，设置了呼叫转移。
+
+突然想到自己的手机如果被偷，应该也不会好到哪里去。即使无法破解我的 FaceID，犯罪团伙仍然可以第一时间把 SIM 卡拿出来，就可以接收各种验证短信，很多服务和银行卡就直接凉凉了&hellip;&hellip;
+为了降低手机 SIM 卡被盗用的风险，我们可以给 SIM 卡设置 PIN 码。设置方法很简单，iOS 设置方法如下：
+打开 设置 -&gt; 蜂窝网络 -&gt; SIM 卡 PIN 码，然后点击开关即可。
+注意默认的 PIN 码是 1234，但你可以设置 6 位数字的  PIN 码。
+
+安卓一般是这样的（以三星手机为例）：设置 -&gt; 生物识别和安全性 -&gt; 其他安全设置 -&gt; 设置 SIM 卡锁
+界面是这样的：
+
+注意事项：
+
+SIM 卡的 PIN 码输错 3 次 SIM 卡就会被锁，只能再输入 PUK 码才能解锁（在你办理手机卡时会有），如果遗忘了就找运营商的客服；
+最稳妥的还是到运营商服务点办理换卡；
+设置 PIN  码后，手机关机重启或 SIM 卡换手机时，要先输入PIN码（三次机会）；
+如果设置 SIM 卡密码后，手机一直没关机，SIM 卡也没移走，重新点亮屏幕时不需要输入 SIM 卡 PIN 码；
+如果您给两张卡分别都设了密码，开机时两张卡都会要求输入的；
+
+也就是说，设置后唯一的麻烦就是手机重启或者换手机时需要输入一下 PIN 码，一直保持开机则无需输入。">
+<meta name="author" content="">
+<link rel="canonical" href="https://tony.engineer/posts/2020/sim-pin/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://tony.engineer/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tony.engineer/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tony.engineer/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tony.engineer/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tony.engineer/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://tony.engineer/posts/2020/sim-pin/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://tony.engineer/posts/2020/sim-pin/">
+  <meta property="og:site_name" content="托尼吹雪">
+  <meta property="og:title" content="给 SIM 卡设置 PIN 码，降低手机失窃带来的额外风险">
+  <meta property="og:description" content="今天上午在朋友圈看到一篇文章——《一部手机失窃引发的惊心动魄的战争》， 主要讲的是作者的老婆手机被偷，由此引发手机卡被盗用的悲剧（财产损失）。有兴趣的或者手机关联了巨款的或者信用额度较高的用户一定要认真看一遍。
+作者（信息安全老骆驼，公众号：知非姑姑）最后总结道：
+在这一系列过程中，对方有几点还是让我比较服的：
+全程用的都是正常的业务操作，只是把各个机构的“弱验证”的相关业务链接起来，形成巨大的破坏； 应该是使用了技术手段通过的人脸验证，用图片处理技术来绕过活体人脸识别验证；团队分工协作能力太强，在处理过程中我感觉自己已经用了最快的速度，但总还是晚一步； 注重隐蔽，留好后路，包括删掉我云闪付上的一些卡来防止我查明细，通过新建账号的方式，如果我没发现，贸然去解冻银行卡，后续还有第二波的攻击； 包括赶在我补卡后改服务密码前，设置了呼叫转移。 突然想到自己的手机如果被偷，应该也不会好到哪里去。即使无法破解我的 FaceID，犯罪团伙仍然可以第一时间把 SIM 卡拿出来，就可以接收各种验证短信，很多服务和银行卡就直接凉凉了……
+为了降低手机 SIM 卡被盗用的风险，我们可以给 SIM 卡设置 PIN 码。设置方法很简单，iOS 设置方法如下：
+打开 设置 -&gt; 蜂窝网络 -&gt; SIM 卡 PIN 码，然后点击开关即可。
+注意默认的 PIN 码是 1234，但你可以设置 6 位数字的 PIN 码。
+安卓一般是这样的（以三星手机为例）：设置 -&gt; 生物识别和安全性 -&gt; 其他安全设置 -&gt; 设置 SIM 卡锁
+界面是这样的：
+注意事项：
+SIM 卡的 PIN 码输错 3 次 SIM 卡就会被锁，只能再输入 PUK 码才能解锁（在你办理手机卡时会有），如果遗忘了就找运营商的客服； 最稳妥的还是到运营商服务点办理换卡； 设置 PIN 码后，手机关机重启或 SIM 卡换手机时，要先输入PIN码（三次机会）； 如果设置 SIM 卡密码后，手机一直没关机，SIM 卡也没移走，重新点亮屏幕时不需要输入 SIM 卡 PIN 码； 如果您给两张卡分别都设了密码，开机时两张卡都会要求输入的； 也就是说，设置后唯一的麻烦就是手机重启或者换手机时需要输入一下 PIN 码，一直保持开机则无需输入。">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-10-09T00:00:00+08:00">
+    <meta property="article:modified_time" content="2020-10-09T00:00:00+08:00">
+    <meta property="article:tag" content="Phone">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="给 SIM 卡设置 PIN 码，降低手机失窃带来的额外风险">
+<meta name="twitter:description" content="今天上午在朋友圈看到一篇文章——《一部手机失窃引发的惊心动魄的战争》，
+主要讲的是作者的老婆手机被偷，由此引发手机卡被盗用的悲剧（财产损失）。有兴趣的或者手机关联了巨款的或者信用额度较高的用户一定要认真看一遍。
+作者（信息安全老骆驼，公众号：知非姑姑）最后总结道：
+在这一系列过程中，对方有几点还是让我比较服的：
+
+全程用的都是正常的业务操作，只是把各个机构的“弱验证”的相关业务链接起来，形成巨大的破坏；
+应该是使用了技术手段通过的人脸验证，用图片处理技术来绕过活体人脸识别验证；团队分工协作能力太强，在处理过程中我感觉自己已经用了最快的速度，但总还是晚一步；
+注重隐蔽，留好后路，包括删掉我云闪付上的一些卡来防止我查明细，通过新建账号的方式，如果我没发现，贸然去解冻银行卡，后续还有第二波的攻击；
+包括赶在我补卡后改服务密码前，设置了呼叫转移。
+
+突然想到自己的手机如果被偷，应该也不会好到哪里去。即使无法破解我的 FaceID，犯罪团伙仍然可以第一时间把 SIM 卡拿出来，就可以接收各种验证短信，很多服务和银行卡就直接凉凉了&hellip;&hellip;
+为了降低手机 SIM 卡被盗用的风险，我们可以给 SIM 卡设置 PIN 码。设置方法很简单，iOS 设置方法如下：
+打开 设置 -&gt; 蜂窝网络 -&gt; SIM 卡 PIN 码，然后点击开关即可。
+注意默认的 PIN 码是 1234，但你可以设置 6 位数字的  PIN 码。
+
+安卓一般是这样的（以三星手机为例）：设置 -&gt; 生物识别和安全性 -&gt; 其他安全设置 -&gt; 设置 SIM 卡锁
+界面是这样的：
+
+注意事项：
+
+SIM 卡的 PIN 码输错 3 次 SIM 卡就会被锁，只能再输入 PUK 码才能解锁（在你办理手机卡时会有），如果遗忘了就找运营商的客服；
+最稳妥的还是到运营商服务点办理换卡；
+设置 PIN  码后，手机关机重启或 SIM 卡换手机时，要先输入PIN码（三次机会）；
+如果设置 SIM 卡密码后，手机一直没关机，SIM 卡也没移走，重新点亮屏幕时不需要输入 SIM 卡 PIN 码；
+如果您给两张卡分别都设了密码，开机时两张卡都会要求输入的；
+
+也就是说，设置后唯一的麻烦就是手机重启或者换手机时需要输入一下 PIN 码，一直保持开机则无需输入。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://tony.engineer/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "给 SIM 卡设置 PIN 码，降低手机失窃带来的额外风险",
+      "item": "https://tony.engineer/posts/2020/sim-pin/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "给 SIM 卡设置 PIN 码，降低手机失窃带来的额外风险",
+  "name": "给 SIM 卡设置 PIN 码，降低手机失窃带来的额外风险",
+  "description": "今天上午在朋友圈看到一篇文章——《一部手机失窃引发的惊心动魄的战争》， 主要讲的是作者的老婆手机被偷，由此引发手机卡被盗用的悲剧（财产损失）。有兴趣的或者手机关联了巨款的或者信用额度较高的用户一定要认真看一遍。\n作者（信息安全老骆驼，公众号：知非姑姑）最后总结道：\n在这一系列过程中，对方有几点还是让我比较服的：\n全程用的都是正常的业务操作，只是把各个机构的“弱验证”的相关业务链接起来，形成巨大的破坏； 应该是使用了技术手段通过的人脸验证，用图片处理技术来绕过活体人脸识别验证；团队分工协作能力太强，在处理过程中我感觉自己已经用了最快的速度，但总还是晚一步； 注重隐蔽，留好后路，包括删掉我云闪付上的一些卡来防止我查明细，通过新建账号的方式，如果我没发现，贸然去解冻银行卡，后续还有第二波的攻击； 包括赶在我补卡后改服务密码前，设置了呼叫转移。 突然想到自己的手机如果被偷，应该也不会好到哪里去。即使无法破解我的 FaceID，犯罪团伙仍然可以第一时间把 SIM 卡拿出来，就可以接收各种验证短信，很多服务和银行卡就直接凉凉了\u0026hellip;\u0026hellip;\n为了降低手机 SIM 卡被盗用的风险，我们可以给 SIM 卡设置 PIN 码。设置方法很简单，iOS 设置方法如下：\n打开 设置 -\u0026gt; 蜂窝网络 -\u0026gt; SIM 卡 PIN 码，然后点击开关即可。\n注意默认的 PIN 码是 1234，但你可以设置 6 位数字的 PIN 码。\n安卓一般是这样的（以三星手机为例）：设置 -\u0026gt; 生物识别和安全性 -\u0026gt; 其他安全设置 -\u0026gt; 设置 SIM 卡锁\n界面是这样的：\n注意事项：\nSIM 卡的 PIN 码输错 3 次 SIM 卡就会被锁，只能再输入 PUK 码才能解锁（在你办理手机卡时会有），如果遗忘了就找运营商的客服； 最稳妥的还是到运营商服务点办理换卡； 设置 PIN 码后，手机关机重启或 SIM 卡换手机时，要先输入PIN码（三次机会）； 如果设置 SIM 卡密码后，手机一直没关机，SIM 卡也没移走，重新点亮屏幕时不需要输入 SIM 卡 PIN 码； 如果您给两张卡分别都设了密码，开机时两张卡都会要求输入的； 也就是说，设置后唯一的麻烦就是手机重启或者换手机时需要输入一下 PIN 码，一直保持开机则无需输入。\n",
+  "keywords": [
+    "phone"
+  ],
+  "articleBody": "今天上午在朋友圈看到一篇文章——《一部手机失窃引发的惊心动魄的战争》， 主要讲的是作者的老婆手机被偷，由此引发手机卡被盗用的悲剧（财产损失）。有兴趣的或者手机关联了巨款的或者信用额度较高的用户一定要认真看一遍。\n作者（信息安全老骆驼，公众号：知非姑姑）最后总结道：\n在这一系列过程中，对方有几点还是让我比较服的：\n全程用的都是正常的业务操作，只是把各个机构的“弱验证”的相关业务链接起来，形成巨大的破坏； 应该是使用了技术手段通过的人脸验证，用图片处理技术来绕过活体人脸识别验证；团队分工协作能力太强，在处理过程中我感觉自己已经用了最快的速度，但总还是晚一步； 注重隐蔽，留好后路，包括删掉我云闪付上的一些卡来防止我查明细，通过新建账号的方式，如果我没发现，贸然去解冻银行卡，后续还有第二波的攻击； 包括赶在我补卡后改服务密码前，设置了呼叫转移。 突然想到自己的手机如果被偷，应该也不会好到哪里去。即使无法破解我的 FaceID，犯罪团伙仍然可以第一时间把 SIM 卡拿出来，就可以接收各种验证短信，很多服务和银行卡就直接凉凉了……\n为了降低手机 SIM 卡被盗用的风险，我们可以给 SIM 卡设置 PIN 码。设置方法很简单，iOS 设置方法如下：\n打开 设置 -\u003e 蜂窝网络 -\u003e SIM 卡 PIN 码，然后点击开关即可。\n注意默认的 PIN 码是 1234，但你可以设置 6 位数字的 PIN 码。\n安卓一般是这样的（以三星手机为例）：设置 -\u003e 生物识别和安全性 -\u003e 其他安全设置 -\u003e 设置 SIM 卡锁\n界面是这样的：\n注意事项：\nSIM 卡的 PIN 码输错 3 次 SIM 卡就会被锁，只能再输入 PUK 码才能解锁（在你办理手机卡时会有），如果遗忘了就找运营商的客服； 最稳妥的还是到运营商服务点办理换卡； 设置 PIN 码后，手机关机重启或 SIM 卡换手机时，要先输入PIN码（三次机会）； 如果设置 SIM 卡密码后，手机一直没关机，SIM 卡也没移走，重新点亮屏幕时不需要输入 SIM 卡 PIN 码； 如果您给两张卡分别都设了密码，开机时两张卡都会要求输入的； 也就是说，设置后唯一的麻烦就是手机重启或者换手机时需要输入一下 PIN 码，一直保持开机则无需输入。\nPS：本文重点只是讲了关于 SIM 相关的风险，在日常使用中，设置复杂一点的开机密码、开启手机查找功能同样很重要，因为不是本文的重点，所以不细谈了。\n以下是 Apple 官方的提示，也适用于安卓机型：\n",
+  "wordCount" : "82",
+  "inLanguage": "en",
+  "datePublished": "2020-10-09T00:00:00+08:00",
+  "dateModified": "2020-10-09T00:00:00+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tony.engineer/posts/2020/sim-pin/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "托尼吹雪",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tony.engineer/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://tony.engineer/" accesskey="h" title="托尼吹雪 (Alt + H)">托尼吹雪</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://tony.engineer/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      给 SIM 卡设置 PIN 码，降低手机失窃带来的额外风险
+    </h1>
+    <div class="post-meta"><span title='2020-10-09 00:00:00 +0800 CST'>October 9, 2020</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>今天上午在朋友圈看到一篇文章——《<a href="https://mp.weixin.qq.com/s?__biz=MzA3MDIyOTU1OA==&amp;mid=2651655571&amp;idx=1&amp;sn=af42765da4efb972cd81c79919223186">一部手机失窃引发的惊心动魄的战争</a>》，
+主要讲的是作者的老婆手机被偷，由此引发手机卡被盗用的悲剧（财产损失）。有兴趣的或者手机关联了巨款的或者信用额度较高的用户一定要认真看一遍。</p>
+<p>作者（信息安全老骆驼，公众号：知非姑姑）最后总结道：</p>
+<p>在这一系列过程中，对方有几点还是让我比较服的：</p>
+<ul>
+<li>全程用的都是正常的业务操作，只是把各个机构的“弱验证”的相关业务链接起来，形成巨大的破坏；</li>
+<li>应该是使用了技术手段通过的人脸验证，用图片处理技术来绕过活体人脸识别验证；团队分工协作能力太强，在处理过程中我感觉自己已经用了最快的速度，但总还是晚一步；</li>
+<li>注重隐蔽，留好后路，包括删掉我云闪付上的一些卡来防止我查明细，通过新建账号的方式，如果我没发现，贸然去解冻银行卡，后续还有第二波的攻击；</li>
+<li>包括赶在我补卡后改服务密码前，设置了呼叫转移。</li>
+</ul>
+<p>突然想到自己的手机如果被偷，应该也不会好到哪里去。即使无法破解我的 FaceID，犯罪团伙仍然可以第一时间把 SIM 卡拿出来，就可以接收各种验证短信，很多服务和银行卡就直接凉凉了&hellip;&hellip;</p>
+<p>为了降低手机 SIM 卡被盗用的风险，我们可以给 SIM 卡设置 PIN 码。设置方法很简单，iOS 设置方法如下：</p>
+<p>打开 <code>设置</code> -&gt; <code>蜂窝网络</code> -&gt; <code>SIM 卡 PIN 码</code>，然后点击开关即可。</p>
+<p>注意默认的 PIN 码是 1234，但你可以设置 6 位数字的  PIN 码。</p>
+<p><img loading="lazy" src="/images/sim-pin/01.png"></p>
+<p>安卓一般是这样的（以三星手机为例）：<code>设置</code> -&gt; <code>生物识别和安全性</code> -&gt; <code>其他安全设置</code> -&gt; <code>设置 SIM 卡锁</code></p>
+<p>界面是这样的：</p>
+<p><img loading="lazy" src="/images/sim-pin/02.png"></p>
+<p>注意事项：</p>
+<ol>
+<li>SIM 卡的 PIN 码输错 3 次 SIM 卡就会被锁，只能再输入 PUK 码才能解锁（在你办理手机卡时会有），如果遗忘了就找运营商的客服；</li>
+<li>最稳妥的还是到运营商服务点办理换卡；</li>
+<li>设置 PIN  码后，手机关机重启或 SIM 卡换手机时，要先输入PIN码（三次机会）；</li>
+<li>如果设置 SIM 卡密码后，手机一直没关机，SIM 卡也没移走，重新点亮屏幕时不需要输入 SIM 卡 PIN 码；</li>
+<li>如果您给两张卡分别都设了密码，开机时两张卡都会要求输入的；</li>
+</ol>
+<p>也就是说，设置后唯一的麻烦就是手机重启或者换手机时需要输入一下 PIN 码，一直保持开机则无需输入。</p>
+<p>PS：本文重点只是讲了关于 SIM 相关的风险，在日常使用中，设置复杂一点的开机密码、开启手机查找功能同样很重要，因为不是本文的重点，所以不细谈了。</p>
+<p>以下是 <a href="https://support.apple.com/zh-cn/HT201529">Apple 官方的提示</a>，也适用于安卓机型：</p>
+<p><img loading="lazy" src="/images/sim-pin/03.png"></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://tony.engineer/tags/phone/">Phone</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://tony.engineer/">托尼吹雪</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

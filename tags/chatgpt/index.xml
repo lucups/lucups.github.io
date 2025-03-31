@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ChatGPT on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/chatgpt/</link>
+    <description>Recent content in ChatGPT on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ChatGPT 是只不错的 “小黄鸭”</title>
+      <link>https://tony.engineer/posts/2023/chatgpt-is-a-good-rubber-duck/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2023/chatgpt-is-a-good-rubber-duck/</guid>
+      <description>&lt;p&gt;今天遇到一个问题，在使用 &lt;a href=&#34;https://symfony.com/&#34;&gt;Symfony 6.x&lt;/a&gt; 框架的项目里，我没有使用框架自带的
+Security 组件，而是自己实现了一个用户认证的土方法。&lt;/p&gt;
+&lt;p&gt;在我的方法中，当用户请求需要登录的接口时，会抛出一个自定义的异常 &lt;code&gt;ApiNotAuthException&lt;/code&gt;，然后我在 &lt;code&gt;ExceptionListener&lt;/code&gt;
+监听器服务中捕获这个异常并封装我自己的返回值结构，最后将状态码强制改为 &lt;code&gt;200&lt;/code&gt;（因为我不喜欢使用 HTTP 状态码来替代业务状态码）。&lt;/p&gt;
+&lt;p&gt;PS: 关于是否应该忽略 HTTP 状态码在前端的处理以及是否应该将业务状态码封装到 HTTP 状态码里，以后有机会我再写一篇博客讨论一下，今天只解决问题。&lt;/p&gt;
+&lt;p&gt;我的异常监听类是这样的：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ExceptionListener&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;onKernelException&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;ExceptionEvent&lt;/span&gt; $event)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        $e &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; $event&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getThrowable&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; ($e &lt;span style=&#34;color:#a6e22e&#34;&gt;instanceof&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ApiNotAuthException&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            $response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;JsonResponse&lt;/span&gt;([
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;success&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;code&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; $e&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getCode&lt;/span&gt;(), &lt;span style=&#34;color:#75715e&#34;&gt;// 我的业务状态码
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;msg&amp;#39;&lt;/span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; $e&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getMessage&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            ], &lt;span style=&#34;color:#a6e22e&#34;&gt;Response&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;HTTP_OK&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// 初始化时设置状态码为 200
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            $response&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setStatusCode&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;Response&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;HTTP_OK&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// 初始化之后再次设置状态码为 200
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            $response&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;headers&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;set&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;X-Status-Code&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Response&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;HTTP_OK&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            $event&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setResponse&lt;/span&gt;($response);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样做的目的是为了让前端可以统一处理业务状态码，而不用关心 HTTP 状态码。 此外因为我觉得 HTTP
+状态码应该是用来表示请求的状态，而不是业务状态，而登录与否应该属于业务层面。&lt;/p&gt;
+&lt;p&gt;总之就是状态码的改变没效果，HTTP Headers 中的 &lt;code&gt;X-Status-Code&lt;/code&gt; 有效果，说明代码确实执行了。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Engineer on 托尼吹雪</title>
+    <link>https://tony.engineer/tags/engineer/</link>
+    <description>Recent content in Engineer on 托尼吹雪</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 30 Dec 2016 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://tony.engineer/tags/engineer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>论软件工程师的职业素养</title>
+      <link>https://tony.engineer/posts/2016/about-engineer/</link>
+      <pubDate>Fri, 30 Dec 2016 00:00:00 +0800</pubDate>
+      <guid>https://tony.engineer/posts/2016/about-engineer/</guid>
+      <description>&lt;p&gt;在过去，工程师是一个极难获得的称谓，通常需要获取相应的学位，有多年的工作经验，甚至还要通过官方的考评，方能取得。&lt;/p&gt;
+&lt;p&gt;那时的工程师，往往要承担着社会责任。比如，作为桥梁工程师，你设计了一座大桥，就得为大桥的质量负责，&lt;/p&gt;
+&lt;p&gt;如果桥垮了，你是要跳河的。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/about-engineer/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然而，自互联网兴盛以来，出现了一大波“软件工程师”，也就是程序员，他们轻易获取了“工程师”的头衔，&lt;/p&gt;
+&lt;p&gt;其中有些人毫无职业素养，毫无责任担当。当然，我并非想要贬低程序员，因为本人也是一个程序员，&lt;/p&gt;
+&lt;p&gt;只是最近掉进坑了，满腹牢骚，愤懑不平，怨气冲天，才不得不作此文，吐槽以泄愤。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tony.engineer/images/about-engineer/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在我看来，作为一名软件工程师，最基本职业素养就是专业技能，也就是编码和程序设计，其他的比如团队精神等等等这里就不多谈了，&lt;/p&gt;
+&lt;p&gt;因为今天只想吐槽这么多。&lt;/p&gt;
+&lt;p&gt;首先来说说编码。作为一名合格的软件工程师，必须要明白代码的可维护性是多么重要，用来衡量可维护性的，首先是代码的可读性。&lt;/p&gt;
+&lt;p&gt;有些人把代码写得别人看不懂，就飘飘然以为自己多牛逼多厉害。比如判断一个变量是否为 0，0 偏偏要写成 &lt;code&gt;intval(chr(48))&lt;/code&gt;，等等等诸如此类不胜枚举，罄竹难书。&lt;/p&gt;
+&lt;p&gt;殊不知这种行为愚蠢至极，过两年把他拉回来看自己的这些代码，他一定会抽自己嘴巴子，因为他自己也看不懂自己写了什么。&lt;/p&gt;
+&lt;p&gt;所以请记住：你的代码别人看不懂，只有外行人才会觉得你牛逼，同行都会说你傻逼。在编码的时候，一定要想一想，这么写别人能理解我的意图吗？代码要写得傻一点，这一点脚本语言工程师尤其要注意，不要滥用魔法特性。&lt;/p&gt;
+&lt;p&gt;再来扯扯程序设计。其实这一点跟代码的可读性有共通之处，程序设计的目的首先是满足业务需求，其次就是在满足业务需求的前提下保证代码的可维护性，也就是保证代码描述的业务逻辑容易被人理解。&lt;/p&gt;
+&lt;p&gt;偏偏有些人，自以为自己的设计高端大气上档次，一个缓存 key，存了 9999 条数据，我只想问，有一条数据更新了怎么办？&lt;/p&gt;
+&lt;p&gt;恭喜你，答错了。人家的做法不是把这 9999 条数据查出来重新 set（虽然这已经足够奇葩），而是把全表的数据查出来每 9999 条分批 set 一遍（奇葩中的奇葩）。除了数据更新，有新数据插入缓存也要全部更新一遍。&lt;/p&gt;
+&lt;p&gt;哪天内存不够加载全表的数据了怎么办？没事啊，人家已经跑路了！人家跑路了项目怎么办？没事啊，有接盘侠啊！&lt;/p&gt;
+&lt;p&gt;没错，我就是这个接盘侠。昨天我花了一个晚上，把这波缓存改成了正常人的设计。&lt;/p&gt;
+&lt;p&gt;2016年的最后两天，我接了一个盘，不过，我会接好这个盘。&lt;/p&gt;
+&lt;p&gt;我不入地狱，谁入地狱？&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
