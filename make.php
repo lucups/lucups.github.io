@@ -193,7 +193,7 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
             min-height: 100svh;
             display: grid;
             grid-template-rows: minmax(0, 1fr) auto;
-            padding: 0 var(--page-padding-x) max(22px, env(safe-area-inset-bottom));
+            padding: 0 var(--page-padding-x) max(8px, env(safe-area-inset-bottom));
         }
 
         .site-header {
@@ -352,7 +352,7 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
         }
 
         .footer {
-            min-height: 64px;
+            min-height: 48px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -423,7 +423,7 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
             }
 
             .footer {
-                min-height: 44px;
+                min-height: 36px;
                 font-size: 10.5px;
                 letter-spacing: 0.09em;
             }
