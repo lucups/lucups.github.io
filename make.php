@@ -122,7 +122,7 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
             --control-border: #d2d7df;
             --control-hover: #f4f6f8;
             --focus: #2563eb;
-            --footer: #24262b;
+            --footer: #747981;
             --page-padding-x: clamp(24px, 3.6vw, 56px);
         }
 
@@ -135,7 +135,7 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
             --control-border: #555960;
             --control-hover: #202226;
             --focus: #60a5fa;
-            --footer: #dedede;
+            --footer: #7f838a;
         }
 
         * {
@@ -199,19 +199,19 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
         .site-header {
             position: fixed;
             z-index: 10;
-            top: max(38px, env(safe-area-inset-top));
+            top: max(28px, env(safe-area-inset-top));
             right: var(--page-padding-x);
         }
 
         .controls {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }
 
         .control {
-            width: 48px;
-            height: 48px;
+            width: 40px;
+            height: 40px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -245,8 +245,8 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
         }
 
         .control svg {
-            width: 23px;
-            height: 23px;
+            width: 19px;
+            height: 19px;
             display: block;
             fill: none;
             stroke: currentColor;
@@ -272,12 +272,12 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 132px 0 72px;
+            padding: 100px 0 44px;
         }
 
         .profile {
-            width: min(100%, 720px);
-            transform: translateY(18px);
+            width: min(100%, 640px);
+            transform: translateY(8px);
             text-align: center;
         }
 
@@ -285,10 +285,10 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
             margin: 0;
             color: var(--text);
             font-family: Georgia, "Times New Roman", "Songti SC", STSong, serif;
-            font-size: clamp(2.5rem, 4.4vw, 4rem);
+            font-size: clamp(2rem, 3.2vw, 3.125rem);
             font-weight: 400;
-            line-height: 1.05;
-            letter-spacing: -0.035em;
+            line-height: 1;
+            letter-spacing: -0.03em;
         }
 
         :root[data-locale="zh"] .name {
@@ -297,12 +297,12 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
         }
 
         .role {
-            margin: 28px 0 0;
+            margin: 16px 0 0;
             color: var(--secondary);
-            font-size: clamp(1.125rem, 1.6vw, 1.5rem);
+            font-size: clamp(0.875rem, 1.2vw, 1.125rem);
             font-weight: 400;
-            line-height: 1.3;
-            letter-spacing: 0.15em;
+            line-height: 1.2;
+            letter-spacing: 0.12em;
         }
 
         :root[data-locale="zh"] .role {
@@ -313,13 +313,13 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 50px;
-            margin-top: 40px;
+            gap: 32px;
+            margin-top: 26px;
         }
 
         .social-link {
-            width: 52px;
-            height: 52px;
+            width: 42px;
+            height: 42px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -334,8 +334,8 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
         }
 
         .social-link svg {
-            width: 38px;
-            height: 38px;
+            width: 30px;
+            height: 30px;
             display: block;
         }
 
@@ -352,17 +352,17 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
         }
 
         .footer {
-            min-height: 102px;
+            min-height: 64px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-top: 1px solid var(--line);
             padding: 0 12px;
             color: var(--footer);
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 400;
             line-height: 1.4;
-            letter-spacing: 0.14em;
+            letter-spacing: 0.12em;
             text-align: center;
             white-space: nowrap;
         }
@@ -373,25 +373,25 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
             }
 
             .site-header {
-                top: max(22px, env(safe-area-inset-top));
+                top: max(18px, env(safe-area-inset-top));
             }
 
             .controls {
-                gap: 10px;
+                gap: 8px;
             }
 
             .control {
-                width: 40px;
-                height: 40px;
+                width: 36px;
+                height: 36px;
             }
 
             .control svg {
-                width: 21px;
-                height: 21px;
+                width: 18px;
+                height: 18px;
             }
 
             .main {
-                padding: 104px 0 64px;
+                padding: 84px 0 44px;
             }
 
             .profile {
@@ -399,40 +399,40 @@ $html = (static function () use ($config, $defaultLocale, $defaultContent, $mail
             }
 
             .name {
-                font-size: 2.5rem;
+                font-size: 2.125rem;
             }
 
             .role {
-                margin-top: 22px;
-                font-size: 1.125rem;
+                margin-top: 14px;
+                font-size: 0.9375rem;
             }
 
             .social-links {
-                gap: 32px;
-                margin-top: 32px;
+                gap: 26px;
+                margin-top: 24px;
             }
 
             .social-link {
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
             }
 
             .social-link svg {
-                width: 37px;
-                height: 37px;
+                width: 29px;
+                height: 29px;
             }
 
             .footer {
-                min-height: 56px;
-                font-size: 12px;
-                letter-spacing: 0.1em;
+                min-height: 44px;
+                font-size: 10.5px;
+                letter-spacing: 0.09em;
             }
         }
 
         @media (max-width: 360px) {
             .footer {
-                font-size: 11px;
-                letter-spacing: 0.075em;
+                font-size: 10px;
+                letter-spacing: 0.065em;
             }
         }
 
